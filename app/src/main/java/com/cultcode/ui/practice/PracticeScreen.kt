@@ -45,7 +45,7 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
     var showSolution by remember { mutableStateOf(false) }
 
     val runCode = {
-        val result = engine.evaluateSemantic(question.id, codeText, question.correctAnswer, question.acceptedAnswers)
+        val result = engine.execute(question.id.substringBefore("-"), codeText, question.correctAnswer, question.acceptedAnswers)
         output = result.stdout
         isSuccess = result.isSuccess
         isRealExecution = result.isRealExecution
