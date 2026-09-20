@@ -1,4 +1,4 @@
-package com.cultcode.ui.course
+﻿package com.cultcode.ui.course
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -28,12 +28,12 @@ fun CourseListScreen(onNavigate: (NavKey) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             item { CourseCategory("Programming") }
-            item { CourseCard("Python", "From Zero to Advanced", 0.78f, onNavigate) }
-            item { CourseCard("JavaScript", "Modern Web Development", 0.35f, onNavigate) }
+            item { CourseCard("Python", "From Zero to Advanced", 0.0f, onNavigate) }
+            item { CourseCard("JavaScript", "Modern Web Development", 0.0f, onNavigate) }
             
             item { CourseCategory("DevOps") }
-            item { CourseCard("Docker", "Containerization Fundamentals", 0.21f, onNavigate) }
-            item { CourseCard("Kubernetes", "Container Orchestration", 0.12f, onNavigate) }
+            item { CourseCard("Docker", "Containerization Fundamentals", 0.0f, onNavigate) }
+            item { CourseCard("Kubernetes", "Container Orchestration", 0.0f, onNavigate) }
             
             item { Spacer(modifier = Modifier.height(32.dp)) }
         }

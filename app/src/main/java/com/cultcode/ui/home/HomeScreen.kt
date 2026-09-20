@@ -1,4 +1,4 @@
-package com.cultcode.ui.home
+﻿package com.cultcode.ui.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -33,7 +33,7 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             item {
-                Text("\ud83d\udd25 12 DAY STREAK", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
+                Text("\ud83d\udd25 0 DAY STREAK", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
             }
             
             item {
@@ -48,8 +48,8 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                         Text("Python", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         Text("Functions & Modules", style = MaterialTheme.typography.bodyMedium)
                         Spacer(modifier = Modifier.height(8.dp))
-                        LinearProgressIndicator(progress = { 0.68f }, modifier = Modifier.fillMaxWidth())
-                        Text("68% complete", style = MaterialTheme.typography.labelSmall, modifier = Modifier.padding(top = 4.dp))
+                        LinearProgressIndicator(progress = { 0.0f }, modifier = Modifier.fillMaxWidth())
+                        Text("0% complete", style = MaterialTheme.typography.labelSmall, modifier = Modifier.padding(top = 4.dp))
                     }
                 }
             }
@@ -65,7 +65,7 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
-                            Text("SQL � Medium", fontWeight = FontWeight.Bold)
+                            Text("SQL • Medium", fontWeight = FontWeight.Bold)
                             Text("+50 XP", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
                         }
                         Spacer(modifier = Modifier.height(4.dp))
@@ -79,9 +79,9 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
             item {
                 Text("YOUR COURSES", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.outline)
                 Spacer(modifier = Modifier.height(8.dp))
-                CourseProgressRow("Python", 0.68f)
-                CourseProgressRow("SQL", 0.42f)
-                CourseProgressRow("JavaScript", 0.35f)
+                CourseProgressRow("Python", 0.0f)
+                CourseProgressRow("SQL", 0.0f)
+                CourseProgressRow("JavaScript", 0.0f)
             }
             
             item { Divider() }
