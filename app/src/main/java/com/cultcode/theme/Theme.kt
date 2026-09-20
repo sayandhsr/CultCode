@@ -1,4 +1,4 @@
-package com.cultcode.theme
+﻿package com.cultcode.theme
 
 import android.app.Activity
 import android.os.Build
@@ -22,14 +22,16 @@ private val LightColors = lightColorScheme(
     onPrimaryContainer = md_theme_light_onPrimaryContainer,
     secondary = md_theme_light_secondary,
     onSecondary = md_theme_light_onSecondary,
-    secondaryContainer = md_theme_light_secondaryContainer,
-    onSecondaryContainer = md_theme_light_onSecondaryContainer,
-    tertiary = md_theme_light_tertiary,
-    onTertiary = md_theme_light_onTertiary,
-    tertiaryContainer = md_theme_light_tertiaryContainer,
-    onTertiaryContainer = md_theme_light_onTertiaryContainer,
+    secondaryContainer = md_theme_light_secondary,
+    onSecondaryContainer = md_theme_light_onSecondary,
+    tertiary = md_theme_light_primary,
+    onTertiary = md_theme_light_onPrimary,
+    tertiaryContainer = md_theme_light_primaryContainer,
+    onTertiaryContainer = md_theme_light_onPrimaryContainer,
     error = md_theme_light_error,
+    errorContainer = md_theme_light_errorContainer,
     onError = md_theme_light_onError,
+    onErrorContainer = md_theme_light_onErrorContainer,
     background = md_theme_light_background,
     onBackground = md_theme_light_onBackground,
     surface = md_theme_light_surface,
@@ -46,14 +48,16 @@ private val DarkColors = darkColorScheme(
     onPrimaryContainer = md_theme_dark_onPrimaryContainer,
     secondary = md_theme_dark_secondary,
     onSecondary = md_theme_dark_onSecondary,
-    secondaryContainer = md_theme_dark_secondaryContainer,
-    onSecondaryContainer = md_theme_dark_onSecondaryContainer,
-    tertiary = md_theme_dark_tertiary,
-    onTertiary = md_theme_dark_onTertiary,
-    tertiaryContainer = md_theme_dark_tertiaryContainer,
-    onTertiaryContainer = md_theme_dark_onTertiaryContainer,
+    secondaryContainer = md_theme_dark_secondary,
+    onSecondaryContainer = md_theme_dark_onSecondary,
+    tertiary = md_theme_dark_primary,
+    onTertiary = md_theme_dark_onPrimary,
+    tertiaryContainer = md_theme_dark_primaryContainer,
+    onTertiaryContainer = md_theme_dark_onPrimaryContainer,
     error = md_theme_dark_error,
+    errorContainer = md_theme_dark_errorContainer,
     onError = md_theme_dark_onError,
+    onErrorContainer = md_theme_dark_onErrorContainer,
     background = md_theme_dark_background,
     onBackground = md_theme_dark_onBackground,
     surface = md_theme_dark_surface,
@@ -65,19 +69,10 @@ private val DarkColors = darkColorScheme(
 
 @Composable
 fun CultCodeTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = false, // Disable dynamic color to enforce our developer brand identity
+    darkTheme: Boolean = true, // Force dark theme by default as per brutalist spec
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-        darkTheme -> DarkColors
-        else -> LightColors
-    }
-    
+    val colorScheme = if (darkTheme) DarkColors else LightColors
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
@@ -89,7 +84,7 @@ fun CultCodeTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = BrutalistTypography,
         content = content
     )
 }

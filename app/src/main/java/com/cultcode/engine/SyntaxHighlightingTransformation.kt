@@ -20,11 +20,11 @@ class SyntaxHighlightingTransformation : VisualTransformation {
         "var", "let", "const", "function", "=>", "val", "fun"
     ).map { it.lowercase() }
 
-    private val keywordColor = Color(0xFFC678DD) // Purple
-    private val stringColor = Color(0xFF98C379)  // Green
-    private val numberColor = Color(0xFFD19A66)  // Orange
-    private val defaultColor = Color(0xFFABB2BF) // Light Grey
-    private val operatorColor = Color(0xFF56B6C2) // Cyan
+    private val keywordColor = Color(0xFFFFFFFF) // Purple
+    private val stringColor = Color(0xFFBBBBBB)  // Green
+    private val numberColor = Color(0xFFAAAAAA)  // Orange
+    private val defaultColor = Color(0xFF888888) // Light Grey
+    private val operatorColor = Color(0xFFFFFFFF) // Cyan
 
     override fun filter(text: AnnotatedString): TransformedText {
         val inputText = text.text

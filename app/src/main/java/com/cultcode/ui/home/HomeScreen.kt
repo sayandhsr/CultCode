@@ -20,7 +20,7 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Good morning, Developer \uD83D\uDC4B", fontWeight = FontWeight.Bold) },
+                title = { Text("UNSULLIED CODE_", fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background,
                     titleContentColor = MaterialTheme.colorScheme.onBackground
