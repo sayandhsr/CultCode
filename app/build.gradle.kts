@@ -1,3 +1,4 @@
+﻿import java.io.File
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.compose.compiler)
@@ -5,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "com.cultcode"
+    namespace = "com.unsulliedcode"
     compileSdk = 36
     defaultConfig {
-        applicationId = "com.cultcode"
+        applicationId = "com.unsulliedcode"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -82,3 +83,46 @@ dependencies {
   implementation(libs.androidx.navigation3.runtime)
   implementation(libs.androidx.lifecycle.viewmodel.navigation3)
 }
+
+tasks.register("checkDesignTokens") {
+    group = "verification"
+    description = "Fails the build if raw hex colors or .dp literals are used outside Tokens.kt and AppColors.kt"
+    
+    // Disable configuration cache for this task
+    notCompatibleWithConfigurationCache("Reads files directly")
+    
+    doLast {
+        val srcDir = File(projectDir, "src/main/java")
+        var failed = false
+        srcDir.walkTopDown().forEach { f ->
+            if (f.isFile && f.extension == "kt") {
+                val name = f.name
+                if (name != "Tokens.kt" && name != "AppColors.kt" && name != "Gradients.kt") {
+                    val content = f.readText()
+                    val lines = content.lines()
+                    lines.forEachIndexed { i, line ->
+                        val code = line.substringBefore("//")
+                        if (code.contains(".dp") && !code.startsWith("import ")) {
+                            System.err.println("Hardcoded .dp literal found in ${f.name}:${i+1}: $line")
+                            failed = true
+                        }
+                        if (Regex("Color\\(0x[0-9A-Fa-f]{8}\\)").containsMatchIn(code)) {
+                            System.err.println("Hardcoded hex color found in ${f.name}:${i+1}: $line")
+                            failed = true
+                        }
+                    }
+                }
+            }
+        }
+        if (failed) {
+            throw GradleException("Build failed: Hardcoded tokens detected outside Tokens.kt / AppColors.kt")
+        }
+    }
+}
+tasks.named("preBuild").configure {
+    dependsOn("checkDesignTokens")
+}
+
+
+
+
