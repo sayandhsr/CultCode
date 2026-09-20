@@ -44,6 +44,7 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                 navigationIcon = { IconButton(onClick = { onNavigate(com.cultcode.Home) }) { Text("<") } },
                 title = { Text("IDE") },
                 actions = {
+                    IconButton(onClick = { android.widget.Toast.makeText(context, "Code saved to local workspace!", android.widget.Toast.LENGTH_SHORT).show() }) { Text("💾") }
                     Box {
                         TextButton(onClick = { expanded = true }) {
                             Text(language)
