@@ -21,7 +21,7 @@ An elite, offline-first mobile coding ecosystem built with Android, Kotlin, and 
 ## 📦 Releases
 The latest compiled APK can be found in the `releases/` directory.
 
-[📥 Download Latest APK](https://github.com/sayandhsr/CultCode/raw/main/releases/UnsulliedCode-debug.apk)
+[![Download Latest APK](https://img.shields.io/badge/Download-Latest_APK-blue?style=for-the-badge&logo=android)](https://github.com/sayandhsr/CultCode/raw/main/releases/UnsulliedCode-debug.apk)
 
 ## ⚖️ License & Fonts
 - **Fonts**: JetBrains Mono & Inter (SIL Open Font License 1.1)
