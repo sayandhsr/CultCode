@@ -24,7 +24,7 @@ import com.cultcode.ui.settings.SettingsScreen
 fun MainNavigation() {
   val context = LocalContext.current
   val repo = remember { UserProgressRepository(context) }
-  val startDestination = if (repo.isOnboardingComplete()) Home else Onboarding
+  val startDestination = Home
   val backStack = rememberNavBackStack(startDestination)
 
   NavDisplay(

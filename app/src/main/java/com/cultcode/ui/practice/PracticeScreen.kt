@@ -139,7 +139,7 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
             ) {
                 Column(modifier = Modifier.padding(12.dp)) {
                     Text("Expected:", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
-                    Text(question.correctAnswer, fontFamily = FontFamily.Monospace, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(question.expectedOutput, fontFamily = FontFamily.Monospace, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
             
