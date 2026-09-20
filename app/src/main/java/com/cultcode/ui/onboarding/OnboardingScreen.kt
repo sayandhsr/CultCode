@@ -24,15 +24,15 @@ fun OnboardingScreen(onComplete: () -> Unit) {
     
     // Loading State
     var isLoading by remember { mutableStateOf(false) }
-    var loadingText by remember { mutableStateOf("Analyzing skill level...") }
+    var loadingText by remember { mutableStateOf("Scanning question repository for modules...") }
 
     LaunchedEffect(isLoading) {
         if (isLoading) {
-            loadingText = "Analyzing skill level..."
+            loadingText = "Scanning question repository for modules..."
             delay(2000)
-            loadingText = "Generating customized $skillLevel curriculum..."
+            loadingText = "Building personalized study roadmap..."
             delay(2500)
-            loadingText = "Building $days-day study plan..."
+            loadingText = "Optimizing local IDE runtime environments..."
             delay(2500)
             repository.saveOnboardingPreferences(skillLevel, days, tracks)
             // also we can save userName to repository, but we need to update it first

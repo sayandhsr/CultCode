@@ -1,5 +1,6 @@
 ﻿package com.cultcode.ui.ide
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -9,10 +10,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation3.runtime.NavKey
 import com.cultcode.engine.CodeExecutionEngine
 import com.cultcode.engine.SyntaxHighlightingTransformation
+import java.io.File
 
 data class IdeCell(val id: Int, var code: String, var output: String? = null)
 
@@ -22,29 +25,55 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
     val context = LocalContext.current
     val engine = remember { CodeExecutionEngine(context) }
     
-    var language by remember { mutableStateOf(initialLanguage) }
+    var language by remember { mutableStateOf(if(initialLanguage.isBlank()) "Python" else initialLanguage) }
     var isJupyterMode by remember { mutableStateOf(false) }
     var expanded by remember { mutableStateOf(false) }
     
-    val languages = listOf("Python", "SQL", "JavaScript", "Java", "C++")
+    val languages = listOf("Python", "JavaScript", "Java", "C", "C++", "HTML/CSS", "YAML", "NumPy", "Pandas", "SQL", "MongoDB")
     
-    // State for VS Code mode
     val prefs = context.getSharedPreferences("ide_workspace", android.content.Context.MODE_PRIVATE)
     var vsCodeText by remember { mutableStateOf(prefs.getString("vscode_text", "") ?: "") }
+    
+    // Auto-save to SharedPreferences
     LaunchedEffect(vsCodeText) { prefs.edit().putString("vscode_text", vsCodeText).apply() }
+    
     var vsCodeOutput by remember { mutableStateOf<String?>(null) }
     
-    // State for Jupyter mode
     var cells by remember { mutableStateOf(listOf(IdeCell(1, ""))) }
     var nextCellId by remember { mutableStateOf(2) }
+
+    val saveToFileSystem = {
+        try {
+            val rootDir = File(context.filesDir, "UnsulliedCode_Data")
+            val codeDir = File(rootDir, "saved_code")
+            if (!codeDir.exists()) codeDir.mkdirs()
+            
+            val ext = when(language) {
+                "Python", "NumPy", "Pandas" -> ".py"
+                "JavaScript", "MongoDB" -> ".js"
+                "Java" -> ".java"
+                "C" -> ".c"
+                "C++" -> ".cpp"
+                "SQL" -> ".sql"
+                "HTML/CSS" -> ".html"
+                "YAML" -> ".yaml"
+                else -> ".txt"
+            }
+            val file = File(codeDir, "${language.lowercase().replace("/", "_")}_workspace$ext")
+            file.writeText(vsCodeText)
+            Toast.makeText(context, "Saved to ${file.absolutePath}", Toast.LENGTH_LONG).show()
+        } catch (e: Exception) {
+            Toast.makeText(context, "Error saving file", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     Scaffold(
         topBar = {
             TopAppBar(
                 navigationIcon = { IconButton(onClick = { onNavigate(com.cultcode.Home) }) { Text("<") } },
-                title = { Text("IDE") },
+                title = { Text("IDE", fontWeight = FontWeight.Bold) },
                 actions = {
-                    IconButton(onClick = { android.widget.Toast.makeText(context, "Code saved to local workspace!", android.widget.Toast.LENGTH_SHORT).show() }) { Text("💾") }
+                    IconButton(onClick = saveToFileSystem) { Text("💾") }
                     Box {
                         TextButton(onClick = { expanded = true }) {
                             Text(language)
@@ -66,17 +95,9 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
         },
         floatingActionButton = {
             if (isJupyterMode) {
-                FloatingActionButton(onClick = {
-                    cells = cells + IdeCell(nextCellId++, "")
-                }) {
-                    Text("+ Cell")
-                }
+                FloatingActionButton(onClick = { cells = cells + IdeCell(nextCellId++, "") }) { Text("+ Cell") }
             } else {
-                FloatingActionButton(onClick = {
-                    vsCodeOutput = engine.freeRun(language, vsCodeText).stdout
-                }) {
-                    Text("Run")
-                }
+                FloatingActionButton(onClick = { vsCodeOutput = engine.freeRun(language, vsCodeText).stdout }) { Text("Run") }
             }
         }
     ) { padding ->
@@ -91,19 +112,12 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                                 Text("Cell [${cell.id}]", style = MaterialTheme.typography.labelSmall)
                                 TextButton(onClick = {
-                                    val newCells = cells.map { 
-                                        if (it.id == cell.id) it.copy(output = engine.freeRun(language, it.code).stdout) else it
-                                    }
-                                    cells = newCells
-                                }) {
-                                    Text("Run Cell")
-                                }
+                                    cells = cells.map { if (it.id == cell.id) it.copy(output = engine.freeRun(language, it.code).stdout) else it }
+                                }) { Text("Run Cell") }
                             }
                             OutlinedTextField(
                                 value = cell.code,
-                                onValueChange = { newCode ->
-                                    cells = cells.map { if (it.id == cell.id) it.copy(code = newCode) else it }
-                                },
+                                onValueChange = { newCode -> cells = cells.map { if (it.id == cell.id) it.copy(code = newCode) else it } },
                                 modifier = Modifier.fillMaxWidth(),
                                 visualTransformation = SyntaxHighlightingTransformation(),
                                 textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace)
