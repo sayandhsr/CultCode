@@ -1,31 +1,31 @@
-﻿# Unsullied Code
+﻿# UNSULLIED CODE
 
 <div align="center">
-  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Unsullied Code Logo" width="200"/>
+  <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Stark Direwolf Logo" width="200"/>
 </div>
 
-## 🚀 Mobile-First Interactive Tech Learning Platform
+## THE BRUTALIST LEARNING ARCHITECTURE
 
-Unsullied Code is a next-generation Android application designed for learning programming, web development, data science, and DevOps completely on the go. Say goodbye to passive video watching—Unsullied Code combines structured curriculum with an interactive code execution engine right in your pocket.
+**Unsullied Code** is an aggressively minimalist, high-contrast monochrome Android learning platform. No colorful distractions. No soft gradients. Just pure logic, stark white typography on pitch black, and an unyielding focus on code execution. 
 
-### 📥 Download the App
-Test out the latest build directly on your Android device:
-**[Download Unsullied Code-latest.apk](https://github.com/sayandhsr/Unsullied Code/raw/main/apk/Unsullied Code-latest.apk)**
+### ↓ EXECUTE PROTOCOL
+Test the latest brutalist build on your Android device:
+**[Download UnsulliedCode-latest.apk](https://github.com/sayandhsr/CultCode/raw/main/apk/UnsulliedCode-latest.apk)**
 
-## 🌟 Key Features
-* **Hybrid Code Execution:** Run your code directly inside the Practice Engine. Clear indicators show whether an output is a simulated validation or a real execution.
-* **Curated Curriculum Engine:** Highly scalable architecture powered by a native JSON parser (ssets/*.json), allowing thousands of lessons without massive library overhead.
-* **Progressive Hints & Solutions:** Stuck on a problem? Reveal step-by-step hints and deep-dive solutions.
-* **Offline Progress Tracking:** Your XP, daily streaks, and course progress are tracked locally.
-* **Dark/Developer Theme:** A gorgeous, eye-friendly Material Design 3 aesthetic tailored for developers.
+## CORE FEATURES
+* **BRUTALIST UI:** A razor-sharp, zero-distraction interface. Monospace typography, physics-based linear progress animations, and absolute monochrome high contrast.
+* **REAL SQL EXECUTION:** A natively embedded, in-memory SQLite engine dynamically spins up test tables and evaluates user SQL queries on-device. No mock data.
+* **AST/REGEX VALIDATION:** A strict, whitespace-independent regex validation engine enforces exact logic requirements for Python, JS, and DevOps scripting.
+* **SYNTAX HIGHLIGHTING:** A custom-built Jetpack Compose `VisualTransformation` intercepts the editor in real-time, coloring standard keywords in stark monochrome tones.
+* **DYNAMIC ROUTING:** Decoupled lesson navigation fetches and renders payloads dynamically from the JSON payload registry.
 
-## 🛠️ Tech Stack
-* **Language:** Kotlin
-* **UI Framework:** Jetpack Compose
-* **Navigation:** ndroidx.navigation3
-* **Architecture:** Offline-first MVP, JSON Content Engine
+## TECHNICAL SPECIFICATIONS
+* **LANGUAGE:** Kotlin
+* **RUNTIME FRAMEWORK:** Jetpack Compose (Compose UI)
+* **EXECUTION ENGINE:** Android SQLite / Regex AST Validator
+* **AESTHETIC PROTOCOL:** Pure Monochrome, Dark Mode Forced
 
-## 📂 Project Structure
-* pp/src/main/java/com/Unsullied Code/: Source code including UI components, theme, and data layer.
-* pp/src/main/assets/: JSON files containing the interactive curriculum.
-* pk/: Pre-compiled Android application packages for quick testing.
+## DIRECTORY STRUCTURE
+* `/app/src/main/java/com/cultcode/engine/` - Local Execution Engines & Syntax Highlighters
+* `/app/src/main/assets/` - Hardened JSON curriculum registry
+* `/apk/` - Compiled binaries ready for deployment
