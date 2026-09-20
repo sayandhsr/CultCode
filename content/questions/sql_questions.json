@@ -1,0 +1,27 @@
+[
+  {
+    "id": "SQL-EASY-SELECT-001",
+    "language": "SQL",
+    "difficulty": "easy",
+    "topic": "select",
+    "subtopic": "basic",
+    "type": "code_output",
+    "question": "Select all columns from the `employees` table.",
+    "code": "-- Write your query below\n\n",
+    "options": [],
+    "correctAnswer": "SELECT * FROM employees;",
+    "acceptedAnswers": ["SELECT * FROM employees"],
+    "hints": [
+      "Use the `SELECT` keyword.",
+      "The `*` symbol means all columns."
+    ],
+    "solution": "SELECT * FROM employees;",
+    "explanation": "The SELECT statement is used to select data from a database. The * character represents all columns in the table.",
+    "commonMistakes": [
+      "Forgetting the FROM clause."
+    ],
+    "databaseId": "employees_v1",
+    "expectedResult": [],
+    "xp": 10
+  }
+]

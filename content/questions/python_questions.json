@@ -1,0 +1,34 @@
+[
+  {
+    "id": "PY-EASY-VARIABLES-001",
+    "language": "Python",
+    "difficulty": "easy",
+    "topic": "variables",
+    "subtopic": "assignment",
+    "type": "code_output",
+    "question": "Assign the integer value 10 to a variable named `score`.",
+    "code": "# Write your code below\n\n",
+    "options": [],
+    "correctAnswer": "score = 10",
+    "acceptedAnswers": ["score = 10", "score=10"],
+    "hints": [
+      "In Python, you use the `=` operator to assign values to variables.",
+      "The variable name goes on the left, and the value on the right."
+    ],
+    "solution": "score = 10",
+    "explanation": "Variables are containers for storing data values. Python has no command for declaring a variable; it is created the moment you first assign a value to it.",
+    "commonMistakes": [
+      "Using `==` instead of `=` for assignment."
+    ],
+    "testCases": [
+      {
+        "input": "",
+        "expectedOutput": "",
+        "assertVariables": {
+          "score": 10
+        }
+      }
+    ],
+    "xp": 10
+  }
+]
