@@ -4,6 +4,9 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -63,7 +66,8 @@ fun CourseCard(name: String, description: String, progress: Float, onNavigate: (
             Text(description, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Spacer(modifier = Modifier.height(16.dp))
             Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
-                LinearProgressIndicator(progress = { progress }, modifier = Modifier.weight(1f).padding(end = 16.dp, top = 8.dp))
+                val animatedProgress by animateFloatAsState(targetValue = progress, animationSpec = tween(1000))
+                LinearProgressIndicator(progress = { animatedProgress }, modifier = Modifier.weight(1f).padding(end = 16.dp, top = 8.dp))
                 Text("${(progress * 100).toInt()}%", style = MaterialTheme.typography.labelMedium)
             }
         }

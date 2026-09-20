@@ -1,4 +1,4 @@
-package com.cultcode.ui.lesson
+﻿package com.cultcode.ui.lesson
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
@@ -14,9 +15,47 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation3.runtime.NavKey
 import com.cultcode.Practice
 
+data class LessonContent(val title: String, val objective: String, val explanation: String, val code: String, val mistakes: String, val practiceId: String)
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) -> Unit) {
+    
+    val lesson = remember(courseId, lessonId) {
+        when(courseId.lowercase()) {
+            "sql" -> LessonContent(
+                "SQL Joins", "Understand how to combine rows from multiple tables.",
+                "A JOIN clause is used to combine rows from two or more tables, based on a related column between them.",
+                "SELECT * FROM Orders\nJOIN Customers\nON Orders.CustomerID = Customers.CustomerID;",
+                "Forgetting the ON clause which causes a cross join.", "SQL-MEDIUM-JOINS-001"
+            )
+            "javascript" -> LessonContent(
+                "JS Variables", "Learn var, let, and const.",
+                "let allows you to declare variables that are limited to the scope of a block statement. const is similar, but its value cannot be reassigned.",
+                "let name = \"Dev\";\nconst pi = 3.14;",
+                "Reassigning a const variable throws an error.", "JS-BASICS-001"
+            )
+            "docker" -> LessonContent(
+                "Docker Containers", "Learn how to containerize apps.",
+                "A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.",
+                "docker build -t myapp .\ndocker run -d -p 8080:80 myapp",
+                "Forgetting to expose the port when running the container.", "DOCKER-EASY-001"
+            )
+            "kubernetes" -> LessonContent(
+                "K8s Pods", "Understand the smallest deployable unit.",
+                "Pods are the smallest deployable units of computing that you can create and manage in Kubernetes. A Pod contains one or more containers.",
+                "kubectl get pods\nkubectl describe pod my-pod",
+                "Assuming a Pod is a VM. Pods are ephemeral.", "K8S-EASY-001"
+            )
+            else -> LessonContent(
+                "Python Variables", "Understand how to store data in variables.",
+                "Variables are containers for storing data values. In Python, you do not need to declare a variable before using it.",
+                "name = \"Developer\"\nscore = 10",
+                "Using a double equals sign (==) for assignment instead of a single equals sign (=).", "PY-BASICS-001"
+            )
+        }
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -25,7 +64,7 @@ fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) 
         },
         floatingActionButton = {
             ExtendedFloatingActionButton(
-                onClick = { onNavigate(Practice("PY-EASY-VARIABLES-001")) },
+                onClick = { onNavigate(Practice(lesson.practiceId)) },
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = MaterialTheme.colorScheme.onPrimary
             ) {
@@ -43,18 +82,18 @@ fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) 
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Python Variables", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+                    Text(lesson.title, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
                     IconButton(onClick = { /* TTS Placeholder */ }) {
-                        Text("▶")
+                        Text("🔊")
                     }
                 }
-                Text("Objective: Understand how to store data in variables.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text("Objective: ${lesson.objective}", color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             
             item {
                 Text("Explanation", style = MaterialTheme.typography.titleLarge, color = MaterialTheme.colorScheme.primary)
                 Spacer(modifier = Modifier.height(8.dp))
-                Text("Variables are containers for storing data values. In Python, you do not need to declare a variable before using it.")
+                Text(lesson.explanation)
             }
             
             item {
@@ -65,7 +104,7 @@ fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) 
                         .padding(16.dp)
                 ) {
                     Text(
-                        "name = \"Developer\"\nscore = 100", 
+                        lesson.code, 
                         fontFamily = FontFamily.Monospace,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -75,11 +114,10 @@ fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) 
             item {
                 Text("Common Mistakes", style = MaterialTheme.typography.titleLarge, color = MaterialTheme.colorScheme.error)
                 Spacer(modifier = Modifier.height(8.dp))
-                Text("Using a double equals sign (==) for assignment instead of a single equals sign (=).")
+                Text(lesson.mistakes)
             }
             
             item { Spacer(modifier = Modifier.height(64.dp)) }
         }
     }
 }
-

@@ -13,12 +13,15 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation3.runtime.NavKey
 import com.cultcode.data.Question
 import com.cultcode.data.QuestionRepository
+import com.cultcode.engine.CodeExecutionEngine
+import com.cultcode.engine.SyntaxHighlightingTransformation
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
     val context = LocalContext.current
     val repository = remember { QuestionRepository(context) }
+    val engine = remember { CodeExecutionEngine(context) }
     val question = remember(questionId) { repository.getQuestion(questionId) }
     
     if (question == null) {
@@ -37,20 +40,11 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
     var isCorrect by remember { mutableStateOf(false) }
 
     fun runCode() {
-        val normalizedCode = codeText.replace("\\s".toRegex(), "")
-        val matched = question.acceptedAnswers.any { 
-            normalizedCode.contains(it.replace("\\s".toRegex(), "")) 
-        } || normalizedCode.contains(question.correctAnswer.replace("\\s".toRegex(), ""))
-        
-        if (matched) {
-            executionResult = "Process finished with exit code 0\nResult: Success!"
-            isCorrect = true
-            isRealExecution = false
-        } else {
-            executionResult = "Error: output does not match expected result."
-            isCorrect = false
-            isRealExecution = false
-        }
+        val language = if (questionId.startsWith("SQL", ignoreCase = true)) "sql" else "python"
+        val result = engine.execute(language, codeText, question.correctAnswer, question.acceptedAnswers)
+        executionResult = result.stdout
+        isCorrect = result.isSuccess
+        isRealExecution = result.isRealExecution
     }
 
     if (showHintDialog) {
@@ -140,6 +134,7 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
             OutlinedTextField(
                 value = codeText,
                 onValueChange = { codeText = it },
+                visualTransformation = SyntaxHighlightingTransformation(),
                 modifier = Modifier.fillMaxWidth().weight(1f),
                 textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace),
                 shape = RoundedCornerShape(8.dp),

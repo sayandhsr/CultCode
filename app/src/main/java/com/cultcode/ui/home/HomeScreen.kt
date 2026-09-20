@@ -4,6 +4,9 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -48,7 +51,8 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                         Text("Python", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         Text("Functions & Modules", style = MaterialTheme.typography.bodyMedium)
                         Spacer(modifier = Modifier.height(8.dp))
-                        LinearProgressIndicator(progress = { 0.0f }, modifier = Modifier.fillMaxWidth())
+                        val animatedProgress by animateFloatAsState(targetValue = 0.0f, animationSpec = tween(1000))
+LinearProgressIndicator(progress = { animatedProgress }, modifier = Modifier.fillMaxWidth())
                         Text("0% complete", style = MaterialTheme.typography.labelSmall, modifier = Modifier.padding(top = 4.dp))
                     }
                 }
@@ -90,9 +94,9 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 Text("QUICK PRACTICE", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.outline)
                 Spacer(modifier = Modifier.height(8.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    FilterChip(selected = false, onClick = { /*TODO*/ }, label = { Text("Python") })
-                    FilterChip(selected = false, onClick = { /*TODO*/ }, label = { Text("SQL") })
-                    FilterChip(selected = false, onClick = { /*TODO*/ }, label = { Text("DSA") })
+                    FilterChip(selected = false, onClick = { onNavigate(Practice("PY-BASICS-001")) }, label = { Text("Python") })
+                    FilterChip(selected = false, onClick = { onNavigate(Practice("SQL-MEDIUM-JOINS-001")) }, label = { Text("SQL") })
+                    FilterChip(selected = false, onClick = { onNavigate(Practice("DSA-ARRAYS-001")) }, label = { Text("DSA") })
                 }
             }
         }
