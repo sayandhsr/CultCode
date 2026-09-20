@@ -1,4 +1,4 @@
-package com.unsulliedcode
+﻿package com.unsulliedcode
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -37,7 +37,7 @@ fun MainNavigation() {
         backStack = backStack,
         onBack = goBack,
         entryProvider = entryProvider {
-            entry<Splash> { StubScreen("Splash", onBack = goBack) }
+            entry<Splash> { com.unsulliedcode.ui.settings.SettingsSubScreen("Splash", onBack = goBack) }
             entry<Onboarding> {
                 com.unsulliedcode.ui.onboarding.OnboardingScreen(
                     onComplete = { backStack.removeLast(); backStack.add(Home) }
@@ -51,53 +51,54 @@ fun MainNavigation() {
             entry<Profile> {
                 com.unsulliedcode.ui.settings.SettingsScreen(onBack = goBack)
             }
-            entry<Settings> { StubScreen("Settings", onBack = goBack) }
-            entry<SettingsTheme> { StubScreen("SettingsTheme", onBack = goBack) }
-            entry<SettingsAccount> { StubScreen("SettingsAccount", onBack = goBack) }
-            entry<SettingsNotifications> { StubScreen("SettingsNotifications", onBack = goBack) }
-            entry<SettingsStorage> { StubScreen("SettingsStorage", onBack = goBack) }
-            entry<SettingsAbout> { StubScreen("SettingsAbout", onBack = goBack) }
+            entry<Settings> { com.unsulliedcode.ui.settings.SettingsSubScreen("Settings", onBack = goBack) }
+            entry<SettingsTheme> { com.unsulliedcode.ui.settings.SettingsSubScreen("Theme Settings", onBack = goBack) }
+            entry<SettingsAccount> { com.unsulliedcode.ui.settings.SettingsSubScreen("Account", onBack = goBack) }
+            entry<SettingsNotifications> { com.unsulliedcode.ui.settings.SettingsSubScreen("Notifications", onBack = goBack) }
+            entry<SettingsStorage> { com.unsulliedcode.ui.settings.SettingsSubScreen("Storage", onBack = goBack) }
+            entry<SettingsAbout> { com.unsulliedcode.ui.settings.SettingsSubScreen("About", onBack = goBack) }
             entry<DesignGallery> { com.unsulliedcode.ui.debug.DesignGalleryScreen() }
-            entry<ArenaMatchmaking> { StubScreen("ArenaMatchmaking", onBack = goBack) }
-            entry<ArenaBattle> { StubScreen("ArenaBattle", onBack = goBack) }
-            entry<ArenaResult> { StubScreen("ArenaResult", onBack = goBack) }
-            entry<ArenaLeaderboard> { StubScreen("ArenaLeaderboard", onBack = goBack) }
-            entry<LearnDashboard> { StubScreen("LearnDashboard", onBack = goBack) }
-            entry<CourseListPython> { StubScreen("CourseListPython", onBack = goBack) }
-            entry<CourseListJava> { StubScreen("CourseListJava", onBack = goBack) }
-            entry<CourseListCpp> { StubScreen("CourseListCpp", onBack = goBack) }
-            entry<CourseListJavascript> { StubScreen("CourseListJavascript", onBack = goBack) }
-            entry<CourseListSql> { StubScreen("CourseListSql", onBack = goBack) }
-            entry<CourseListDocker> { StubScreen("CourseListDocker", onBack = goBack) }
-            entry<CourseListK8s> { StubScreen("CourseListK8s", onBack = goBack) }
-            entry<CourseListPandas> { StubScreen("CourseListPandas", onBack = goBack) }
-            entry<CourseListNumpy> { StubScreen("CourseListNumpy", onBack = goBack) }
-            entry<CourseListHtml> { StubScreen("CourseListHtml", onBack = goBack) }
-            entry<CourseListYaml> { StubScreen("CourseListYaml", onBack = goBack) }
-            entry<CourseListMongo> { StubScreen("CourseListMongo", onBack = goBack) }
-            entry<CourseListGo> { StubScreen("CourseListGo", onBack = goBack) }
-            entry<CourseListRust> { StubScreen("CourseListRust", onBack = goBack) }
-            entry<LessonViewerTheory> { StubScreen("LessonViewerTheory", onBack = goBack) }
-            entry<LessonViewerVideo> { StubScreen("LessonViewerVideo", onBack = goBack) }
-            entry<LessonViewerInteractive> { StubScreen("LessonViewerInteractive", onBack = goBack) }
-            entry<PracticeEditor> { StubScreen("PracticeEditor", onBack = goBack) }
-            entry<PracticeResult> { StubScreen("PracticeResult", onBack = goBack) }
-            entry<IdeSandbox> { StubScreen("IdeSandbox", onBack = goBack) }
-            entry<IdeJupyterMode> { StubScreen("IdeJupyterMode", onBack = goBack) }
-            entry<IdeTerminalMode> { StubScreen("IdeTerminalMode", onBack = goBack) }
-            entry<GitSimulatorLog> { StubScreen("GitSimulatorLog", onBack = goBack) }
-            entry<GitSimulatorCommit> { StubScreen("GitSimulatorCommit", onBack = goBack) }
-            entry<GitSimulatorMerge> { StubScreen("GitSimulatorMerge", onBack = goBack) }
-            entry<DataScienceLab> { StubScreen("DataScienceLab", onBack = goBack) }
-            entry<DataScienceDataset> { StubScreen("DataScienceDataset", onBack = goBack) }
-            entry<GamificationBadges> { StubScreen("GamificationBadges", onBack = goBack) }
-            entry<GamificationStreak> { StubScreen("GamificationStreak", onBack = goBack) }
-            entry<GamificationRewards> { StubScreen("GamificationRewards", onBack = goBack) }
-            entry<Store> { StubScreen("Store", onBack = goBack) }
-            entry<StoreCheckout> { StubScreen("StoreCheckout", onBack = goBack) }
-            entry<AuthLogin> { StubScreen("AuthLogin", onBack = goBack) }
-            entry<AuthSignup> { StubScreen("AuthSignup", onBack = goBack) }
-            entry<AuthForgotPassword> { StubScreen("AuthForgotPassword", onBack = goBack) }
+            entry<ArenaMatchmaking> { com.unsulliedcode.ui.arena.ArenaMatchmakingScreen(onNavigate = { backStack.add(it) }, onBack = goBack) }
+            entry<ArenaBattle> { com.unsulliedcode.ui.arena.ArenaMatchmakingScreen(onNavigate = { backStack.add(it) }, onBack = goBack) }
+            entry<ArenaResult> { com.unsulliedcode.ui.arena.ArenaMatchmakingScreen(onNavigate = { backStack.add(it) }, onBack = goBack) }
+            entry<ArenaLeaderboard> { com.unsulliedcode.ui.arena.ArenaMatchmakingScreen(onNavigate = { backStack.add(it) }, onBack = goBack) }
+            entry<LearnDashboard> { com.unsulliedcode.ui.home.LearnDashboardScreen(onBack = goBack) }
+            entry<CourseListPython> { com.unsulliedcode.ui.course.GenericCourseListScreen("python", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListJava> { com.unsulliedcode.ui.course.GenericCourseListScreen("java", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListCpp> { com.unsulliedcode.ui.course.GenericCourseListScreen("cpp", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListJavascript> { com.unsulliedcode.ui.course.GenericCourseListScreen("javascript", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListSql> { com.unsulliedcode.ui.course.GenericCourseListScreen("sql", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListDocker> { com.unsulliedcode.ui.course.GenericCourseListScreen("docker", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListK8s> { com.unsulliedcode.ui.course.GenericCourseListScreen("k8s", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListPandas> { com.unsulliedcode.ui.course.GenericCourseListScreen("pandas", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListNumpy> { com.unsulliedcode.ui.course.GenericCourseListScreen("numpy", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListHtml> { com.unsulliedcode.ui.course.GenericCourseListScreen("html", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListYaml> { com.unsulliedcode.ui.course.GenericCourseListScreen("yaml", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListMongo> { com.unsulliedcode.ui.course.GenericCourseListScreen("mongo", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListGo> { com.unsulliedcode.ui.course.GenericCourseListScreen("go", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<CourseListRust> { com.unsulliedcode.ui.course.GenericCourseListScreen("rust", onNavigate = { navKey -> backStack.add(navKey) }, onBack = goBack) }
+            entry<LessonViewerTheory> { com.unsulliedcode.ui.settings.SettingsSubScreen("LessonViewerTheory", onBack = goBack) }
+            entry<LessonViewerVideo> { com.unsulliedcode.ui.settings.SettingsSubScreen("LessonViewerVideo", onBack = goBack) }
+            entry<LessonViewerInteractive> { com.unsulliedcode.ui.settings.SettingsSubScreen("LessonViewerInteractive", onBack = goBack) }
+            entry<PracticeEditor> { com.unsulliedcode.ui.practice.PracticeEditorScreen(onBack = goBack) }
+            entry<PracticeResult> { com.unsulliedcode.ui.practice.PracticeEditorScreen(onBack = goBack) }
+            entry<IdeSandbox> { com.unsulliedcode.ui.ide.IdeSandboxScreen(onBack = goBack) }
+            entry<IdeJupyterMode> { com.unsulliedcode.ui.ide.IdeSandboxScreen(onBack = goBack) }
+            entry<IdeTerminalMode> { com.unsulliedcode.ui.ide.IdeSandboxScreen(onBack = goBack) }
+            entry<GitSimulatorLog> { com.unsulliedcode.ui.git.GitSimulatorScreen(onBack = goBack) }
+            entry<GitSimulatorCommit> { com.unsulliedcode.ui.git.GitSimulatorScreen(onBack = goBack) }
+            entry<GitSimulatorMerge> { com.unsulliedcode.ui.git.GitSimulatorScreen(onBack = goBack) }
+            entry<DataScienceLab> { com.unsulliedcode.ui.settings.SettingsSubScreen("DataScienceLab", onBack = goBack) }
+            entry<DataScienceDataset> { com.unsulliedcode.ui.settings.SettingsSubScreen("DataScienceDataset", onBack = goBack) }
+            entry<GamificationBadges> { com.unsulliedcode.ui.gamification.GamificationBadgesScreen(onBack = goBack) }
+            entry<GamificationStreak> { com.unsulliedcode.ui.gamification.GamificationBadgesScreen(onBack = goBack) }
+            entry<GamificationRewards> { com.unsulliedcode.ui.gamification.GamificationBadgesScreen(onBack = goBack) }
+            entry<Store> { com.unsulliedcode.ui.settings.SettingsSubScreen("Store", onBack = goBack) }
+            entry<StoreCheckout> { com.unsulliedcode.ui.settings.SettingsSubScreen("StoreCheckout", onBack = goBack) }
+            entry<AuthLogin> { com.unsulliedcode.ui.settings.SettingsSubScreen("AuthLogin", onBack = goBack) }
+            entry<AuthSignup> { com.unsulliedcode.ui.settings.SettingsSubScreen("AuthSignup", onBack = goBack) }
+            entry<AuthForgotPassword> { com.unsulliedcode.ui.settings.SettingsSubScreen("AuthForgotPassword", onBack = goBack) }
         },
     )
 }
+
