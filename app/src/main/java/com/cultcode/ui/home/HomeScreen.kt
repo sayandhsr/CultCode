@@ -15,6 +15,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+
+
 import androidx.navigation3.runtime.NavKey
 import com.cultcode.Practice
 import com.cultcode.Ide
@@ -39,7 +41,7 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 title = { Text("ANALYTICS DASHBOARD", fontWeight = FontWeight.Black) },
                 actions = {
                     Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-                    IconButton(onClick = { onNavigate(Profile) }) { Text("⚙️") }
+                    TextButton(onClick = { onNavigate(Profile) }) { Text("Settings") }
                 }
             )
         }

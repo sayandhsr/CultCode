@@ -34,7 +34,7 @@ fun OnboardingScreen(onComplete: () -> Unit) {
             delay(2500)
             loadingText = "Optimizing local IDE runtime environments..."
             delay(2500)
-            repository.saveOnboardingPreferences(skillLevel, days, tracks)
+            repository.saveOnboardingPreferences(userName, skillLevel, days, tracks)
             // also we can save userName to repository, but we need to update it first
             onComplete()
         }

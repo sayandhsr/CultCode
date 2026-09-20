@@ -2,703 +2,1103 @@
   "questions": [
     {
       "id": "JS-BASICS-001",
-      "question": "Declare a constant named 'pi' and set it to 3.14.",
-      "code": "// Your code here",
-      "correctAnswer": "const pi = 3.14;",
-      "acceptedAnswers": [
-        "const pi=3.14;"
-      ],
-      "hints": [
-        "Use the const keyword."
-      ],
-      "solution": "const pi = 3.14;",
-      "explanation": "const declares block-scoped, immutable variables."
+      "question": "Print 'Hello World' in JavaScript.",
+      "code": "",
+      "correctAnswer": "print('Hello World')",
+      "expectedOutput": "Hello World",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "print('Hello World')",
+      "explanation": "Basic output."
     },
     {
-      "id": "JS-AUTO-002",
-      "question": "JS Challenge #2: Return the number 2",
-      "code": "// Your code here",
-      "correctAnswer": "return 2;",
-      "acceptedAnswers": [
-        "return 2"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 2;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-002",
+      "question": "JavaScript Basic Challenge 2",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 2",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-003",
-      "question": "JS Challenge #3: Return the number 3",
-      "code": "// Your code here",
-      "correctAnswer": "return 3;",
-      "acceptedAnswers": [
-        "return 3"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 3;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-003",
+      "question": "JavaScript Basic Challenge 3",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 3",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-004",
-      "question": "JS Challenge #4: Return the number 4",
-      "code": "// Your code here",
-      "correctAnswer": "return 4;",
-      "acceptedAnswers": [
-        "return 4"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 4;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-004",
+      "question": "JavaScript Basic Challenge 4",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 4",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-005",
-      "question": "JS Challenge #5: Return the number 5",
-      "code": "// Your code here",
-      "correctAnswer": "return 5;",
-      "acceptedAnswers": [
-        "return 5"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 5;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-005",
+      "question": "JavaScript Basic Challenge 5",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 5",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-006",
-      "question": "JS Challenge #6: Return the number 6",
-      "code": "// Your code here",
-      "correctAnswer": "return 6;",
-      "acceptedAnswers": [
-        "return 6"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 6;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-006",
+      "question": "JavaScript Basic Challenge 6",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 6",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-007",
-      "question": "JS Challenge #7: Return the number 7",
-      "code": "// Your code here",
-      "correctAnswer": "return 7;",
-      "acceptedAnswers": [
-        "return 7"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 7;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-007",
+      "question": "JavaScript Basic Challenge 7",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 7",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-008",
-      "question": "JS Challenge #8: Return the number 8",
-      "code": "// Your code here",
-      "correctAnswer": "return 8;",
-      "acceptedAnswers": [
-        "return 8"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 8;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-008",
+      "question": "JavaScript Basic Challenge 8",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 8",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-009",
-      "question": "JS Challenge #9: Return the number 9",
-      "code": "// Your code here",
-      "correctAnswer": "return 9;",
-      "acceptedAnswers": [
-        "return 9"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 9;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-009",
+      "question": "JavaScript Basic Challenge 9",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 9",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-010",
-      "question": "JS Challenge #10: Return the number 10",
-      "code": "// Your code here",
-      "correctAnswer": "return 10;",
-      "acceptedAnswers": [
-        "return 10"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 10;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-010",
+      "question": "JavaScript Basic Challenge 10",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 10",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-011",
-      "question": "JS Challenge #11: Return the number 11",
-      "code": "// Your code here",
-      "correctAnswer": "return 11;",
-      "acceptedAnswers": [
-        "return 11"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 11;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-011",
+      "question": "JavaScript Basic Challenge 11",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 11",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-012",
-      "question": "JS Challenge #12: Return the number 12",
-      "code": "// Your code here",
-      "correctAnswer": "return 12;",
-      "acceptedAnswers": [
-        "return 12"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 12;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-012",
+      "question": "JavaScript Basic Challenge 12",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 12",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-013",
-      "question": "JS Challenge #13: Return the number 13",
-      "code": "// Your code here",
-      "correctAnswer": "return 13;",
-      "acceptedAnswers": [
-        "return 13"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 13;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-013",
+      "question": "JavaScript Basic Challenge 13",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 13",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-014",
-      "question": "JS Challenge #14: Return the number 14",
-      "code": "// Your code here",
-      "correctAnswer": "return 14;",
-      "acceptedAnswers": [
-        "return 14"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 14;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-014",
+      "question": "JavaScript Basic Challenge 14",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 14",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-015",
-      "question": "JS Challenge #15: Return the number 15",
-      "code": "// Your code here",
-      "correctAnswer": "return 15;",
-      "acceptedAnswers": [
-        "return 15"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 15;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-015",
+      "question": "JavaScript Basic Challenge 15",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 15",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-016",
-      "question": "JS Challenge #16: Return the number 16",
-      "code": "// Your code here",
-      "correctAnswer": "return 16;",
-      "acceptedAnswers": [
-        "return 16"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 16;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-016",
+      "question": "JavaScript Basic Challenge 16",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 16",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-017",
-      "question": "JS Challenge #17: Return the number 17",
-      "code": "// Your code here",
-      "correctAnswer": "return 17;",
-      "acceptedAnswers": [
-        "return 17"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 17;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-017",
+      "question": "JavaScript Basic Challenge 17",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 17",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-018",
-      "question": "JS Challenge #18: Return the number 18",
-      "code": "// Your code here",
-      "correctAnswer": "return 18;",
-      "acceptedAnswers": [
-        "return 18"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 18;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-018",
+      "question": "JavaScript Basic Challenge 18",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 18",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-019",
-      "question": "JS Challenge #19: Return the number 19",
-      "code": "// Your code here",
-      "correctAnswer": "return 19;",
-      "acceptedAnswers": [
-        "return 19"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 19;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-019",
+      "question": "JavaScript Basic Challenge 19",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 19",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-020",
-      "question": "JS Challenge #20: Return the number 20",
-      "code": "// Your code here",
-      "correctAnswer": "return 20;",
-      "acceptedAnswers": [
-        "return 20"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 20;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-020",
+      "question": "JavaScript Basic Challenge 20",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 20",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-021",
-      "question": "JS Challenge #21: Return the number 21",
-      "code": "// Your code here",
-      "correctAnswer": "return 21;",
-      "acceptedAnswers": [
-        "return 21"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 21;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-021",
+      "question": "JavaScript Basic Challenge 21",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 21",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-022",
-      "question": "JS Challenge #22: Return the number 22",
-      "code": "// Your code here",
-      "correctAnswer": "return 22;",
-      "acceptedAnswers": [
-        "return 22"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 22;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-022",
+      "question": "JavaScript Basic Challenge 22",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 22",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-023",
-      "question": "JS Challenge #23: Return the number 23",
-      "code": "// Your code here",
-      "correctAnswer": "return 23;",
-      "acceptedAnswers": [
-        "return 23"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 23;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-023",
+      "question": "JavaScript Basic Challenge 23",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 23",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-024",
-      "question": "JS Challenge #24: Return the number 24",
-      "code": "// Your code here",
-      "correctAnswer": "return 24;",
-      "acceptedAnswers": [
-        "return 24"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 24;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-024",
+      "question": "JavaScript Basic Challenge 24",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 24",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-025",
-      "question": "JS Challenge #25: Return the number 25",
-      "code": "// Your code here",
-      "correctAnswer": "return 25;",
-      "acceptedAnswers": [
-        "return 25"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 25;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-025",
+      "question": "JavaScript Basic Challenge 25",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 25",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-026",
-      "question": "JS Challenge #26: Return the number 26",
-      "code": "// Your code here",
-      "correctAnswer": "return 26;",
-      "acceptedAnswers": [
-        "return 26"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 26;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-026",
+      "question": "JavaScript Basic Challenge 26",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 26",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-027",
-      "question": "JS Challenge #27: Return the number 27",
-      "code": "// Your code here",
-      "correctAnswer": "return 27;",
-      "acceptedAnswers": [
-        "return 27"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 27;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-027",
+      "question": "JavaScript Basic Challenge 27",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 27",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-028",
-      "question": "JS Challenge #28: Return the number 28",
-      "code": "// Your code here",
-      "correctAnswer": "return 28;",
-      "acceptedAnswers": [
-        "return 28"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 28;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-028",
+      "question": "JavaScript Basic Challenge 28",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 28",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-029",
-      "question": "JS Challenge #29: Return the number 29",
-      "code": "// Your code here",
-      "correctAnswer": "return 29;",
-      "acceptedAnswers": [
-        "return 29"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 29;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-029",
+      "question": "JavaScript Basic Challenge 29",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 29",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-030",
-      "question": "JS Challenge #30: Return the number 30",
-      "code": "// Your code here",
-      "correctAnswer": "return 30;",
-      "acceptedAnswers": [
-        "return 30"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 30;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-030",
+      "question": "JavaScript Basic Challenge 30",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 30",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-031",
-      "question": "JS Challenge #31: Return the number 31",
-      "code": "// Your code here",
-      "correctAnswer": "return 31;",
-      "acceptedAnswers": [
-        "return 31"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 31;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-031",
+      "question": "JavaScript Basic Challenge 31",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 31",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-032",
-      "question": "JS Challenge #32: Return the number 32",
-      "code": "// Your code here",
-      "correctAnswer": "return 32;",
-      "acceptedAnswers": [
-        "return 32"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 32;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-032",
+      "question": "JavaScript Basic Challenge 32",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 32",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-033",
-      "question": "JS Challenge #33: Return the number 33",
-      "code": "// Your code here",
-      "correctAnswer": "return 33;",
-      "acceptedAnswers": [
-        "return 33"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 33;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-033",
+      "question": "JavaScript Basic Challenge 33",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 33",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-034",
-      "question": "JS Challenge #34: Return the number 34",
-      "code": "// Your code here",
-      "correctAnswer": "return 34;",
-      "acceptedAnswers": [
-        "return 34"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 34;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-034",
+      "question": "JavaScript Basic Challenge 34",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 34",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-035",
-      "question": "JS Challenge #35: Return the number 35",
-      "code": "// Your code here",
-      "correctAnswer": "return 35;",
-      "acceptedAnswers": [
-        "return 35"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 35;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-035",
+      "question": "JavaScript Basic Challenge 35",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 35",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-036",
-      "question": "JS Challenge #36: Return the number 36",
-      "code": "// Your code here",
-      "correctAnswer": "return 36;",
-      "acceptedAnswers": [
-        "return 36"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 36;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-036",
+      "question": "JavaScript Basic Challenge 36",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 36",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-037",
-      "question": "JS Challenge #37: Return the number 37",
-      "code": "// Your code here",
-      "correctAnswer": "return 37;",
-      "acceptedAnswers": [
-        "return 37"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 37;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-037",
+      "question": "JavaScript Basic Challenge 37",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 37",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-038",
-      "question": "JS Challenge #38: Return the number 38",
-      "code": "// Your code here",
-      "correctAnswer": "return 38;",
-      "acceptedAnswers": [
-        "return 38"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 38;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-038",
+      "question": "JavaScript Basic Challenge 38",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 38",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-039",
-      "question": "JS Challenge #39: Return the number 39",
-      "code": "// Your code here",
-      "correctAnswer": "return 39;",
-      "acceptedAnswers": [
-        "return 39"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 39;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-039",
+      "question": "JavaScript Basic Challenge 39",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 39",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-040",
-      "question": "JS Challenge #40: Return the number 40",
-      "code": "// Your code here",
-      "correctAnswer": "return 40;",
-      "acceptedAnswers": [
-        "return 40"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 40;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-040",
+      "question": "JavaScript Basic Challenge 40",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 40",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-041",
-      "question": "JS Challenge #41: Return the number 41",
-      "code": "// Your code here",
-      "correctAnswer": "return 41;",
-      "acceptedAnswers": [
-        "return 41"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 41;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-041",
+      "question": "JavaScript Basic Challenge 41",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 41",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-042",
-      "question": "JS Challenge #42: Return the number 42",
-      "code": "// Your code here",
-      "correctAnswer": "return 42;",
-      "acceptedAnswers": [
-        "return 42"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 42;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-042",
+      "question": "JavaScript Basic Challenge 42",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 42",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-043",
-      "question": "JS Challenge #43: Return the number 43",
-      "code": "// Your code here",
-      "correctAnswer": "return 43;",
-      "acceptedAnswers": [
-        "return 43"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 43;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-043",
+      "question": "JavaScript Basic Challenge 43",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 43",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-044",
-      "question": "JS Challenge #44: Return the number 44",
-      "code": "// Your code here",
-      "correctAnswer": "return 44;",
-      "acceptedAnswers": [
-        "return 44"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 44;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-044",
+      "question": "JavaScript Basic Challenge 44",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 44",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-045",
-      "question": "JS Challenge #45: Return the number 45",
-      "code": "// Your code here",
-      "correctAnswer": "return 45;",
-      "acceptedAnswers": [
-        "return 45"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 45;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-045",
+      "question": "JavaScript Basic Challenge 45",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 45",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-046",
-      "question": "JS Challenge #46: Return the number 46",
-      "code": "// Your code here",
-      "correctAnswer": "return 46;",
-      "acceptedAnswers": [
-        "return 46"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 46;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-046",
+      "question": "JavaScript Basic Challenge 46",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 46",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-047",
-      "question": "JS Challenge #47: Return the number 47",
-      "code": "// Your code here",
-      "correctAnswer": "return 47;",
-      "acceptedAnswers": [
-        "return 47"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 47;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-047",
+      "question": "JavaScript Basic Challenge 47",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 47",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-048",
-      "question": "JS Challenge #48: Return the number 48",
-      "code": "// Your code here",
-      "correctAnswer": "return 48;",
-      "acceptedAnswers": [
-        "return 48"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 48;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-048",
+      "question": "JavaScript Basic Challenge 48",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 48",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-049",
-      "question": "JS Challenge #49: Return the number 49",
-      "code": "// Your code here",
-      "correctAnswer": "return 49;",
-      "acceptedAnswers": [
-        "return 49"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 49;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-049",
+      "question": "JavaScript Basic Challenge 49",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 49",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     },
     {
-      "id": "JS-AUTO-050",
-      "question": "JS Challenge #50: Return the number 50",
-      "code": "// Your code here",
-      "correctAnswer": "return 50;",
-      "acceptedAnswers": [
-        "return 50"
-      ],
-      "hints": [
-        "Use the return keyword."
-      ],
-      "solution": "return 50;",
-      "explanation": "return exits a function and returns a value."
+      "id": "JS-BASICS-050",
+      "question": "JavaScript Basic Challenge 50",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 50",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-101",
+      "question": "Write an intermediate JavaScript function.",
+      "code": "",
+      "correctAnswer": "function()",
+      "expectedOutput": "Executed",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "function()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-102",
+      "question": "JavaScript Intermediate Challenge 102",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 102",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-103",
+      "question": "JavaScript Intermediate Challenge 103",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 103",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-104",
+      "question": "JavaScript Intermediate Challenge 104",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 104",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-105",
+      "question": "JavaScript Intermediate Challenge 105",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 105",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-106",
+      "question": "JavaScript Intermediate Challenge 106",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 106",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-107",
+      "question": "JavaScript Intermediate Challenge 107",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 107",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-108",
+      "question": "JavaScript Intermediate Challenge 108",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 108",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-109",
+      "question": "JavaScript Intermediate Challenge 109",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 109",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-110",
+      "question": "JavaScript Intermediate Challenge 110",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 110",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-111",
+      "question": "JavaScript Intermediate Challenge 111",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 111",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-112",
+      "question": "JavaScript Intermediate Challenge 112",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 112",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-113",
+      "question": "JavaScript Intermediate Challenge 113",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 113",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-114",
+      "question": "JavaScript Intermediate Challenge 114",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 114",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-115",
+      "question": "JavaScript Intermediate Challenge 115",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 115",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-116",
+      "question": "JavaScript Intermediate Challenge 116",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 116",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-117",
+      "question": "JavaScript Intermediate Challenge 117",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 117",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-118",
+      "question": "JavaScript Intermediate Challenge 118",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 118",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-119",
+      "question": "JavaScript Intermediate Challenge 119",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 119",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-120",
+      "question": "JavaScript Intermediate Challenge 120",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 120",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-121",
+      "question": "JavaScript Intermediate Challenge 121",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 121",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-122",
+      "question": "JavaScript Intermediate Challenge 122",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 122",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-123",
+      "question": "JavaScript Intermediate Challenge 123",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 123",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-124",
+      "question": "JavaScript Intermediate Challenge 124",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 124",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-125",
+      "question": "JavaScript Intermediate Challenge 125",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 125",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-126",
+      "question": "JavaScript Intermediate Challenge 126",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 126",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-127",
+      "question": "JavaScript Intermediate Challenge 127",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 127",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-128",
+      "question": "JavaScript Intermediate Challenge 128",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 128",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-129",
+      "question": "JavaScript Intermediate Challenge 129",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 129",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-130",
+      "question": "JavaScript Intermediate Challenge 130",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 130",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-131",
+      "question": "JavaScript Intermediate Challenge 131",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 131",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-132",
+      "question": "JavaScript Intermediate Challenge 132",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 132",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-133",
+      "question": "JavaScript Intermediate Challenge 133",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 133",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-134",
+      "question": "JavaScript Intermediate Challenge 134",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 134",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-135",
+      "question": "JavaScript Intermediate Challenge 135",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 135",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-136",
+      "question": "JavaScript Intermediate Challenge 136",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 136",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-137",
+      "question": "JavaScript Intermediate Challenge 137",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 137",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-138",
+      "question": "JavaScript Intermediate Challenge 138",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 138",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-139",
+      "question": "JavaScript Intermediate Challenge 139",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 139",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-140",
+      "question": "JavaScript Intermediate Challenge 140",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 140",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-141",
+      "question": "JavaScript Intermediate Challenge 141",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 141",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-142",
+      "question": "JavaScript Intermediate Challenge 142",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 142",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-143",
+      "question": "JavaScript Intermediate Challenge 143",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 143",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-144",
+      "question": "JavaScript Intermediate Challenge 144",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 144",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-145",
+      "question": "JavaScript Intermediate Challenge 145",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 145",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-146",
+      "question": "JavaScript Intermediate Challenge 146",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 146",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-147",
+      "question": "JavaScript Intermediate Challenge 147",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 147",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-148",
+      "question": "JavaScript Intermediate Challenge 148",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 148",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-149",
+      "question": "JavaScript Intermediate Challenge 149",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 149",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
+    },
+    {
+      "id": "JS-INTERMEDIATE-150",
+      "question": "JavaScript Intermediate Challenge 150",
+      "code": "",
+      "correctAnswer": "solve()",
+      "expectedOutput": "Output 150",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "solve()",
+      "explanation": ""
     }
   ]
 }

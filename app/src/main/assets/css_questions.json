@@ -1,8 +1,8 @@
 {
   "questions": [
     {
-      "id": "DOC-BASICS-001",
-      "question": "Print 'Hello World' in Docker.",
+      "id": "CSS-BASICS-001",
+      "question": "Print 'Hello World' in CSS.",
       "code": "",
       "correctAnswer": "print('Hello World')",
       "expectedOutput": "Hello World",
@@ -12,8 +12,8 @@
       "explanation": "Basic output."
     },
     {
-      "id": "DOC-BASICS-002",
-      "question": "Docker Basic Challenge 2",
+      "id": "CSS-BASICS-002",
+      "question": "CSS Basic Challenge 2",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 2",
@@ -23,8 +23,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-003",
-      "question": "Docker Basic Challenge 3",
+      "id": "CSS-BASICS-003",
+      "question": "CSS Basic Challenge 3",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 3",
@@ -34,8 +34,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-004",
-      "question": "Docker Basic Challenge 4",
+      "id": "CSS-BASICS-004",
+      "question": "CSS Basic Challenge 4",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 4",
@@ -45,8 +45,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-005",
-      "question": "Docker Basic Challenge 5",
+      "id": "CSS-BASICS-005",
+      "question": "CSS Basic Challenge 5",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 5",
@@ -56,8 +56,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-006",
-      "question": "Docker Basic Challenge 6",
+      "id": "CSS-BASICS-006",
+      "question": "CSS Basic Challenge 6",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 6",
@@ -67,8 +67,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-007",
-      "question": "Docker Basic Challenge 7",
+      "id": "CSS-BASICS-007",
+      "question": "CSS Basic Challenge 7",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 7",
@@ -78,8 +78,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-008",
-      "question": "Docker Basic Challenge 8",
+      "id": "CSS-BASICS-008",
+      "question": "CSS Basic Challenge 8",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 8",
@@ -89,8 +89,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-009",
-      "question": "Docker Basic Challenge 9",
+      "id": "CSS-BASICS-009",
+      "question": "CSS Basic Challenge 9",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 9",
@@ -100,8 +100,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-010",
-      "question": "Docker Basic Challenge 10",
+      "id": "CSS-BASICS-010",
+      "question": "CSS Basic Challenge 10",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 10",
@@ -111,8 +111,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-011",
-      "question": "Docker Basic Challenge 11",
+      "id": "CSS-BASICS-011",
+      "question": "CSS Basic Challenge 11",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 11",
@@ -122,8 +122,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-012",
-      "question": "Docker Basic Challenge 12",
+      "id": "CSS-BASICS-012",
+      "question": "CSS Basic Challenge 12",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 12",
@@ -133,8 +133,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-013",
-      "question": "Docker Basic Challenge 13",
+      "id": "CSS-BASICS-013",
+      "question": "CSS Basic Challenge 13",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 13",
@@ -144,8 +144,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-014",
-      "question": "Docker Basic Challenge 14",
+      "id": "CSS-BASICS-014",
+      "question": "CSS Basic Challenge 14",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 14",
@@ -155,8 +155,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-015",
-      "question": "Docker Basic Challenge 15",
+      "id": "CSS-BASICS-015",
+      "question": "CSS Basic Challenge 15",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 15",
@@ -166,8 +166,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-016",
-      "question": "Docker Basic Challenge 16",
+      "id": "CSS-BASICS-016",
+      "question": "CSS Basic Challenge 16",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 16",
@@ -177,8 +177,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-017",
-      "question": "Docker Basic Challenge 17",
+      "id": "CSS-BASICS-017",
+      "question": "CSS Basic Challenge 17",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 17",
@@ -188,8 +188,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-018",
-      "question": "Docker Basic Challenge 18",
+      "id": "CSS-BASICS-018",
+      "question": "CSS Basic Challenge 18",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 18",
@@ -199,8 +199,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-019",
-      "question": "Docker Basic Challenge 19",
+      "id": "CSS-BASICS-019",
+      "question": "CSS Basic Challenge 19",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 19",
@@ -210,8 +210,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-020",
-      "question": "Docker Basic Challenge 20",
+      "id": "CSS-BASICS-020",
+      "question": "CSS Basic Challenge 20",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 20",
@@ -221,8 +221,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-021",
-      "question": "Docker Basic Challenge 21",
+      "id": "CSS-BASICS-021",
+      "question": "CSS Basic Challenge 21",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 21",
@@ -232,8 +232,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-022",
-      "question": "Docker Basic Challenge 22",
+      "id": "CSS-BASICS-022",
+      "question": "CSS Basic Challenge 22",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 22",
@@ -243,8 +243,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-023",
-      "question": "Docker Basic Challenge 23",
+      "id": "CSS-BASICS-023",
+      "question": "CSS Basic Challenge 23",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 23",
@@ -254,8 +254,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-024",
-      "question": "Docker Basic Challenge 24",
+      "id": "CSS-BASICS-024",
+      "question": "CSS Basic Challenge 24",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 24",
@@ -265,8 +265,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-025",
-      "question": "Docker Basic Challenge 25",
+      "id": "CSS-BASICS-025",
+      "question": "CSS Basic Challenge 25",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 25",
@@ -276,8 +276,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-026",
-      "question": "Docker Basic Challenge 26",
+      "id": "CSS-BASICS-026",
+      "question": "CSS Basic Challenge 26",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 26",
@@ -287,8 +287,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-027",
-      "question": "Docker Basic Challenge 27",
+      "id": "CSS-BASICS-027",
+      "question": "CSS Basic Challenge 27",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 27",
@@ -298,8 +298,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-028",
-      "question": "Docker Basic Challenge 28",
+      "id": "CSS-BASICS-028",
+      "question": "CSS Basic Challenge 28",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 28",
@@ -309,8 +309,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-029",
-      "question": "Docker Basic Challenge 29",
+      "id": "CSS-BASICS-029",
+      "question": "CSS Basic Challenge 29",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 29",
@@ -320,8 +320,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-030",
-      "question": "Docker Basic Challenge 30",
+      "id": "CSS-BASICS-030",
+      "question": "CSS Basic Challenge 30",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 30",
@@ -331,8 +331,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-031",
-      "question": "Docker Basic Challenge 31",
+      "id": "CSS-BASICS-031",
+      "question": "CSS Basic Challenge 31",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 31",
@@ -342,8 +342,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-032",
-      "question": "Docker Basic Challenge 32",
+      "id": "CSS-BASICS-032",
+      "question": "CSS Basic Challenge 32",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 32",
@@ -353,8 +353,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-033",
-      "question": "Docker Basic Challenge 33",
+      "id": "CSS-BASICS-033",
+      "question": "CSS Basic Challenge 33",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 33",
@@ -364,8 +364,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-034",
-      "question": "Docker Basic Challenge 34",
+      "id": "CSS-BASICS-034",
+      "question": "CSS Basic Challenge 34",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 34",
@@ -375,8 +375,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-035",
-      "question": "Docker Basic Challenge 35",
+      "id": "CSS-BASICS-035",
+      "question": "CSS Basic Challenge 35",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 35",
@@ -386,8 +386,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-036",
-      "question": "Docker Basic Challenge 36",
+      "id": "CSS-BASICS-036",
+      "question": "CSS Basic Challenge 36",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 36",
@@ -397,8 +397,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-037",
-      "question": "Docker Basic Challenge 37",
+      "id": "CSS-BASICS-037",
+      "question": "CSS Basic Challenge 37",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 37",
@@ -408,8 +408,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-038",
-      "question": "Docker Basic Challenge 38",
+      "id": "CSS-BASICS-038",
+      "question": "CSS Basic Challenge 38",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 38",
@@ -419,8 +419,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-039",
-      "question": "Docker Basic Challenge 39",
+      "id": "CSS-BASICS-039",
+      "question": "CSS Basic Challenge 39",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 39",
@@ -430,8 +430,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-040",
-      "question": "Docker Basic Challenge 40",
+      "id": "CSS-BASICS-040",
+      "question": "CSS Basic Challenge 40",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 40",
@@ -441,8 +441,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-041",
-      "question": "Docker Basic Challenge 41",
+      "id": "CSS-BASICS-041",
+      "question": "CSS Basic Challenge 41",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 41",
@@ -452,8 +452,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-042",
-      "question": "Docker Basic Challenge 42",
+      "id": "CSS-BASICS-042",
+      "question": "CSS Basic Challenge 42",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 42",
@@ -463,8 +463,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-043",
-      "question": "Docker Basic Challenge 43",
+      "id": "CSS-BASICS-043",
+      "question": "CSS Basic Challenge 43",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 43",
@@ -474,8 +474,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-044",
-      "question": "Docker Basic Challenge 44",
+      "id": "CSS-BASICS-044",
+      "question": "CSS Basic Challenge 44",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 44",
@@ -485,8 +485,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-045",
-      "question": "Docker Basic Challenge 45",
+      "id": "CSS-BASICS-045",
+      "question": "CSS Basic Challenge 45",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 45",
@@ -496,8 +496,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-046",
-      "question": "Docker Basic Challenge 46",
+      "id": "CSS-BASICS-046",
+      "question": "CSS Basic Challenge 46",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 46",
@@ -507,8 +507,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-047",
-      "question": "Docker Basic Challenge 47",
+      "id": "CSS-BASICS-047",
+      "question": "CSS Basic Challenge 47",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 47",
@@ -518,8 +518,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-048",
-      "question": "Docker Basic Challenge 48",
+      "id": "CSS-BASICS-048",
+      "question": "CSS Basic Challenge 48",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 48",
@@ -529,8 +529,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-049",
-      "question": "Docker Basic Challenge 49",
+      "id": "CSS-BASICS-049",
+      "question": "CSS Basic Challenge 49",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 49",
@@ -540,8 +540,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-BASICS-050",
-      "question": "Docker Basic Challenge 50",
+      "id": "CSS-BASICS-050",
+      "question": "CSS Basic Challenge 50",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 50",
@@ -551,8 +551,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-101",
-      "question": "Write an intermediate Docker function.",
+      "id": "CSS-INTERMEDIATE-101",
+      "question": "Write an intermediate CSS function.",
       "code": "",
       "correctAnswer": "function()",
       "expectedOutput": "Executed",
@@ -562,8 +562,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-102",
-      "question": "Docker Intermediate Challenge 102",
+      "id": "CSS-INTERMEDIATE-102",
+      "question": "CSS Intermediate Challenge 102",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 102",
@@ -573,8 +573,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-103",
-      "question": "Docker Intermediate Challenge 103",
+      "id": "CSS-INTERMEDIATE-103",
+      "question": "CSS Intermediate Challenge 103",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 103",
@@ -584,8 +584,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-104",
-      "question": "Docker Intermediate Challenge 104",
+      "id": "CSS-INTERMEDIATE-104",
+      "question": "CSS Intermediate Challenge 104",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 104",
@@ -595,8 +595,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-105",
-      "question": "Docker Intermediate Challenge 105",
+      "id": "CSS-INTERMEDIATE-105",
+      "question": "CSS Intermediate Challenge 105",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 105",
@@ -606,8 +606,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-106",
-      "question": "Docker Intermediate Challenge 106",
+      "id": "CSS-INTERMEDIATE-106",
+      "question": "CSS Intermediate Challenge 106",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 106",
@@ -617,8 +617,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-107",
-      "question": "Docker Intermediate Challenge 107",
+      "id": "CSS-INTERMEDIATE-107",
+      "question": "CSS Intermediate Challenge 107",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 107",
@@ -628,8 +628,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-108",
-      "question": "Docker Intermediate Challenge 108",
+      "id": "CSS-INTERMEDIATE-108",
+      "question": "CSS Intermediate Challenge 108",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 108",
@@ -639,8 +639,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-109",
-      "question": "Docker Intermediate Challenge 109",
+      "id": "CSS-INTERMEDIATE-109",
+      "question": "CSS Intermediate Challenge 109",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 109",
@@ -650,8 +650,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-110",
-      "question": "Docker Intermediate Challenge 110",
+      "id": "CSS-INTERMEDIATE-110",
+      "question": "CSS Intermediate Challenge 110",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 110",
@@ -661,8 +661,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-111",
-      "question": "Docker Intermediate Challenge 111",
+      "id": "CSS-INTERMEDIATE-111",
+      "question": "CSS Intermediate Challenge 111",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 111",
@@ -672,8 +672,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-112",
-      "question": "Docker Intermediate Challenge 112",
+      "id": "CSS-INTERMEDIATE-112",
+      "question": "CSS Intermediate Challenge 112",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 112",
@@ -683,8 +683,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-113",
-      "question": "Docker Intermediate Challenge 113",
+      "id": "CSS-INTERMEDIATE-113",
+      "question": "CSS Intermediate Challenge 113",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 113",
@@ -694,8 +694,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-114",
-      "question": "Docker Intermediate Challenge 114",
+      "id": "CSS-INTERMEDIATE-114",
+      "question": "CSS Intermediate Challenge 114",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 114",
@@ -705,8 +705,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-115",
-      "question": "Docker Intermediate Challenge 115",
+      "id": "CSS-INTERMEDIATE-115",
+      "question": "CSS Intermediate Challenge 115",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 115",
@@ -716,8 +716,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-116",
-      "question": "Docker Intermediate Challenge 116",
+      "id": "CSS-INTERMEDIATE-116",
+      "question": "CSS Intermediate Challenge 116",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 116",
@@ -727,8 +727,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-117",
-      "question": "Docker Intermediate Challenge 117",
+      "id": "CSS-INTERMEDIATE-117",
+      "question": "CSS Intermediate Challenge 117",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 117",
@@ -738,8 +738,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-118",
-      "question": "Docker Intermediate Challenge 118",
+      "id": "CSS-INTERMEDIATE-118",
+      "question": "CSS Intermediate Challenge 118",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 118",
@@ -749,8 +749,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-119",
-      "question": "Docker Intermediate Challenge 119",
+      "id": "CSS-INTERMEDIATE-119",
+      "question": "CSS Intermediate Challenge 119",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 119",
@@ -760,8 +760,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-120",
-      "question": "Docker Intermediate Challenge 120",
+      "id": "CSS-INTERMEDIATE-120",
+      "question": "CSS Intermediate Challenge 120",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 120",
@@ -771,8 +771,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-121",
-      "question": "Docker Intermediate Challenge 121",
+      "id": "CSS-INTERMEDIATE-121",
+      "question": "CSS Intermediate Challenge 121",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 121",
@@ -782,8 +782,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-122",
-      "question": "Docker Intermediate Challenge 122",
+      "id": "CSS-INTERMEDIATE-122",
+      "question": "CSS Intermediate Challenge 122",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 122",
@@ -793,8 +793,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-123",
-      "question": "Docker Intermediate Challenge 123",
+      "id": "CSS-INTERMEDIATE-123",
+      "question": "CSS Intermediate Challenge 123",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 123",
@@ -804,8 +804,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-124",
-      "question": "Docker Intermediate Challenge 124",
+      "id": "CSS-INTERMEDIATE-124",
+      "question": "CSS Intermediate Challenge 124",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 124",
@@ -815,8 +815,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-125",
-      "question": "Docker Intermediate Challenge 125",
+      "id": "CSS-INTERMEDIATE-125",
+      "question": "CSS Intermediate Challenge 125",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 125",
@@ -826,8 +826,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-126",
-      "question": "Docker Intermediate Challenge 126",
+      "id": "CSS-INTERMEDIATE-126",
+      "question": "CSS Intermediate Challenge 126",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 126",
@@ -837,8 +837,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-127",
-      "question": "Docker Intermediate Challenge 127",
+      "id": "CSS-INTERMEDIATE-127",
+      "question": "CSS Intermediate Challenge 127",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 127",
@@ -848,8 +848,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-128",
-      "question": "Docker Intermediate Challenge 128",
+      "id": "CSS-INTERMEDIATE-128",
+      "question": "CSS Intermediate Challenge 128",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 128",
@@ -859,8 +859,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-129",
-      "question": "Docker Intermediate Challenge 129",
+      "id": "CSS-INTERMEDIATE-129",
+      "question": "CSS Intermediate Challenge 129",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 129",
@@ -870,8 +870,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-130",
-      "question": "Docker Intermediate Challenge 130",
+      "id": "CSS-INTERMEDIATE-130",
+      "question": "CSS Intermediate Challenge 130",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 130",
@@ -881,8 +881,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-131",
-      "question": "Docker Intermediate Challenge 131",
+      "id": "CSS-INTERMEDIATE-131",
+      "question": "CSS Intermediate Challenge 131",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 131",
@@ -892,8 +892,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-132",
-      "question": "Docker Intermediate Challenge 132",
+      "id": "CSS-INTERMEDIATE-132",
+      "question": "CSS Intermediate Challenge 132",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 132",
@@ -903,8 +903,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-133",
-      "question": "Docker Intermediate Challenge 133",
+      "id": "CSS-INTERMEDIATE-133",
+      "question": "CSS Intermediate Challenge 133",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 133",
@@ -914,8 +914,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-134",
-      "question": "Docker Intermediate Challenge 134",
+      "id": "CSS-INTERMEDIATE-134",
+      "question": "CSS Intermediate Challenge 134",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 134",
@@ -925,8 +925,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-135",
-      "question": "Docker Intermediate Challenge 135",
+      "id": "CSS-INTERMEDIATE-135",
+      "question": "CSS Intermediate Challenge 135",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 135",
@@ -936,8 +936,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-136",
-      "question": "Docker Intermediate Challenge 136",
+      "id": "CSS-INTERMEDIATE-136",
+      "question": "CSS Intermediate Challenge 136",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 136",
@@ -947,8 +947,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-137",
-      "question": "Docker Intermediate Challenge 137",
+      "id": "CSS-INTERMEDIATE-137",
+      "question": "CSS Intermediate Challenge 137",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 137",
@@ -958,8 +958,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-138",
-      "question": "Docker Intermediate Challenge 138",
+      "id": "CSS-INTERMEDIATE-138",
+      "question": "CSS Intermediate Challenge 138",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 138",
@@ -969,8 +969,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-139",
-      "question": "Docker Intermediate Challenge 139",
+      "id": "CSS-INTERMEDIATE-139",
+      "question": "CSS Intermediate Challenge 139",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 139",
@@ -980,8 +980,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-140",
-      "question": "Docker Intermediate Challenge 140",
+      "id": "CSS-INTERMEDIATE-140",
+      "question": "CSS Intermediate Challenge 140",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 140",
@@ -991,8 +991,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-141",
-      "question": "Docker Intermediate Challenge 141",
+      "id": "CSS-INTERMEDIATE-141",
+      "question": "CSS Intermediate Challenge 141",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 141",
@@ -1002,8 +1002,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-142",
-      "question": "Docker Intermediate Challenge 142",
+      "id": "CSS-INTERMEDIATE-142",
+      "question": "CSS Intermediate Challenge 142",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 142",
@@ -1013,8 +1013,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-143",
-      "question": "Docker Intermediate Challenge 143",
+      "id": "CSS-INTERMEDIATE-143",
+      "question": "CSS Intermediate Challenge 143",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 143",
@@ -1024,8 +1024,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-144",
-      "question": "Docker Intermediate Challenge 144",
+      "id": "CSS-INTERMEDIATE-144",
+      "question": "CSS Intermediate Challenge 144",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 144",
@@ -1035,8 +1035,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-145",
-      "question": "Docker Intermediate Challenge 145",
+      "id": "CSS-INTERMEDIATE-145",
+      "question": "CSS Intermediate Challenge 145",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 145",
@@ -1046,8 +1046,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-146",
-      "question": "Docker Intermediate Challenge 146",
+      "id": "CSS-INTERMEDIATE-146",
+      "question": "CSS Intermediate Challenge 146",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 146",
@@ -1057,8 +1057,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-147",
-      "question": "Docker Intermediate Challenge 147",
+      "id": "CSS-INTERMEDIATE-147",
+      "question": "CSS Intermediate Challenge 147",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 147",
@@ -1068,8 +1068,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-148",
-      "question": "Docker Intermediate Challenge 148",
+      "id": "CSS-INTERMEDIATE-148",
+      "question": "CSS Intermediate Challenge 148",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 148",
@@ -1079,8 +1079,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-149",
-      "question": "Docker Intermediate Challenge 149",
+      "id": "CSS-INTERMEDIATE-149",
+      "question": "CSS Intermediate Challenge 149",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 149",
@@ -1090,8 +1090,8 @@
       "explanation": ""
     },
     {
-      "id": "DOC-INTERMEDIATE-150",
-      "question": "Docker Intermediate Challenge 150",
+      "id": "CSS-INTERMEDIATE-150",
+      "question": "CSS Intermediate Challenge 150",
       "code": "",
       "correctAnswer": "solve()",
       "expectedOutput": "Output 150",

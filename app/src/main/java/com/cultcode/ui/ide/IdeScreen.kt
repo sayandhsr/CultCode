@@ -73,7 +73,7 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                 navigationIcon = { IconButton(onClick = { onNavigate(com.cultcode.Home) }) { Text("<") } },
                 title = { Text("IDE", fontWeight = FontWeight.Bold) },
                 actions = {
-                    IconButton(onClick = saveToFileSystem) { Text("💾") }
+                    TextButton(onClick = saveToFileSystem) { Text("Save") }
                     Box {
                         TextButton(onClick = { expanded = true }) {
                             Text(language)

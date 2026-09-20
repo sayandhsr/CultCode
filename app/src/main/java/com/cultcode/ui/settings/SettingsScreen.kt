@@ -48,7 +48,7 @@ fun SettingsScreen(onBack: () -> Unit) {
     LaunchedEffect(isLoading) {
         if (isLoading) {
             delay(1000)
-            repository.saveOnboardingPreferences(skillLevel, 30, tracks)
+            repository.saveOnboardingPreferences("User", skillLevel, 30, tracks)
             repository.setDarkTheme(isDark)
             repository.setMonospace(isMono)
             themeUpdater()

@@ -32,6 +32,11 @@ class QuestionRepository(private val context: Context) {
             id.startsWith("HTM") -> "html_questions.json"
             id.startsWith("CSS") -> "css_questions.json"
             id.startsWith("TS") -> "typescript_questions.json"
+            id.startsWith("NUM") -> "numpy_questions.json"
+            id.startsWith("PAN") -> "pandas_questions.json"
+            id.startsWith("MON") -> "mongodb_questions.json"
+            id.startsWith("CPP") -> "cpp_questions.json"
+            id.startsWith("C-") -> "c_questions.json"
             else -> "python_questions.json" // Fallback
         }
         
