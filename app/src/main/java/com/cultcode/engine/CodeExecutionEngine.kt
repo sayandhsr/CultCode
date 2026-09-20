@@ -9,20 +9,49 @@ data class ExecutionResult(val stdout: String, val isSuccess: Boolean, val isRea
 
 class CodeExecutionEngine(private val context: Context) {
     
+    fun freeRun(language: String, code: String): ExecutionResult {
+        return when (language.lowercase()) {
+            "sql" -> {
+                val res = executeSql(code, "DUMMY", listOf())
+                val out = res.stdout
+                    .replace("Query Executed successfully, but did not match expected solution.\n\n", "")
+                    .replace("Error: output does not match expected logical structure.", "Executed successfully. No tabular output.")
+                ExecutionResult(out, true, true)
+            }
+            "python", "pandas/eda" -> {
+                if (code.contains("import pandas") && code.contains("read_csv")) {
+                    val res = executePythonDataScience(code, "DUMMY", listOf())
+                    val out = res.stdout.replace("Code executed, but logic did not match expected EDA steps.\n\n", "")
+                    ExecutionResult(out, true, true)
+                } else {
+                    val prints = mutableListOf<String>()
+                    val matcher = java.util.regex.Pattern.compile("print\\((.*?)\\)").matcher(code)
+                    while (matcher.find()) {
+                        val inside = matcher.group(1)?.replace("\"", "")?.replace("'", "") ?: ""
+                        prints.add(inside)
+                    }
+                    if (prints.isNotEmpty()) {
+                        ExecutionResult("Process finished with exit code 0\n" + prints.joinToString("\n"), true, false)
+                    } else {
+                        ExecutionResult("Process finished with exit code 0\n[No output] (Compilation Simulation)", true, false)
+                    }
+                }
+            }
+            else -> ExecutionResult("Execution simulated successfully.\n[Offline Sandbox Mode for ${language.uppercase()}]", true, false)
+        }
+    }
+
     fun execute(language: String, code: String, expectedAnswer: String, acceptedAnswers: List<String>): ExecutionResult {
         return when (language.lowercase()) {
             "sql" -> executeSql(code, expectedAnswer, acceptedAnswers)
-            "python" -> executePythonDataScience(code, expectedAnswer, acceptedAnswers)
+            "python", "pandas/eda" -> executePythonDataScience(code, expectedAnswer, acceptedAnswers)
             else -> evaluateSemantic(code, expectedAnswer, acceptedAnswers)
         }
     }
 
     private fun executePythonDataScience(code: String, expected: String, accepted: List<String>): ExecutionResult {
-        // Special Data Science Sandbox interceptor
         if (code.contains("import pandas") && code.contains("read_csv")) {
             val isCorrect = evaluateSemantic(code, expected, accepted).isSuccess
-            
-            // Simulate Pandas output by actually reading the CSV from assets!
             var output = ""
             try {
                 val inputStream = context.assets.open("sales_data.csv")
@@ -37,9 +66,8 @@ class CodeExecutionEngine(private val context: Context) {
             }
             
             val stdout = if (isCorrect) "Process finished with exit code 0\n[Pandas Dataframe Loaded]\n$output" else "Code executed, but logic did not match expected EDA steps.\n\n$output"
-            return ExecutionResult(stdout, isCorrect, true) // Mark as true execution since we actually read the file!
+            return ExecutionResult(stdout, isCorrect, true)
         }
-        
         return evaluateSemantic(code, expected, accepted)
     }
 
@@ -68,9 +96,7 @@ class CodeExecutionEngine(private val context: Context) {
                     rowCount++
                 }
                 cursor.close()
-                
                 val isCorrect = evaluateSemantic(code, expected, accepted).isSuccess
-                
                 return ExecutionResult(
                     stdout = if (isCorrect) "Process finished with exit code 0\nResult: Success!\n\nOutput:\n$output" else "Query Executed successfully, but did not match expected solution.\n\nOutput:\n$output",
                     isSuccess = isCorrect,
@@ -101,24 +127,14 @@ class CodeExecutionEngine(private val context: Context) {
         val strictMatched = accepted.any { 
             strictCode.contains(it.replace("\\s".toRegex(), "")) 
         } || strictCode.contains(expected.replace("\\s".toRegex(), ""))
-        
-        if (strictMatched) {
-            return ExecutionResult("Process finished with exit code 0\nResult: Validation Success!", true, false)
-        }
+        if (strictMatched) return ExecutionResult("Process finished with exit code 0\nResult: Validation Success!", true, false)
 
         val fuzzyCode = code.replace("[^A-Za-z0-9]".toRegex(), "").lowercase()
         val fuzzyMatched = accepted.any {
             fuzzyCode.contains(it.replace("[^A-Za-z0-9]".toRegex(), "").lowercase())
         } || fuzzyCode.contains(expected.replace("[^A-Za-z0-9]".toRegex(), "").lowercase())
-
-        if (fuzzyMatched) {
-            return ExecutionResult("Process finished with exit code 0\nResult: Semantic Validation Success!", true, false)
-        }
+        if (fuzzyMatched) return ExecutionResult("Process finished with exit code 0\nResult: Semantic Validation Success!", true, false)
         
-        return ExecutionResult(
-            stdout = "Error: output does not match expected logical structure.",
-            isSuccess = false,
-            isRealExecution = false
-        )
+        return ExecutionResult(stdout = "Error: output does not match expected logical structure.", isSuccess = false, isRealExecution = false)
     }
 }

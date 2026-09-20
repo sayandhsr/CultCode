@@ -1,4 +1,4 @@
-package com.cultcode
+﻿package com.cultcode
 
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
@@ -10,3 +10,5 @@ import kotlinx.serialization.Serializable
 @Serializable data class Practice(val questionId: String) : NavKey
 @Serializable data object Profile : NavKey
 
+
+@Serializable data class Ide(val initialLanguage: String) : NavKey

@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation3.runtime.NavKey
 import com.cultcode.CourseList
 import com.cultcode.Practice
+import com.cultcode.Ide
 import com.cultcode.data.UserProgressRepository
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -70,6 +71,20 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 }
             }
 
+            item {
+                Card(
+                    onClick = { onNavigate(Ide("Python")) },
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text("COMMON IDE", color = MaterialTheme.colorScheme.onPrimaryContainer, style = MaterialTheme.typography.labelMedium)
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text("Open Sandbox Editor", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                    }
+                }
+            }
+
             item { HorizontalDivider() }
 
             item {
@@ -80,6 +95,20 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 }
             }
             
+            item {
+                Card(
+                    onClick = { onNavigate(Ide("Python")) },
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text("COMMON IDE", color = MaterialTheme.colorScheme.onPrimaryContainer, style = MaterialTheme.typography.labelMedium)
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text("Open Sandbox Editor", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                    }
+                }
+            }
+
             item { HorizontalDivider() }
             
             item {

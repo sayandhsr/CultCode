@@ -1,4 +1,4 @@
-package com.cultcode
+﻿package com.cultcode
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
@@ -14,6 +14,7 @@ import com.cultcode.ui.home.HomeScreen
 import com.cultcode.ui.lesson.LessonViewerScreen
 import com.cultcode.ui.onboarding.OnboardingScreen
 import com.cultcode.ui.practice.PracticeScreen
+import com.cultcode.ui.ide.IdeScreen
 
 @Composable
 fun MainNavigation() {
@@ -42,6 +43,9 @@ fun MainNavigation() {
                 lessonId = it.lessonId,
                 onNavigate = { navKey -> backStack.add(navKey) }
             )
+        }
+        entry<Ide> {
+          IdeScreen(initialLanguage = it.initialLanguage, onNavigate = { navKey -> backStack.add(navKey) })
         }
         entry<Practice> {
             PracticeScreen(
