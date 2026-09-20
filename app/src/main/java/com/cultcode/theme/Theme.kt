@@ -69,7 +69,8 @@ private val DarkColors = darkColorScheme(
 
 @Composable
 fun CultCodeTheme(
-    darkTheme: Boolean = true, // Force dark theme by default as per brutalist spec
+    darkTheme: Boolean = true,
+    useMonospace: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (darkTheme) DarkColors else LightColors
@@ -84,7 +85,7 @@ fun CultCodeTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = BrutalistTypography,
+        typography = if (useMonospace) BrutalistTypography else StandardTypography,
         content = content
     )
 }

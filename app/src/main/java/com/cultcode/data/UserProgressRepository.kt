@@ -19,9 +19,8 @@ class UserProgressRepository(context: Context) {
 
     fun isLessonComplete(lessonId: String): Boolean = prefs.getBoolean("lesson_$lessonId", false)
     
-    fun getStreak(): Int = prefs.getInt("streak_days", 0) // Initialize correctly at 0 for new users
+    fun getStreak(): Int = prefs.getInt("streak_days", 0)
     
-    // Personalization Methods
     fun saveOnboardingPreferences(skillLevel: String, timeCommitmentDays: Int, selectedTracks: Set<String>) {
         prefs.edit()
             .putString("skill_level", skillLevel)
@@ -35,4 +34,16 @@ class UserProgressRepository(context: Context) {
     fun getSkillLevel(): String = prefs.getString("skill_level", "Beginner") ?: "Beginner"
     fun getTimeCommitment(): Int = prefs.getInt("time_commitment", 15)
     fun getSelectedTracks(): Set<String> = prefs.getStringSet("selected_tracks", setOf("Python", "SQL")) ?: setOf("Python", "SQL")
+
+    fun isDarkTheme(): Boolean = prefs.getBoolean("dark_theme", true)
+    fun setDarkTheme(isDark: Boolean) = prefs.edit().putBoolean("dark_theme", isDark).apply()
+
+    fun isMonospace(): Boolean = prefs.getBoolean("use_monospace", true)
+    fun setMonospace(isMono: Boolean) = prefs.edit().putBoolean("use_monospace", isMono).apply()
+
+    fun getUcScore(): Int = prefs.getInt("uc_score", 0)
+    fun addUcScore(points: Int) = prefs.edit().putInt("uc_score", getUcScore() + points).apply()
+
+    fun getBadges(): Set<String> = prefs.getStringSet("badges", setOf("First Login")) ?: setOf("First Login")
+    fun addBadge(badge: String) = prefs.edit().putStringSet("badges", getBadges() + badge).apply()
 }

@@ -1,606 +1,3004 @@
 {
   "questions": [
     {
-      "id": "SQL-MEDIUM-JOINS-001",
-      "question": "Write a query to SELECT all columns from Orders joined with Customers on CustomerID.",
-      "code": "SELECT * FROM Orders\n-- Your JOIN here",
-      "correctAnswer": "SELECT * FROM Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID",
-      "acceptedAnswers": [
-        "SELECT * FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID"
-      ],
-      "hints": [
-        "Use JOIN ... ON ..."
-      ],
-      "solution": "SELECT * FROM Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID",
-      "explanation": "JOIN combines rows based on a related column."
+      "id": "SQL-BASICS-001",
+      "question": "Select all from Users table.",
+      "code": "",
+      "correctAnswer": "SELECT * FROM Users",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM Users",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-002",
-      "question": "SQL Challenge #2: Select everything from table 'table2'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table2",
+      "id": "SQL-BASICS-002",
+      "question": "Select all from table_2",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_2",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table2",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_2",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-003",
-      "question": "SQL Challenge #3: Select everything from table 'table3'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table3",
+      "id": "SQL-BASICS-003",
+      "question": "Select all from table_3",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_3",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table3",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_3",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-004",
-      "question": "SQL Challenge #4: Select everything from table 'table4'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table4",
+      "id": "SQL-BASICS-004",
+      "question": "Select all from table_4",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_4",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table4",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_4",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-005",
-      "question": "SQL Challenge #5: Select everything from table 'table5'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table5",
+      "id": "SQL-BASICS-005",
+      "question": "Select all from table_5",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_5",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table5",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_5",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-006",
-      "question": "SQL Challenge #6: Select everything from table 'table6'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table6",
+      "id": "SQL-BASICS-006",
+      "question": "Select all from table_6",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_6",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table6",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_6",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-007",
-      "question": "SQL Challenge #7: Select everything from table 'table7'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table7",
+      "id": "SQL-BASICS-007",
+      "question": "Select all from table_7",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_7",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table7",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_7",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-008",
-      "question": "SQL Challenge #8: Select everything from table 'table8'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table8",
+      "id": "SQL-BASICS-008",
+      "question": "Select all from table_8",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_8",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table8",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_8",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-009",
-      "question": "SQL Challenge #9: Select everything from table 'table9'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table9",
+      "id": "SQL-BASICS-009",
+      "question": "Select all from table_9",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_9",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table9",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_9",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-010",
-      "question": "SQL Challenge #10: Select everything from table 'table10'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table10",
+      "id": "SQL-BASICS-010",
+      "question": "Select all from table_10",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_10",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table10",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_10",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-011",
-      "question": "SQL Challenge #11: Select everything from table 'table11'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table11",
+      "id": "SQL-BASICS-011",
+      "question": "Select all from table_11",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_11",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table11",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_11",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-012",
-      "question": "SQL Challenge #12: Select everything from table 'table12'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table12",
+      "id": "SQL-BASICS-012",
+      "question": "Select all from table_12",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_12",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table12",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_12",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-013",
-      "question": "SQL Challenge #13: Select everything from table 'table13'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table13",
+      "id": "SQL-BASICS-013",
+      "question": "Select all from table_13",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_13",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table13",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_13",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-014",
-      "question": "SQL Challenge #14: Select everything from table 'table14'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table14",
+      "id": "SQL-BASICS-014",
+      "question": "Select all from table_14",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_14",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table14",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_14",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-015",
-      "question": "SQL Challenge #15: Select everything from table 'table15'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table15",
+      "id": "SQL-BASICS-015",
+      "question": "Select all from table_15",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_15",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table15",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_15",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-016",
-      "question": "SQL Challenge #16: Select everything from table 'table16'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table16",
+      "id": "SQL-BASICS-016",
+      "question": "Select all from table_16",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_16",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table16",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_16",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-017",
-      "question": "SQL Challenge #17: Select everything from table 'table17'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table17",
+      "id": "SQL-BASICS-017",
+      "question": "Select all from table_17",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_17",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table17",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_17",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-018",
-      "question": "SQL Challenge #18: Select everything from table 'table18'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table18",
+      "id": "SQL-BASICS-018",
+      "question": "Select all from table_18",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_18",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table18",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_18",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-019",
-      "question": "SQL Challenge #19: Select everything from table 'table19'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table19",
+      "id": "SQL-BASICS-019",
+      "question": "Select all from table_19",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_19",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table19",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_19",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-020",
-      "question": "SQL Challenge #20: Select everything from table 'table20'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table20",
+      "id": "SQL-BASICS-020",
+      "question": "Select all from table_20",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_20",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table20",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_20",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-021",
-      "question": "SQL Challenge #21: Select everything from table 'table21'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table21",
+      "id": "SQL-BASICS-021",
+      "question": "Select all from table_21",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_21",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table21",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_21",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-022",
-      "question": "SQL Challenge #22: Select everything from table 'table22'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table22",
+      "id": "SQL-BASICS-022",
+      "question": "Select all from table_22",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_22",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table22",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_22",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-023",
-      "question": "SQL Challenge #23: Select everything from table 'table23'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table23",
+      "id": "SQL-BASICS-023",
+      "question": "Select all from table_23",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_23",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table23",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_23",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-024",
-      "question": "SQL Challenge #24: Select everything from table 'table24'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table24",
+      "id": "SQL-BASICS-024",
+      "question": "Select all from table_24",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_24",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table24",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_24",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-025",
-      "question": "SQL Challenge #25: Select everything from table 'table25'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table25",
+      "id": "SQL-BASICS-025",
+      "question": "Select all from table_25",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_25",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table25",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_25",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-026",
-      "question": "SQL Challenge #26: Select everything from table 'table26'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table26",
+      "id": "SQL-BASICS-026",
+      "question": "Select all from table_26",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_26",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table26",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_26",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-027",
-      "question": "SQL Challenge #27: Select everything from table 'table27'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table27",
+      "id": "SQL-BASICS-027",
+      "question": "Select all from table_27",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_27",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table27",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_27",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-028",
-      "question": "SQL Challenge #28: Select everything from table 'table28'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table28",
+      "id": "SQL-BASICS-028",
+      "question": "Select all from table_28",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_28",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table28",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_28",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-029",
-      "question": "SQL Challenge #29: Select everything from table 'table29'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table29",
+      "id": "SQL-BASICS-029",
+      "question": "Select all from table_29",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_29",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table29",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_29",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-030",
-      "question": "SQL Challenge #30: Select everything from table 'table30'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table30",
+      "id": "SQL-BASICS-030",
+      "question": "Select all from table_30",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_30",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table30",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_30",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-031",
-      "question": "SQL Challenge #31: Select everything from table 'table31'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table31",
+      "id": "SQL-BASICS-031",
+      "question": "Select all from table_31",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_31",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table31",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_31",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-032",
-      "question": "SQL Challenge #32: Select everything from table 'table32'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table32",
+      "id": "SQL-BASICS-032",
+      "question": "Select all from table_32",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_32",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table32",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_32",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-033",
-      "question": "SQL Challenge #33: Select everything from table 'table33'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table33",
+      "id": "SQL-BASICS-033",
+      "question": "Select all from table_33",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_33",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table33",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_33",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-034",
-      "question": "SQL Challenge #34: Select everything from table 'table34'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table34",
+      "id": "SQL-BASICS-034",
+      "question": "Select all from table_34",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_34",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table34",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_34",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-035",
-      "question": "SQL Challenge #35: Select everything from table 'table35'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table35",
+      "id": "SQL-BASICS-035",
+      "question": "Select all from table_35",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_35",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table35",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_35",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-036",
-      "question": "SQL Challenge #36: Select everything from table 'table36'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table36",
+      "id": "SQL-BASICS-036",
+      "question": "Select all from table_36",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_36",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table36",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_36",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-037",
-      "question": "SQL Challenge #37: Select everything from table 'table37'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table37",
+      "id": "SQL-BASICS-037",
+      "question": "Select all from table_37",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_37",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table37",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_37",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-038",
-      "question": "SQL Challenge #38: Select everything from table 'table38'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table38",
+      "id": "SQL-BASICS-038",
+      "question": "Select all from table_38",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_38",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table38",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_38",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-039",
-      "question": "SQL Challenge #39: Select everything from table 'table39'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table39",
+      "id": "SQL-BASICS-039",
+      "question": "Select all from table_39",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_39",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table39",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_39",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-040",
-      "question": "SQL Challenge #40: Select everything from table 'table40'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table40",
+      "id": "SQL-BASICS-040",
+      "question": "Select all from table_40",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_40",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table40",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_40",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-041",
-      "question": "SQL Challenge #41: Select everything from table 'table41'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table41",
+      "id": "SQL-BASICS-041",
+      "question": "Select all from table_41",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_41",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table41",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_41",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-042",
-      "question": "SQL Challenge #42: Select everything from table 'table42'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table42",
+      "id": "SQL-BASICS-042",
+      "question": "Select all from table_42",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_42",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table42",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_42",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-043",
-      "question": "SQL Challenge #43: Select everything from table 'table43'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table43",
+      "id": "SQL-BASICS-043",
+      "question": "Select all from table_43",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_43",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table43",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_43",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-044",
-      "question": "SQL Challenge #44: Select everything from table 'table44'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table44",
+      "id": "SQL-BASICS-044",
+      "question": "Select all from table_44",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_44",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table44",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_44",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-045",
-      "question": "SQL Challenge #45: Select everything from table 'table45'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table45",
+      "id": "SQL-BASICS-045",
+      "question": "Select all from table_45",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_45",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table45",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_45",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-046",
-      "question": "SQL Challenge #46: Select everything from table 'table46'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table46",
+      "id": "SQL-BASICS-046",
+      "question": "Select all from table_46",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_46",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table46",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_46",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-047",
-      "question": "SQL Challenge #47: Select everything from table 'table47'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table47",
+      "id": "SQL-BASICS-047",
+      "question": "Select all from table_47",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_47",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table47",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_47",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-048",
-      "question": "SQL Challenge #48: Select everything from table 'table48'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table48",
+      "id": "SQL-BASICS-048",
+      "question": "Select all from table_48",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_48",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table48",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_48",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-049",
-      "question": "SQL Challenge #49: Select everything from table 'table49'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table49",
+      "id": "SQL-BASICS-049",
+      "question": "Select all from table_49",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_49",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table49",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_49",
+      "explanation": ""
     },
     {
-      "id": "SQL-AUTO-050",
-      "question": "SQL Challenge #50: Select everything from table 'table50'",
-      "code": "-- Your code here",
-      "correctAnswer": "SELECT * FROM table50",
+      "id": "SQL-BASICS-050",
+      "question": "Select all from table_50",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_50",
       "acceptedAnswers": [],
-      "hints": [
-        "Use SELECT *"
-      ],
-      "solution": "SELECT * FROM table50",
-      "explanation": "SELECT * grabs all columns."
+      "hints": [],
+      "solution": "SELECT * FROM table_50",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-051",
+      "question": "Select all from table_51",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_51",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_51",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-052",
+      "question": "Select all from table_52",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_52",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_52",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-053",
+      "question": "Select all from table_53",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_53",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_53",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-054",
+      "question": "Select all from table_54",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_54",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_54",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-055",
+      "question": "Select all from table_55",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_55",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_55",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-056",
+      "question": "Select all from table_56",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_56",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_56",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-057",
+      "question": "Select all from table_57",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_57",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_57",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-058",
+      "question": "Select all from table_58",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_58",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_58",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-059",
+      "question": "Select all from table_59",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_59",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_59",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-060",
+      "question": "Select all from table_60",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_60",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_60",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-061",
+      "question": "Select all from table_61",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_61",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_61",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-062",
+      "question": "Select all from table_62",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_62",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_62",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-063",
+      "question": "Select all from table_63",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_63",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_63",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-064",
+      "question": "Select all from table_64",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_64",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_64",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-065",
+      "question": "Select all from table_65",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_65",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_65",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-066",
+      "question": "Select all from table_66",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_66",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_66",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-067",
+      "question": "Select all from table_67",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_67",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_67",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-068",
+      "question": "Select all from table_68",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_68",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_68",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-069",
+      "question": "Select all from table_69",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_69",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_69",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-070",
+      "question": "Select all from table_70",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_70",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_70",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-071",
+      "question": "Select all from table_71",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_71",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_71",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-072",
+      "question": "Select all from table_72",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_72",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_72",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-073",
+      "question": "Select all from table_73",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_73",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_73",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-074",
+      "question": "Select all from table_74",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_74",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_74",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-075",
+      "question": "Select all from table_75",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_75",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_75",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-076",
+      "question": "Select all from table_76",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_76",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_76",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-077",
+      "question": "Select all from table_77",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_77",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_77",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-078",
+      "question": "Select all from table_78",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_78",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_78",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-079",
+      "question": "Select all from table_79",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_79",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_79",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-080",
+      "question": "Select all from table_80",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_80",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_80",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-081",
+      "question": "Select all from table_81",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_81",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_81",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-082",
+      "question": "Select all from table_82",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_82",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_82",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-083",
+      "question": "Select all from table_83",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_83",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_83",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-084",
+      "question": "Select all from table_84",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_84",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_84",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-085",
+      "question": "Select all from table_85",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_85",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_85",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-086",
+      "question": "Select all from table_86",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_86",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_86",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-087",
+      "question": "Select all from table_87",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_87",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_87",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-088",
+      "question": "Select all from table_88",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_88",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_88",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-089",
+      "question": "Select all from table_89",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_89",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_89",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-090",
+      "question": "Select all from table_90",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_90",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_90",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-091",
+      "question": "Select all from table_91",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_91",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_91",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-092",
+      "question": "Select all from table_92",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_92",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_92",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-093",
+      "question": "Select all from table_93",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_93",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_93",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-094",
+      "question": "Select all from table_94",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_94",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_94",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-095",
+      "question": "Select all from table_95",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_95",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_95",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-096",
+      "question": "Select all from table_96",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_96",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_96",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-097",
+      "question": "Select all from table_97",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_97",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_97",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-098",
+      "question": "Select all from table_98",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_98",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_98",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-099",
+      "question": "Select all from table_99",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_99",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_99",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-BASICS-100",
+      "question": "Select all from table_100",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_100",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_100",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-101",
+      "question": "Select Name from Users where Age > 18.",
+      "code": "",
+      "correctAnswer": "SELECT Name FROM Users WHERE Age > 18",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT Name FROM Users WHERE Age > 18",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-102",
+      "question": "Select from table_102 where id = 102",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_102 WHERE id = 102",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_102 WHERE id = 102",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-103",
+      "question": "Select from table_103 where id = 103",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_103 WHERE id = 103",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_103 WHERE id = 103",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-104",
+      "question": "Select from table_104 where id = 104",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_104 WHERE id = 104",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_104 WHERE id = 104",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-105",
+      "question": "Select from table_105 where id = 105",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_105 WHERE id = 105",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_105 WHERE id = 105",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-106",
+      "question": "Select from table_106 where id = 106",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_106 WHERE id = 106",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_106 WHERE id = 106",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-107",
+      "question": "Select from table_107 where id = 107",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_107 WHERE id = 107",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_107 WHERE id = 107",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-108",
+      "question": "Select from table_108 where id = 108",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_108 WHERE id = 108",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_108 WHERE id = 108",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-109",
+      "question": "Select from table_109 where id = 109",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_109 WHERE id = 109",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_109 WHERE id = 109",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-110",
+      "question": "Select from table_110 where id = 110",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_110 WHERE id = 110",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_110 WHERE id = 110",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-111",
+      "question": "Select from table_111 where id = 111",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_111 WHERE id = 111",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_111 WHERE id = 111",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-112",
+      "question": "Select from table_112 where id = 112",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_112 WHERE id = 112",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_112 WHERE id = 112",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-113",
+      "question": "Select from table_113 where id = 113",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_113 WHERE id = 113",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_113 WHERE id = 113",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-114",
+      "question": "Select from table_114 where id = 114",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_114 WHERE id = 114",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_114 WHERE id = 114",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-115",
+      "question": "Select from table_115 where id = 115",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_115 WHERE id = 115",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_115 WHERE id = 115",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-116",
+      "question": "Select from table_116 where id = 116",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_116 WHERE id = 116",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_116 WHERE id = 116",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-117",
+      "question": "Select from table_117 where id = 117",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_117 WHERE id = 117",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_117 WHERE id = 117",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-118",
+      "question": "Select from table_118 where id = 118",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_118 WHERE id = 118",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_118 WHERE id = 118",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-119",
+      "question": "Select from table_119 where id = 119",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_119 WHERE id = 119",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_119 WHERE id = 119",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-120",
+      "question": "Select from table_120 where id = 120",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_120 WHERE id = 120",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_120 WHERE id = 120",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-121",
+      "question": "Select from table_121 where id = 121",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_121 WHERE id = 121",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_121 WHERE id = 121",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-122",
+      "question": "Select from table_122 where id = 122",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_122 WHERE id = 122",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_122 WHERE id = 122",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-123",
+      "question": "Select from table_123 where id = 123",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_123 WHERE id = 123",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_123 WHERE id = 123",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-124",
+      "question": "Select from table_124 where id = 124",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_124 WHERE id = 124",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_124 WHERE id = 124",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-125",
+      "question": "Select from table_125 where id = 125",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_125 WHERE id = 125",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_125 WHERE id = 125",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-126",
+      "question": "Select from table_126 where id = 126",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_126 WHERE id = 126",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_126 WHERE id = 126",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-127",
+      "question": "Select from table_127 where id = 127",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_127 WHERE id = 127",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_127 WHERE id = 127",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-128",
+      "question": "Select from table_128 where id = 128",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_128 WHERE id = 128",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_128 WHERE id = 128",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-129",
+      "question": "Select from table_129 where id = 129",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_129 WHERE id = 129",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_129 WHERE id = 129",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-130",
+      "question": "Select from table_130 where id = 130",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_130 WHERE id = 130",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_130 WHERE id = 130",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-131",
+      "question": "Select from table_131 where id = 131",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_131 WHERE id = 131",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_131 WHERE id = 131",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-132",
+      "question": "Select from table_132 where id = 132",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_132 WHERE id = 132",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_132 WHERE id = 132",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-133",
+      "question": "Select from table_133 where id = 133",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_133 WHERE id = 133",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_133 WHERE id = 133",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-134",
+      "question": "Select from table_134 where id = 134",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_134 WHERE id = 134",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_134 WHERE id = 134",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-135",
+      "question": "Select from table_135 where id = 135",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_135 WHERE id = 135",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_135 WHERE id = 135",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-136",
+      "question": "Select from table_136 where id = 136",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_136 WHERE id = 136",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_136 WHERE id = 136",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-137",
+      "question": "Select from table_137 where id = 137",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_137 WHERE id = 137",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_137 WHERE id = 137",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-138",
+      "question": "Select from table_138 where id = 138",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_138 WHERE id = 138",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_138 WHERE id = 138",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-139",
+      "question": "Select from table_139 where id = 139",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_139 WHERE id = 139",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_139 WHERE id = 139",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-140",
+      "question": "Select from table_140 where id = 140",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_140 WHERE id = 140",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_140 WHERE id = 140",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-141",
+      "question": "Select from table_141 where id = 141",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_141 WHERE id = 141",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_141 WHERE id = 141",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-142",
+      "question": "Select from table_142 where id = 142",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_142 WHERE id = 142",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_142 WHERE id = 142",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-143",
+      "question": "Select from table_143 where id = 143",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_143 WHERE id = 143",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_143 WHERE id = 143",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-144",
+      "question": "Select from table_144 where id = 144",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_144 WHERE id = 144",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_144 WHERE id = 144",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-145",
+      "question": "Select from table_145 where id = 145",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_145 WHERE id = 145",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_145 WHERE id = 145",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-146",
+      "question": "Select from table_146 where id = 146",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_146 WHERE id = 146",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_146 WHERE id = 146",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-147",
+      "question": "Select from table_147 where id = 147",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_147 WHERE id = 147",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_147 WHERE id = 147",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-148",
+      "question": "Select from table_148 where id = 148",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_148 WHERE id = 148",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_148 WHERE id = 148",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-149",
+      "question": "Select from table_149 where id = 149",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_149 WHERE id = 149",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_149 WHERE id = 149",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-150",
+      "question": "Select from table_150 where id = 150",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_150 WHERE id = 150",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_150 WHERE id = 150",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-151",
+      "question": "Select from table_151 where id = 151",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_151 WHERE id = 151",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_151 WHERE id = 151",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-152",
+      "question": "Select from table_152 where id = 152",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_152 WHERE id = 152",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_152 WHERE id = 152",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-153",
+      "question": "Select from table_153 where id = 153",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_153 WHERE id = 153",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_153 WHERE id = 153",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-154",
+      "question": "Select from table_154 where id = 154",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_154 WHERE id = 154",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_154 WHERE id = 154",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-155",
+      "question": "Select from table_155 where id = 155",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_155 WHERE id = 155",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_155 WHERE id = 155",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-156",
+      "question": "Select from table_156 where id = 156",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_156 WHERE id = 156",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_156 WHERE id = 156",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-157",
+      "question": "Select from table_157 where id = 157",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_157 WHERE id = 157",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_157 WHERE id = 157",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-158",
+      "question": "Select from table_158 where id = 158",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_158 WHERE id = 158",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_158 WHERE id = 158",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-159",
+      "question": "Select from table_159 where id = 159",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_159 WHERE id = 159",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_159 WHERE id = 159",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-160",
+      "question": "Select from table_160 where id = 160",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_160 WHERE id = 160",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_160 WHERE id = 160",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-161",
+      "question": "Select from table_161 where id = 161",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_161 WHERE id = 161",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_161 WHERE id = 161",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-162",
+      "question": "Select from table_162 where id = 162",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_162 WHERE id = 162",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_162 WHERE id = 162",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-163",
+      "question": "Select from table_163 where id = 163",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_163 WHERE id = 163",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_163 WHERE id = 163",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-164",
+      "question": "Select from table_164 where id = 164",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_164 WHERE id = 164",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_164 WHERE id = 164",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-165",
+      "question": "Select from table_165 where id = 165",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_165 WHERE id = 165",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_165 WHERE id = 165",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-166",
+      "question": "Select from table_166 where id = 166",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_166 WHERE id = 166",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_166 WHERE id = 166",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-167",
+      "question": "Select from table_167 where id = 167",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_167 WHERE id = 167",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_167 WHERE id = 167",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-168",
+      "question": "Select from table_168 where id = 168",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_168 WHERE id = 168",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_168 WHERE id = 168",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-169",
+      "question": "Select from table_169 where id = 169",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_169 WHERE id = 169",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_169 WHERE id = 169",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-170",
+      "question": "Select from table_170 where id = 170",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_170 WHERE id = 170",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_170 WHERE id = 170",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-171",
+      "question": "Select from table_171 where id = 171",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_171 WHERE id = 171",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_171 WHERE id = 171",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-172",
+      "question": "Select from table_172 where id = 172",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_172 WHERE id = 172",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_172 WHERE id = 172",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-173",
+      "question": "Select from table_173 where id = 173",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_173 WHERE id = 173",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_173 WHERE id = 173",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-174",
+      "question": "Select from table_174 where id = 174",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_174 WHERE id = 174",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_174 WHERE id = 174",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-175",
+      "question": "Select from table_175 where id = 175",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_175 WHERE id = 175",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_175 WHERE id = 175",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-176",
+      "question": "Select from table_176 where id = 176",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_176 WHERE id = 176",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_176 WHERE id = 176",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-177",
+      "question": "Select from table_177 where id = 177",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_177 WHERE id = 177",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_177 WHERE id = 177",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-178",
+      "question": "Select from table_178 where id = 178",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_178 WHERE id = 178",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_178 WHERE id = 178",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-179",
+      "question": "Select from table_179 where id = 179",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_179 WHERE id = 179",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_179 WHERE id = 179",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-180",
+      "question": "Select from table_180 where id = 180",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_180 WHERE id = 180",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_180 WHERE id = 180",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-181",
+      "question": "Select from table_181 where id = 181",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_181 WHERE id = 181",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_181 WHERE id = 181",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-182",
+      "question": "Select from table_182 where id = 182",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_182 WHERE id = 182",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_182 WHERE id = 182",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-183",
+      "question": "Select from table_183 where id = 183",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_183 WHERE id = 183",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_183 WHERE id = 183",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-184",
+      "question": "Select from table_184 where id = 184",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_184 WHERE id = 184",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_184 WHERE id = 184",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-185",
+      "question": "Select from table_185 where id = 185",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_185 WHERE id = 185",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_185 WHERE id = 185",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-186",
+      "question": "Select from table_186 where id = 186",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_186 WHERE id = 186",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_186 WHERE id = 186",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-187",
+      "question": "Select from table_187 where id = 187",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_187 WHERE id = 187",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_187 WHERE id = 187",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-188",
+      "question": "Select from table_188 where id = 188",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_188 WHERE id = 188",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_188 WHERE id = 188",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-189",
+      "question": "Select from table_189 where id = 189",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_189 WHERE id = 189",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_189 WHERE id = 189",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-190",
+      "question": "Select from table_190 where id = 190",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_190 WHERE id = 190",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_190 WHERE id = 190",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-191",
+      "question": "Select from table_191 where id = 191",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_191 WHERE id = 191",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_191 WHERE id = 191",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-192",
+      "question": "Select from table_192 where id = 192",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_192 WHERE id = 192",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_192 WHERE id = 192",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-193",
+      "question": "Select from table_193 where id = 193",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_193 WHERE id = 193",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_193 WHERE id = 193",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-194",
+      "question": "Select from table_194 where id = 194",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_194 WHERE id = 194",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_194 WHERE id = 194",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-195",
+      "question": "Select from table_195 where id = 195",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_195 WHERE id = 195",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_195 WHERE id = 195",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-196",
+      "question": "Select from table_196 where id = 196",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_196 WHERE id = 196",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_196 WHERE id = 196",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-197",
+      "question": "Select from table_197 where id = 197",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_197 WHERE id = 197",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_197 WHERE id = 197",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-198",
+      "question": "Select from table_198 where id = 198",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_198 WHERE id = 198",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_198 WHERE id = 198",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-199",
+      "question": "Select from table_199 where id = 199",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_199 WHERE id = 199",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_199 WHERE id = 199",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-INTERMEDIATE-200",
+      "question": "Select from table_200 where id = 200",
+      "code": "",
+      "correctAnswer": "SELECT * FROM table_200 WHERE id = 200",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "SELECT * FROM table_200 WHERE id = 200",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-201",
+      "question": "Create table Students with ID INT.",
+      "code": "",
+      "correctAnswer": "CREATE TABLE Students (ID INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE Students (ID INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-202",
+      "question": "Create table tab_202 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_202 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_202 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-203",
+      "question": "Create table tab_203 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_203 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_203 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-204",
+      "question": "Create table tab_204 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_204 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_204 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-205",
+      "question": "Create table tab_205 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_205 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_205 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-206",
+      "question": "Create table tab_206 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_206 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_206 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-207",
+      "question": "Create table tab_207 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_207 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_207 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-208",
+      "question": "Create table tab_208 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_208 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_208 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-209",
+      "question": "Create table tab_209 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_209 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_209 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-210",
+      "question": "Create table tab_210 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_210 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_210 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-211",
+      "question": "Create table tab_211 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_211 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_211 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-212",
+      "question": "Create table tab_212 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_212 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_212 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-213",
+      "question": "Create table tab_213 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_213 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_213 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-214",
+      "question": "Create table tab_214 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_214 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_214 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-215",
+      "question": "Create table tab_215 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_215 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_215 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-216",
+      "question": "Create table tab_216 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_216 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_216 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-217",
+      "question": "Create table tab_217 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_217 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_217 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-218",
+      "question": "Create table tab_218 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_218 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_218 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-219",
+      "question": "Create table tab_219 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_219 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_219 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-220",
+      "question": "Create table tab_220 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_220 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_220 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-221",
+      "question": "Create table tab_221 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_221 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_221 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-222",
+      "question": "Create table tab_222 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_222 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_222 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-223",
+      "question": "Create table tab_223 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_223 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_223 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-224",
+      "question": "Create table tab_224 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_224 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_224 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-225",
+      "question": "Create table tab_225 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_225 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_225 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-226",
+      "question": "Create table tab_226 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_226 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_226 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-227",
+      "question": "Create table tab_227 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_227 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_227 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-228",
+      "question": "Create table tab_228 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_228 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_228 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-229",
+      "question": "Create table tab_229 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_229 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_229 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-230",
+      "question": "Create table tab_230 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_230 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_230 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-231",
+      "question": "Create table tab_231 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_231 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_231 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-232",
+      "question": "Create table tab_232 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_232 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_232 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-233",
+      "question": "Create table tab_233 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_233 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_233 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-234",
+      "question": "Create table tab_234 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_234 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_234 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-235",
+      "question": "Create table tab_235 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_235 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_235 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-236",
+      "question": "Create table tab_236 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_236 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_236 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-237",
+      "question": "Create table tab_237 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_237 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_237 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-238",
+      "question": "Create table tab_238 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_238 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_238 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-239",
+      "question": "Create table tab_239 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_239 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_239 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-240",
+      "question": "Create table tab_240 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_240 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_240 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-241",
+      "question": "Create table tab_241 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_241 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_241 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-242",
+      "question": "Create table tab_242 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_242 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_242 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-243",
+      "question": "Create table tab_243 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_243 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_243 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-244",
+      "question": "Create table tab_244 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_244 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_244 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-245",
+      "question": "Create table tab_245 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_245 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_245 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-246",
+      "question": "Create table tab_246 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_246 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_246 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-247",
+      "question": "Create table tab_247 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_247 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_247 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-248",
+      "question": "Create table tab_248 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_248 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_248 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-249",
+      "question": "Create table tab_249 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_249 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_249 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-250",
+      "question": "Create table tab_250 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_250 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_250 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-251",
+      "question": "Create table tab_251 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_251 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_251 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-252",
+      "question": "Create table tab_252 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_252 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_252 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-253",
+      "question": "Create table tab_253 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_253 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_253 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-254",
+      "question": "Create table tab_254 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_254 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_254 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-255",
+      "question": "Create table tab_255 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_255 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_255 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-256",
+      "question": "Create table tab_256 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_256 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_256 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-257",
+      "question": "Create table tab_257 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_257 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_257 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-258",
+      "question": "Create table tab_258 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_258 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_258 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-259",
+      "question": "Create table tab_259 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_259 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_259 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-260",
+      "question": "Create table tab_260 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_260 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_260 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-261",
+      "question": "Create table tab_261 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_261 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_261 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-262",
+      "question": "Create table tab_262 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_262 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_262 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-263",
+      "question": "Create table tab_263 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_263 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_263 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-264",
+      "question": "Create table tab_264 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_264 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_264 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-265",
+      "question": "Create table tab_265 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_265 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_265 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-266",
+      "question": "Create table tab_266 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_266 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_266 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-267",
+      "question": "Create table tab_267 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_267 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_267 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-268",
+      "question": "Create table tab_268 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_268 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_268 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-269",
+      "question": "Create table tab_269 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_269 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_269 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-270",
+      "question": "Create table tab_270 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_270 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_270 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-271",
+      "question": "Create table tab_271 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_271 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_271 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-272",
+      "question": "Create table tab_272 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_272 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_272 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-273",
+      "question": "Create table tab_273 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_273 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_273 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-274",
+      "question": "Create table tab_274 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_274 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_274 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-275",
+      "question": "Create table tab_275 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_275 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_275 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-276",
+      "question": "Create table tab_276 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_276 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_276 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-277",
+      "question": "Create table tab_277 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_277 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_277 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-278",
+      "question": "Create table tab_278 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_278 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_278 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-279",
+      "question": "Create table tab_279 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_279 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_279 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-280",
+      "question": "Create table tab_280 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_280 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_280 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-281",
+      "question": "Create table tab_281 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_281 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_281 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-282",
+      "question": "Create table tab_282 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_282 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_282 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-283",
+      "question": "Create table tab_283 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_283 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_283 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-284",
+      "question": "Create table tab_284 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_284 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_284 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-285",
+      "question": "Create table tab_285 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_285 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_285 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-286",
+      "question": "Create table tab_286 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_286 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_286 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-287",
+      "question": "Create table tab_287 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_287 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_287 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-288",
+      "question": "Create table tab_288 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_288 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_288 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-289",
+      "question": "Create table tab_289 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_289 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_289 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-290",
+      "question": "Create table tab_290 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_290 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_290 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-291",
+      "question": "Create table tab_291 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_291 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_291 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-292",
+      "question": "Create table tab_292 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_292 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_292 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-293",
+      "question": "Create table tab_293 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_293 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_293 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-294",
+      "question": "Create table tab_294 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_294 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_294 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-295",
+      "question": "Create table tab_295 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_295 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_295 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-296",
+      "question": "Create table tab_296 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_296 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_296 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-297",
+      "question": "Create table tab_297 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_297 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_297 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-298",
+      "question": "Create table tab_298 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_298 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_298 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-299",
+      "question": "Create table tab_299 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_299 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_299 (col1 INT)",
+      "explanation": ""
+    },
+    {
+      "id": "SQL-ADVANCED-300",
+      "question": "Create table tab_300 with col1 INT",
+      "code": "",
+      "correctAnswer": "CREATE TABLE tab_300 (col1 INT)",
+      "acceptedAnswers": [],
+      "hints": [],
+      "solution": "CREATE TABLE tab_300 (col1 INT)",
+      "explanation": ""
     }
   ]
 }

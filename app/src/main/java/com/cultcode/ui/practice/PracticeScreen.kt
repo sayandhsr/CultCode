@@ -20,9 +20,10 @@ import com.cultcode.engine.SyntaxHighlightingTransformation
 @Composable
 fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
     val context = LocalContext.current
-    val repository = remember { QuestionRepository(context) }
+    val qRepository = remember { QuestionRepository(context) }
+    val uRepository = remember { com.cultcode.data.UserProgressRepository(context) }
     val engine = remember { CodeExecutionEngine(context) }
-    val question = remember(questionId) { repository.getQuestion(questionId) }
+    val question = remember(questionId) { qRepository.getQuestion(questionId) }
     
     if (question == null) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = androidx.compose.ui.Alignment.Center) {
@@ -50,6 +51,14 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
         executionResult = result.stdout
         isCorrect = result.isSuccess
         isRealExecution = result.isRealExecution
+        if (result.isSuccess) {
+            uRepository.addUcScore(10)
+            // Randomly award advanced badges if applicable
+            if (questionId.contains("ADVANCED")) {
+                if (questionId.startsWith("PY")) uRepository.addBadge("Python Advanced")
+                if (questionId.startsWith("SQL")) uRepository.addBadge("SQL Advanced")
+            }
+        }
     }
 
     if (showHintDialog) {
