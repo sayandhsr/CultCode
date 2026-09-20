@@ -29,7 +29,9 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
     val languages = listOf("Python", "SQL", "JavaScript", "Java", "C++")
     
     // State for VS Code mode
-    var vsCodeText by remember { mutableStateOf("") }
+    val prefs = context.getSharedPreferences("ide_workspace", android.content.Context.MODE_PRIVATE)
+    var vsCodeText by remember { mutableStateOf(prefs.getString("vscode_text", "") ?: "") }
+    LaunchedEffect(vsCodeText) { prefs.edit().putString("vscode_text", vsCodeText).apply() }
     var vsCodeOutput by remember { mutableStateOf<String?>(null) }
     
     // State for Jupyter mode
@@ -39,7 +41,8 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Common IDE") },
+                navigationIcon = { IconButton(onClick = { onNavigate(com.cultcode.Home) }) { Text("<") } },
+                title = { Text("IDE") },
                 actions = {
                     Box {
                         TextButton(onClick = { expanded = true }) {

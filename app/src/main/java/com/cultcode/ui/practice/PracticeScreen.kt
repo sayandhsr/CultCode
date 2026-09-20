@@ -31,7 +31,12 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
         return
     }
 
-    var codeText by remember(questionId) { mutableStateOf(question.code) }
+    val prefs = context.getSharedPreferences("code_workspace", android.content.Context.MODE_PRIVATE)
+    var codeText by remember(questionId) { mutableStateOf(prefs.getString(questionId, question.code) ?: question.code) }
+    
+    LaunchedEffect(codeText) {
+        prefs.edit().putString(questionId, codeText).apply()
+    }
     var showHintDialog by remember { mutableStateOf(false) }
     var hintIndex by remember { mutableStateOf(0) }
     var showSolutionDialog by remember { mutableStateOf(false) }
@@ -83,8 +88,10 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
+                navigationIcon = { IconButton(onClick = { onNavigate(com.cultcode.Home) }) { Text("<") } },
                 title = { Text(questionId, style = MaterialTheme.typography.titleMedium) },
                 actions = {
+                    Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                     if (question.hints.isNotEmpty()) {
                         TextButton(onClick = { showHintDialog = true }) {
                             Text("Hint")

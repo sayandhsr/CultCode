@@ -1,0 +1,704 @@
+{
+  "questions": [
+    {
+      "id": "JS-BASICS-001",
+      "question": "Declare a constant named 'pi' and set it to 3.14.",
+      "code": "// Your code here",
+      "correctAnswer": "const pi = 3.14;",
+      "acceptedAnswers": [
+        "const pi=3.14;"
+      ],
+      "hints": [
+        "Use the const keyword."
+      ],
+      "solution": "const pi = 3.14;",
+      "explanation": "const declares block-scoped, immutable variables."
+    },
+    {
+      "id": "JS-AUTO-002",
+      "question": "JS Challenge #2: Return the number 2",
+      "code": "// Your code here",
+      "correctAnswer": "return 2;",
+      "acceptedAnswers": [
+        "return 2"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 2;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-003",
+      "question": "JS Challenge #3: Return the number 3",
+      "code": "// Your code here",
+      "correctAnswer": "return 3;",
+      "acceptedAnswers": [
+        "return 3"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 3;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-004",
+      "question": "JS Challenge #4: Return the number 4",
+      "code": "// Your code here",
+      "correctAnswer": "return 4;",
+      "acceptedAnswers": [
+        "return 4"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 4;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-005",
+      "question": "JS Challenge #5: Return the number 5",
+      "code": "// Your code here",
+      "correctAnswer": "return 5;",
+      "acceptedAnswers": [
+        "return 5"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 5;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-006",
+      "question": "JS Challenge #6: Return the number 6",
+      "code": "// Your code here",
+      "correctAnswer": "return 6;",
+      "acceptedAnswers": [
+        "return 6"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 6;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-007",
+      "question": "JS Challenge #7: Return the number 7",
+      "code": "// Your code here",
+      "correctAnswer": "return 7;",
+      "acceptedAnswers": [
+        "return 7"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 7;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-008",
+      "question": "JS Challenge #8: Return the number 8",
+      "code": "// Your code here",
+      "correctAnswer": "return 8;",
+      "acceptedAnswers": [
+        "return 8"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 8;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-009",
+      "question": "JS Challenge #9: Return the number 9",
+      "code": "// Your code here",
+      "correctAnswer": "return 9;",
+      "acceptedAnswers": [
+        "return 9"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 9;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-010",
+      "question": "JS Challenge #10: Return the number 10",
+      "code": "// Your code here",
+      "correctAnswer": "return 10;",
+      "acceptedAnswers": [
+        "return 10"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 10;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-011",
+      "question": "JS Challenge #11: Return the number 11",
+      "code": "// Your code here",
+      "correctAnswer": "return 11;",
+      "acceptedAnswers": [
+        "return 11"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 11;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-012",
+      "question": "JS Challenge #12: Return the number 12",
+      "code": "// Your code here",
+      "correctAnswer": "return 12;",
+      "acceptedAnswers": [
+        "return 12"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 12;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-013",
+      "question": "JS Challenge #13: Return the number 13",
+      "code": "// Your code here",
+      "correctAnswer": "return 13;",
+      "acceptedAnswers": [
+        "return 13"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 13;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-014",
+      "question": "JS Challenge #14: Return the number 14",
+      "code": "// Your code here",
+      "correctAnswer": "return 14;",
+      "acceptedAnswers": [
+        "return 14"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 14;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-015",
+      "question": "JS Challenge #15: Return the number 15",
+      "code": "// Your code here",
+      "correctAnswer": "return 15;",
+      "acceptedAnswers": [
+        "return 15"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 15;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-016",
+      "question": "JS Challenge #16: Return the number 16",
+      "code": "// Your code here",
+      "correctAnswer": "return 16;",
+      "acceptedAnswers": [
+        "return 16"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 16;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-017",
+      "question": "JS Challenge #17: Return the number 17",
+      "code": "// Your code here",
+      "correctAnswer": "return 17;",
+      "acceptedAnswers": [
+        "return 17"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 17;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-018",
+      "question": "JS Challenge #18: Return the number 18",
+      "code": "// Your code here",
+      "correctAnswer": "return 18;",
+      "acceptedAnswers": [
+        "return 18"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 18;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-019",
+      "question": "JS Challenge #19: Return the number 19",
+      "code": "// Your code here",
+      "correctAnswer": "return 19;",
+      "acceptedAnswers": [
+        "return 19"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 19;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-020",
+      "question": "JS Challenge #20: Return the number 20",
+      "code": "// Your code here",
+      "correctAnswer": "return 20;",
+      "acceptedAnswers": [
+        "return 20"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 20;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-021",
+      "question": "JS Challenge #21: Return the number 21",
+      "code": "// Your code here",
+      "correctAnswer": "return 21;",
+      "acceptedAnswers": [
+        "return 21"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 21;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-022",
+      "question": "JS Challenge #22: Return the number 22",
+      "code": "// Your code here",
+      "correctAnswer": "return 22;",
+      "acceptedAnswers": [
+        "return 22"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 22;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-023",
+      "question": "JS Challenge #23: Return the number 23",
+      "code": "// Your code here",
+      "correctAnswer": "return 23;",
+      "acceptedAnswers": [
+        "return 23"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 23;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-024",
+      "question": "JS Challenge #24: Return the number 24",
+      "code": "// Your code here",
+      "correctAnswer": "return 24;",
+      "acceptedAnswers": [
+        "return 24"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 24;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-025",
+      "question": "JS Challenge #25: Return the number 25",
+      "code": "// Your code here",
+      "correctAnswer": "return 25;",
+      "acceptedAnswers": [
+        "return 25"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 25;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-026",
+      "question": "JS Challenge #26: Return the number 26",
+      "code": "// Your code here",
+      "correctAnswer": "return 26;",
+      "acceptedAnswers": [
+        "return 26"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 26;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-027",
+      "question": "JS Challenge #27: Return the number 27",
+      "code": "// Your code here",
+      "correctAnswer": "return 27;",
+      "acceptedAnswers": [
+        "return 27"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 27;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-028",
+      "question": "JS Challenge #28: Return the number 28",
+      "code": "// Your code here",
+      "correctAnswer": "return 28;",
+      "acceptedAnswers": [
+        "return 28"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 28;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-029",
+      "question": "JS Challenge #29: Return the number 29",
+      "code": "// Your code here",
+      "correctAnswer": "return 29;",
+      "acceptedAnswers": [
+        "return 29"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 29;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-030",
+      "question": "JS Challenge #30: Return the number 30",
+      "code": "// Your code here",
+      "correctAnswer": "return 30;",
+      "acceptedAnswers": [
+        "return 30"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 30;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-031",
+      "question": "JS Challenge #31: Return the number 31",
+      "code": "// Your code here",
+      "correctAnswer": "return 31;",
+      "acceptedAnswers": [
+        "return 31"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 31;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-032",
+      "question": "JS Challenge #32: Return the number 32",
+      "code": "// Your code here",
+      "correctAnswer": "return 32;",
+      "acceptedAnswers": [
+        "return 32"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 32;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-033",
+      "question": "JS Challenge #33: Return the number 33",
+      "code": "// Your code here",
+      "correctAnswer": "return 33;",
+      "acceptedAnswers": [
+        "return 33"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 33;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-034",
+      "question": "JS Challenge #34: Return the number 34",
+      "code": "// Your code here",
+      "correctAnswer": "return 34;",
+      "acceptedAnswers": [
+        "return 34"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 34;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-035",
+      "question": "JS Challenge #35: Return the number 35",
+      "code": "// Your code here",
+      "correctAnswer": "return 35;",
+      "acceptedAnswers": [
+        "return 35"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 35;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-036",
+      "question": "JS Challenge #36: Return the number 36",
+      "code": "// Your code here",
+      "correctAnswer": "return 36;",
+      "acceptedAnswers": [
+        "return 36"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 36;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-037",
+      "question": "JS Challenge #37: Return the number 37",
+      "code": "// Your code here",
+      "correctAnswer": "return 37;",
+      "acceptedAnswers": [
+        "return 37"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 37;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-038",
+      "question": "JS Challenge #38: Return the number 38",
+      "code": "// Your code here",
+      "correctAnswer": "return 38;",
+      "acceptedAnswers": [
+        "return 38"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 38;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-039",
+      "question": "JS Challenge #39: Return the number 39",
+      "code": "// Your code here",
+      "correctAnswer": "return 39;",
+      "acceptedAnswers": [
+        "return 39"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 39;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-040",
+      "question": "JS Challenge #40: Return the number 40",
+      "code": "// Your code here",
+      "correctAnswer": "return 40;",
+      "acceptedAnswers": [
+        "return 40"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 40;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-041",
+      "question": "JS Challenge #41: Return the number 41",
+      "code": "// Your code here",
+      "correctAnswer": "return 41;",
+      "acceptedAnswers": [
+        "return 41"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 41;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-042",
+      "question": "JS Challenge #42: Return the number 42",
+      "code": "// Your code here",
+      "correctAnswer": "return 42;",
+      "acceptedAnswers": [
+        "return 42"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 42;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-043",
+      "question": "JS Challenge #43: Return the number 43",
+      "code": "// Your code here",
+      "correctAnswer": "return 43;",
+      "acceptedAnswers": [
+        "return 43"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 43;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-044",
+      "question": "JS Challenge #44: Return the number 44",
+      "code": "// Your code here",
+      "correctAnswer": "return 44;",
+      "acceptedAnswers": [
+        "return 44"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 44;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-045",
+      "question": "JS Challenge #45: Return the number 45",
+      "code": "// Your code here",
+      "correctAnswer": "return 45;",
+      "acceptedAnswers": [
+        "return 45"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 45;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-046",
+      "question": "JS Challenge #46: Return the number 46",
+      "code": "// Your code here",
+      "correctAnswer": "return 46;",
+      "acceptedAnswers": [
+        "return 46"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 46;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-047",
+      "question": "JS Challenge #47: Return the number 47",
+      "code": "// Your code here",
+      "correctAnswer": "return 47;",
+      "acceptedAnswers": [
+        "return 47"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 47;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-048",
+      "question": "JS Challenge #48: Return the number 48",
+      "code": "// Your code here",
+      "correctAnswer": "return 48;",
+      "acceptedAnswers": [
+        "return 48"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 48;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-049",
+      "question": "JS Challenge #49: Return the number 49",
+      "code": "// Your code here",
+      "correctAnswer": "return 49;",
+      "acceptedAnswers": [
+        "return 49"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 49;",
+      "explanation": "return exits a function and returns a value."
+    },
+    {
+      "id": "JS-AUTO-050",
+      "question": "JS Challenge #50: Return the number 50",
+      "code": "// Your code here",
+      "correctAnswer": "return 50;",
+      "acceptedAnswers": [
+        "return 50"
+      ],
+      "hints": [
+        "Use the return keyword."
+      ],
+      "solution": "return 50;",
+      "explanation": "return exits a function and returns a value."
+    }
+  ]
+}

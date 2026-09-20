@@ -14,7 +14,9 @@ import androidx.navigation3.runtime.NavKey
 import com.cultcode.CourseList
 import com.cultcode.Practice
 import com.cultcode.Ide
+import com.cultcode.Profile
 import com.cultcode.data.UserProgressRepository
+import com.cultcode.engine.CurriculumEngine
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -26,11 +28,16 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
     val totalDays = repository.getTimeCommitment()
     val level = repository.getSkillLevel()
     val primaryTrack = tracks.firstOrNull() ?: "Python"
+    val todayModule = remember(primaryTrack, level, totalDays) { CurriculumEngine.generateRoadmap(primaryTrack, level, totalDays).firstOrNull() ?: CurriculumEngine.DailyModule(1, "Core Fundamentals", "PY-BASICS-001") }
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("UNSULLIED CODE_", fontWeight = FontWeight.Bold) },
+                title = { Text("Dashboard") },
+                actions = {
+                    Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                    IconButton(onClick = { onNavigate(Profile) }) { Text("⚙️") }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background,
                     titleContentColor = MaterialTheme.colorScheme.onBackground
@@ -62,7 +69,7 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                         Text("Day 1 of $totalDays", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium)
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(primaryTrack, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                        Text("Core Fundamentals", style = MaterialTheme.typography.bodyMedium)
+                        Text(todayModule.title, style = MaterialTheme.typography.bodyMedium)
                         Spacer(modifier = Modifier.height(8.dp))
                         val animatedProgress by animateFloatAsState(targetValue = 0.0f, animationSpec = tween(1000))
                         LinearProgressIndicator(progress = { animatedProgress }, modifier = Modifier.fillMaxWidth())
@@ -92,20 +99,6 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 Spacer(modifier = Modifier.height(8.dp))
                 tracks.forEach { track ->
                     CourseProgressRow(track, 0.0f)
-                }
-            }
-            
-            item {
-                Card(
-                    onClick = { onNavigate(Ide("Python")) },
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text("COMMON IDE", color = MaterialTheme.colorScheme.onPrimaryContainer, style = MaterialTheme.typography.labelMedium)
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text("Open Sandbox Editor", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                    }
                 }
             }
 

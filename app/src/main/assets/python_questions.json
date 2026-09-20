@@ -1,34 +1,718 @@
-[
-  {
-    "id": "PY-EASY-VARIABLES-001",
-    "language": "Python",
-    "difficulty": "easy",
-    "topic": "variables",
-    "subtopic": "assignment",
-    "type": "code_output",
-    "question": "Assign the integer value 10 to a variable named `score`.",
-    "code": "# Write your code below\n\n",
-    "options": [],
-    "correctAnswer": "score = 10",
-    "acceptedAnswers": ["score = 10", "score=10"],
-    "hints": [
-      "In Python, you use the `=` operator to assign values to variables.",
-      "The variable name goes on the left, and the value on the right."
-    ],
-    "solution": "score = 10",
-    "explanation": "Variables are containers for storing data values. Python has no command for declaring a variable; it is created the moment you first assign a value to it.",
-    "commonMistakes": [
-      "Using `==` instead of `=` for assignment."
-    ],
-    "testCases": [
-      {
-        "input": "",
-        "expectedOutput": "",
-        "assertVariables": {
-          "score": 10
-        }
-      }
-    ],
-    "xp": 10
-  }
-]
+{
+  "questions": [
+    {
+      "id": "PY-BASICS-001",
+      "question": "Variables are containers for storing data values. Create a variable named 'score' and assign it 10.",
+      "code": "# Your code here",
+      "correctAnswer": "score = 10",
+      "acceptedAnswers": [
+        "score=10"
+      ],
+      "hints": [
+        "Use the equals sign for assignment"
+      ],
+      "solution": "score = 10",
+      "explanation": "Python does not require keyword like var or let."
+    },
+    {
+      "id": "DSA-ARRAYS-001",
+      "question": "Create a list named 'arr' with the numbers 1, 2, 3.",
+      "code": "# Your code here",
+      "correctAnswer": "arr = [1, 2, 3]",
+      "acceptedAnswers": [
+        "arr=[1,2,3]"
+      ],
+      "hints": [
+        "Use square brackets []"
+      ],
+      "solution": "arr = [1, 2, 3]",
+      "explanation": "Python lists are equivalent to arrays in DSA."
+    },
+    {
+      "id": "PY-AUTO-002",
+      "question": "Python Challenge #2: Print the number 2",
+      "code": "# Your code here",
+      "correctAnswer": "print(2)",
+      "acceptedAnswers": [
+        "print( 2 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(2)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-003",
+      "question": "Python Challenge #3: Print the number 3",
+      "code": "# Your code here",
+      "correctAnswer": "print(3)",
+      "acceptedAnswers": [
+        "print( 3 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(3)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-004",
+      "question": "Python Challenge #4: Print the number 4",
+      "code": "# Your code here",
+      "correctAnswer": "print(4)",
+      "acceptedAnswers": [
+        "print( 4 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(4)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-005",
+      "question": "Python Challenge #5: Print the number 5",
+      "code": "# Your code here",
+      "correctAnswer": "print(5)",
+      "acceptedAnswers": [
+        "print( 5 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(5)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-006",
+      "question": "Python Challenge #6: Print the number 6",
+      "code": "# Your code here",
+      "correctAnswer": "print(6)",
+      "acceptedAnswers": [
+        "print( 6 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(6)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-007",
+      "question": "Python Challenge #7: Print the number 7",
+      "code": "# Your code here",
+      "correctAnswer": "print(7)",
+      "acceptedAnswers": [
+        "print( 7 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(7)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-008",
+      "question": "Python Challenge #8: Print the number 8",
+      "code": "# Your code here",
+      "correctAnswer": "print(8)",
+      "acceptedAnswers": [
+        "print( 8 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(8)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-009",
+      "question": "Python Challenge #9: Print the number 9",
+      "code": "# Your code here",
+      "correctAnswer": "print(9)",
+      "acceptedAnswers": [
+        "print( 9 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(9)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-010",
+      "question": "Python Challenge #10: Print the number 10",
+      "code": "# Your code here",
+      "correctAnswer": "print(10)",
+      "acceptedAnswers": [
+        "print( 10 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(10)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-011",
+      "question": "Python Challenge #11: Print the number 11",
+      "code": "# Your code here",
+      "correctAnswer": "print(11)",
+      "acceptedAnswers": [
+        "print( 11 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(11)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-012",
+      "question": "Python Challenge #12: Print the number 12",
+      "code": "# Your code here",
+      "correctAnswer": "print(12)",
+      "acceptedAnswers": [
+        "print( 12 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(12)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-013",
+      "question": "Python Challenge #13: Print the number 13",
+      "code": "# Your code here",
+      "correctAnswer": "print(13)",
+      "acceptedAnswers": [
+        "print( 13 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(13)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-014",
+      "question": "Python Challenge #14: Print the number 14",
+      "code": "# Your code here",
+      "correctAnswer": "print(14)",
+      "acceptedAnswers": [
+        "print( 14 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(14)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-015",
+      "question": "Python Challenge #15: Print the number 15",
+      "code": "# Your code here",
+      "correctAnswer": "print(15)",
+      "acceptedAnswers": [
+        "print( 15 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(15)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-016",
+      "question": "Python Challenge #16: Print the number 16",
+      "code": "# Your code here",
+      "correctAnswer": "print(16)",
+      "acceptedAnswers": [
+        "print( 16 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(16)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-017",
+      "question": "Python Challenge #17: Print the number 17",
+      "code": "# Your code here",
+      "correctAnswer": "print(17)",
+      "acceptedAnswers": [
+        "print( 17 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(17)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-018",
+      "question": "Python Challenge #18: Print the number 18",
+      "code": "# Your code here",
+      "correctAnswer": "print(18)",
+      "acceptedAnswers": [
+        "print( 18 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(18)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-019",
+      "question": "Python Challenge #19: Print the number 19",
+      "code": "# Your code here",
+      "correctAnswer": "print(19)",
+      "acceptedAnswers": [
+        "print( 19 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(19)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-020",
+      "question": "Python Challenge #20: Print the number 20",
+      "code": "# Your code here",
+      "correctAnswer": "print(20)",
+      "acceptedAnswers": [
+        "print( 20 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(20)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-021",
+      "question": "Python Challenge #21: Print the number 21",
+      "code": "# Your code here",
+      "correctAnswer": "print(21)",
+      "acceptedAnswers": [
+        "print( 21 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(21)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-022",
+      "question": "Python Challenge #22: Print the number 22",
+      "code": "# Your code here",
+      "correctAnswer": "print(22)",
+      "acceptedAnswers": [
+        "print( 22 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(22)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-023",
+      "question": "Python Challenge #23: Print the number 23",
+      "code": "# Your code here",
+      "correctAnswer": "print(23)",
+      "acceptedAnswers": [
+        "print( 23 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(23)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-024",
+      "question": "Python Challenge #24: Print the number 24",
+      "code": "# Your code here",
+      "correctAnswer": "print(24)",
+      "acceptedAnswers": [
+        "print( 24 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(24)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-025",
+      "question": "Python Challenge #25: Print the number 25",
+      "code": "# Your code here",
+      "correctAnswer": "print(25)",
+      "acceptedAnswers": [
+        "print( 25 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(25)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-026",
+      "question": "Python Challenge #26: Print the number 26",
+      "code": "# Your code here",
+      "correctAnswer": "print(26)",
+      "acceptedAnswers": [
+        "print( 26 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(26)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-027",
+      "question": "Python Challenge #27: Print the number 27",
+      "code": "# Your code here",
+      "correctAnswer": "print(27)",
+      "acceptedAnswers": [
+        "print( 27 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(27)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-028",
+      "question": "Python Challenge #28: Print the number 28",
+      "code": "# Your code here",
+      "correctAnswer": "print(28)",
+      "acceptedAnswers": [
+        "print( 28 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(28)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-029",
+      "question": "Python Challenge #29: Print the number 29",
+      "code": "# Your code here",
+      "correctAnswer": "print(29)",
+      "acceptedAnswers": [
+        "print( 29 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(29)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-030",
+      "question": "Python Challenge #30: Print the number 30",
+      "code": "# Your code here",
+      "correctAnswer": "print(30)",
+      "acceptedAnswers": [
+        "print( 30 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(30)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-031",
+      "question": "Python Challenge #31: Print the number 31",
+      "code": "# Your code here",
+      "correctAnswer": "print(31)",
+      "acceptedAnswers": [
+        "print( 31 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(31)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-032",
+      "question": "Python Challenge #32: Print the number 32",
+      "code": "# Your code here",
+      "correctAnswer": "print(32)",
+      "acceptedAnswers": [
+        "print( 32 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(32)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-033",
+      "question": "Python Challenge #33: Print the number 33",
+      "code": "# Your code here",
+      "correctAnswer": "print(33)",
+      "acceptedAnswers": [
+        "print( 33 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(33)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-034",
+      "question": "Python Challenge #34: Print the number 34",
+      "code": "# Your code here",
+      "correctAnswer": "print(34)",
+      "acceptedAnswers": [
+        "print( 34 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(34)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-035",
+      "question": "Python Challenge #35: Print the number 35",
+      "code": "# Your code here",
+      "correctAnswer": "print(35)",
+      "acceptedAnswers": [
+        "print( 35 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(35)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-036",
+      "question": "Python Challenge #36: Print the number 36",
+      "code": "# Your code here",
+      "correctAnswer": "print(36)",
+      "acceptedAnswers": [
+        "print( 36 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(36)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-037",
+      "question": "Python Challenge #37: Print the number 37",
+      "code": "# Your code here",
+      "correctAnswer": "print(37)",
+      "acceptedAnswers": [
+        "print( 37 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(37)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-038",
+      "question": "Python Challenge #38: Print the number 38",
+      "code": "# Your code here",
+      "correctAnswer": "print(38)",
+      "acceptedAnswers": [
+        "print( 38 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(38)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-039",
+      "question": "Python Challenge #39: Print the number 39",
+      "code": "# Your code here",
+      "correctAnswer": "print(39)",
+      "acceptedAnswers": [
+        "print( 39 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(39)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-040",
+      "question": "Python Challenge #40: Print the number 40",
+      "code": "# Your code here",
+      "correctAnswer": "print(40)",
+      "acceptedAnswers": [
+        "print( 40 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(40)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-041",
+      "question": "Python Challenge #41: Print the number 41",
+      "code": "# Your code here",
+      "correctAnswer": "print(41)",
+      "acceptedAnswers": [
+        "print( 41 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(41)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-042",
+      "question": "Python Challenge #42: Print the number 42",
+      "code": "# Your code here",
+      "correctAnswer": "print(42)",
+      "acceptedAnswers": [
+        "print( 42 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(42)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-043",
+      "question": "Python Challenge #43: Print the number 43",
+      "code": "# Your code here",
+      "correctAnswer": "print(43)",
+      "acceptedAnswers": [
+        "print( 43 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(43)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-044",
+      "question": "Python Challenge #44: Print the number 44",
+      "code": "# Your code here",
+      "correctAnswer": "print(44)",
+      "acceptedAnswers": [
+        "print( 44 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(44)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-045",
+      "question": "Python Challenge #45: Print the number 45",
+      "code": "# Your code here",
+      "correctAnswer": "print(45)",
+      "acceptedAnswers": [
+        "print( 45 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(45)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-046",
+      "question": "Python Challenge #46: Print the number 46",
+      "code": "# Your code here",
+      "correctAnswer": "print(46)",
+      "acceptedAnswers": [
+        "print( 46 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(46)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-047",
+      "question": "Python Challenge #47: Print the number 47",
+      "code": "# Your code here",
+      "correctAnswer": "print(47)",
+      "acceptedAnswers": [
+        "print( 47 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(47)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-048",
+      "question": "Python Challenge #48: Print the number 48",
+      "code": "# Your code here",
+      "correctAnswer": "print(48)",
+      "acceptedAnswers": [
+        "print( 48 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(48)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-049",
+      "question": "Python Challenge #49: Print the number 49",
+      "code": "# Your code here",
+      "correctAnswer": "print(49)",
+      "acceptedAnswers": [
+        "print( 49 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(49)",
+      "explanation": "The print function outputs text to the console."
+    },
+    {
+      "id": "PY-AUTO-050",
+      "question": "Python Challenge #50: Print the number 50",
+      "code": "# Your code here",
+      "correctAnswer": "print(50)",
+      "acceptedAnswers": [
+        "print( 50 )"
+      ],
+      "hints": [
+        "Use the print function."
+      ],
+      "solution": "print(50)",
+      "explanation": "The print function outputs text to the console."
+    }
+  ]
+}

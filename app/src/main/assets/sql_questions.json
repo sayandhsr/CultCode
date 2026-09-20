@@ -1,27 +1,606 @@
-[
-  {
-    "id": "SQL-EASY-SELECT-001",
-    "language": "SQL",
-    "difficulty": "easy",
-    "topic": "select",
-    "subtopic": "basic",
-    "type": "code_output",
-    "question": "Select all columns from the `employees` table.",
-    "code": "-- Write your query below\n\n",
-    "options": [],
-    "correctAnswer": "SELECT * FROM employees;",
-    "acceptedAnswers": ["SELECT * FROM employees"],
-    "hints": [
-      "Use the `SELECT` keyword.",
-      "The `*` symbol means all columns."
-    ],
-    "solution": "SELECT * FROM employees;",
-    "explanation": "The SELECT statement is used to select data from a database. The * character represents all columns in the table.",
-    "commonMistakes": [
-      "Forgetting the FROM clause."
-    ],
-    "databaseId": "employees_v1",
-    "expectedResult": [],
-    "xp": 10
-  }
-]
+{
+  "questions": [
+    {
+      "id": "SQL-MEDIUM-JOINS-001",
+      "question": "Write a query to SELECT all columns from Orders joined with Customers on CustomerID.",
+      "code": "SELECT * FROM Orders\n-- Your JOIN here",
+      "correctAnswer": "SELECT * FROM Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID",
+      "acceptedAnswers": [
+        "SELECT * FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID"
+      ],
+      "hints": [
+        "Use JOIN ... ON ..."
+      ],
+      "solution": "SELECT * FROM Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID",
+      "explanation": "JOIN combines rows based on a related column."
+    },
+    {
+      "id": "SQL-AUTO-002",
+      "question": "SQL Challenge #2: Select everything from table 'table2'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table2",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table2",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-003",
+      "question": "SQL Challenge #3: Select everything from table 'table3'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table3",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table3",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-004",
+      "question": "SQL Challenge #4: Select everything from table 'table4'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table4",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table4",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-005",
+      "question": "SQL Challenge #5: Select everything from table 'table5'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table5",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table5",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-006",
+      "question": "SQL Challenge #6: Select everything from table 'table6'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table6",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table6",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-007",
+      "question": "SQL Challenge #7: Select everything from table 'table7'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table7",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table7",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-008",
+      "question": "SQL Challenge #8: Select everything from table 'table8'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table8",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table8",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-009",
+      "question": "SQL Challenge #9: Select everything from table 'table9'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table9",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table9",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-010",
+      "question": "SQL Challenge #10: Select everything from table 'table10'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table10",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table10",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-011",
+      "question": "SQL Challenge #11: Select everything from table 'table11'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table11",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table11",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-012",
+      "question": "SQL Challenge #12: Select everything from table 'table12'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table12",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table12",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-013",
+      "question": "SQL Challenge #13: Select everything from table 'table13'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table13",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table13",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-014",
+      "question": "SQL Challenge #14: Select everything from table 'table14'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table14",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table14",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-015",
+      "question": "SQL Challenge #15: Select everything from table 'table15'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table15",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table15",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-016",
+      "question": "SQL Challenge #16: Select everything from table 'table16'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table16",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table16",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-017",
+      "question": "SQL Challenge #17: Select everything from table 'table17'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table17",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table17",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-018",
+      "question": "SQL Challenge #18: Select everything from table 'table18'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table18",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table18",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-019",
+      "question": "SQL Challenge #19: Select everything from table 'table19'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table19",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table19",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-020",
+      "question": "SQL Challenge #20: Select everything from table 'table20'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table20",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table20",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-021",
+      "question": "SQL Challenge #21: Select everything from table 'table21'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table21",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table21",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-022",
+      "question": "SQL Challenge #22: Select everything from table 'table22'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table22",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table22",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-023",
+      "question": "SQL Challenge #23: Select everything from table 'table23'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table23",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table23",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-024",
+      "question": "SQL Challenge #24: Select everything from table 'table24'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table24",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table24",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-025",
+      "question": "SQL Challenge #25: Select everything from table 'table25'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table25",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table25",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-026",
+      "question": "SQL Challenge #26: Select everything from table 'table26'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table26",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table26",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-027",
+      "question": "SQL Challenge #27: Select everything from table 'table27'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table27",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table27",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-028",
+      "question": "SQL Challenge #28: Select everything from table 'table28'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table28",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table28",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-029",
+      "question": "SQL Challenge #29: Select everything from table 'table29'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table29",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table29",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-030",
+      "question": "SQL Challenge #30: Select everything from table 'table30'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table30",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table30",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-031",
+      "question": "SQL Challenge #31: Select everything from table 'table31'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table31",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table31",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-032",
+      "question": "SQL Challenge #32: Select everything from table 'table32'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table32",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table32",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-033",
+      "question": "SQL Challenge #33: Select everything from table 'table33'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table33",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table33",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-034",
+      "question": "SQL Challenge #34: Select everything from table 'table34'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table34",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table34",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-035",
+      "question": "SQL Challenge #35: Select everything from table 'table35'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table35",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table35",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-036",
+      "question": "SQL Challenge #36: Select everything from table 'table36'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table36",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table36",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-037",
+      "question": "SQL Challenge #37: Select everything from table 'table37'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table37",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table37",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-038",
+      "question": "SQL Challenge #38: Select everything from table 'table38'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table38",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table38",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-039",
+      "question": "SQL Challenge #39: Select everything from table 'table39'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table39",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table39",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-040",
+      "question": "SQL Challenge #40: Select everything from table 'table40'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table40",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table40",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-041",
+      "question": "SQL Challenge #41: Select everything from table 'table41'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table41",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table41",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-042",
+      "question": "SQL Challenge #42: Select everything from table 'table42'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table42",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table42",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-043",
+      "question": "SQL Challenge #43: Select everything from table 'table43'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table43",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table43",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-044",
+      "question": "SQL Challenge #44: Select everything from table 'table44'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table44",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table44",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-045",
+      "question": "SQL Challenge #45: Select everything from table 'table45'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table45",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table45",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-046",
+      "question": "SQL Challenge #46: Select everything from table 'table46'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table46",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table46",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-047",
+      "question": "SQL Challenge #47: Select everything from table 'table47'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table47",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table47",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-048",
+      "question": "SQL Challenge #48: Select everything from table 'table48'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table48",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table48",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-049",
+      "question": "SQL Challenge #49: Select everything from table 'table49'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table49",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table49",
+      "explanation": "SELECT * grabs all columns."
+    },
+    {
+      "id": "SQL-AUTO-050",
+      "question": "SQL Challenge #50: Select everything from table 'table50'",
+      "code": "-- Your code here",
+      "correctAnswer": "SELECT * FROM table50",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use SELECT *"
+      ],
+      "solution": "SELECT * FROM table50",
+      "explanation": "SELECT * grabs all columns."
+    }
+  ]
+}

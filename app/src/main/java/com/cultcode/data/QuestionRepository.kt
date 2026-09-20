@@ -21,6 +21,8 @@ class QuestionRepository(private val context: Context) {
         val fileName = when {
             id.startsWith("SQL") -> "sql_questions.json"
             id.startsWith("PY") -> "python_questions.json"
+            id.startsWith("DSA") -> "python_questions.json"
+            id.startsWith("JS") -> "javascript_questions.json"
             id.startsWith("YAM") -> "yaml_questions.json"
             id.startsWith("DOC") -> "docker_questions.json"
             id.startsWith("K8S") -> "k8s_questions.json"

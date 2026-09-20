@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.delay
 import com.cultcode.data.UserProgressRepository
 
 @Composable
@@ -15,10 +16,44 @@ fun OnboardingScreen(onComplete: () -> Unit) {
     val context = LocalContext.current
     val repository = remember { UserProgressRepository(context) }
     
-    var step by remember { mutableStateOf(1) }
+    var step by remember { mutableStateOf(0) }
+    var userName by remember { mutableStateOf("") }
     var skillLevel by remember { mutableStateOf("Beginner") }
     var days by remember { mutableStateOf(15) }
     var tracks by remember { mutableStateOf(setOf<String>()) }
+    
+    // Loading State
+    var isLoading by remember { mutableStateOf(false) }
+    var loadingText by remember { mutableStateOf("Analyzing skill level...") }
+
+    LaunchedEffect(isLoading) {
+        if (isLoading) {
+            loadingText = "Analyzing skill level..."
+            delay(2000)
+            loadingText = "Generating customized $skillLevel curriculum..."
+            delay(2500)
+            loadingText = "Building $days-day study plan..."
+            delay(2500)
+            repository.saveOnboardingPreferences(skillLevel, days, tracks)
+            // also we can save userName to repository, but we need to update it first
+            onComplete()
+        }
+    }
+
+    if (isLoading) {
+        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
+                Spacer(modifier = Modifier.height(24.dp))
+                Text(loadingText, style = MaterialTheme.typography.bodyLarge)
+            }
+        }
+        return
+    }
 
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
@@ -27,6 +62,23 @@ fun OnboardingScreen(onComplete: () -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             when (step) {
+                0 -> {
+                    Text("WELCOME TO UNSULLIED CODE", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                    Spacer(modifier = Modifier.height(32.dp))
+                    OutlinedTextField(
+                        value = userName,
+                        onValueChange = { userName = it },
+                        label = { Text("What is your name?") },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Spacer(modifier = Modifier.height(32.dp))
+                    Button(
+                        onClick = { if(userName.isNotBlank()) step = 1 },
+                        modifier = Modifier.fillMaxWidth().height(56.dp)
+                    ) {
+                        Text("CONTINUE")
+                    }
+                }
                 1 -> {
                     Text("YOUR SKILL LEVEL", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                     Spacer(modifier = Modifier.height(32.dp))
@@ -86,10 +138,7 @@ fun OnboardingScreen(onComplete: () -> Unit) {
                     }
                     Spacer(modifier = Modifier.height(32.dp))
                     Button(
-                        onClick = {
-                            repository.saveOnboardingPreferences(skillLevel, days, tracks)
-                            onComplete()
-                        },
+                        onClick = { isLoading = true },
                         modifier = Modifier.fillMaxWidth().height(56.dp)
                     ) {
                         Text("GENERATE SCHEDULE")

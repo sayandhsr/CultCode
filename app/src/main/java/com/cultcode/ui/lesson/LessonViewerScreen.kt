@@ -89,7 +89,9 @@ fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(courseId.replaceFirstChar { it.uppercase() }) }
+                navigationIcon = { IconButton(onClick = { onNavigate(com.cultcode.CourseList) }) { Text("<") } },
+                title = { Text(courseId.replaceFirstChar { it.uppercase() }) },
+                actions = { Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary) }
             )
         },
         floatingActionButton = {
