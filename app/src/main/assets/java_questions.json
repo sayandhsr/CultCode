@@ -1,0 +1,19 @@
+﻿{
+  "questions": [
+    {
+      "id": "JAV-BASICS-001",
+      "question": "Print 'Hello, World!' to the console in Java.",
+      "code": "class Main {\n    public static void main(String[] args) {\n        // your code here\n    }\n}",
+      "correctAnswer": "System.out.println(\"Hello, World!\");",
+      "acceptedAnswers": [
+        "System.out.print(\"Hello, World!\");"
+      ],
+      "hints": [
+        "Use the System.out object.",
+        "Call the println method."
+      ],
+      "solution": "System.out.println(\"Hello, World!\");",
+      "explanation": "System.out.println() prints text to the console and adds a new line."
+    }
+  ]
+}

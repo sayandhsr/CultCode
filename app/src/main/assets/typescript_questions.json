@@ -1,0 +1,17 @@
+﻿{
+  "questions": [
+    {
+      "id": "TS-BASICS-001",
+      "question": "Define an interface 'User' with a string 'name' and number 'age', then create a typed variable 'user'.",
+      "code": "// Your code here",
+      "correctAnswer": "interface User { name: string; age: number; }\nconst user: User = { name: 'John', age: 30 };",
+      "acceptedAnswers": [],
+      "hints": [
+        "Use the 'interface' keyword.",
+        "Specify the types explicitly."
+      ],
+      "solution": "interface User { name: string; age: number; }",
+      "explanation": "TypeScript interfaces provide strong typing for objects."
+    }
+  ]
+}

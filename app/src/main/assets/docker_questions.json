@@ -1,0 +1,19 @@
+﻿{
+  "questions": [
+    {
+      "id": "DOC-BASICS-001",
+      "question": "Write a Dockerfile command to use the official Node.js 18 alpine image as the base.",
+      "code": "# Write your Dockerfile command here\n",
+      "correctAnswer": "FROM node:18-alpine",
+      "acceptedAnswers": [
+        "FROM node:18-alpine"
+      ],
+      "hints": [
+        "The keyword is FROM.",
+        "The image name is node:18-alpine."
+      ],
+      "solution": "FROM node:18-alpine",
+      "explanation": "Every Dockerfile must begin with a FROM instruction."
+    }
+  ]
+}

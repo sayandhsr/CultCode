@@ -39,13 +39,43 @@ fun LessonViewerScreen(courseId: String, lessonId: String, onNavigate: (NavKey) 
                 "Docker Containers", "Learn how to containerize apps.",
                 "A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.",
                 "docker build -t myapp .\ndocker run -d -p 8080:80 myapp",
-                "Forgetting to expose the port when running the container.", "DOCKER-EASY-001"
+                "Forgetting to expose the port when running the container.", "DOC-BASICS-001"
             )
             "kubernetes" -> LessonContent(
                 "K8s Pods", "Understand the smallest deployable unit.",
                 "Pods are the smallest deployable units of computing that you can create and manage in Kubernetes. A Pod contains one or more containers.",
                 "kubectl get pods\nkubectl describe pod my-pod",
-                "Assuming a Pod is a VM. Pods are ephemeral.", "K8S-EASY-001"
+                "Assuming a Pod is a VM. Pods are ephemeral.", "K8S-BASICS-001"
+            )
+            "yaml" -> LessonContent(
+                "YAML Configuration", "Understand YAML syntax.",
+                "YAML is a human-readable data-serialization language. It is commonly used for configuration files.",
+                "server:\n  port: 8080",
+                "Using tabs instead of spaces.", "YAM-BASICS-001"
+            )
+            "java" -> LessonContent(
+                "Java Basics", "Learn Java syntax.",
+                "Java is a high-level, class-based, object-oriented programming language.",
+                "class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World\");\n  }\n}",
+                "Forgetting semicolons.", "JAV-BASICS-001"
+            )
+            "pandas/eda" -> LessonContent(
+                "Data Science & EDA", "Learn Exploratory Data Analysis.",
+                "Pandas is an essential Python library for loading, analyzing, and cleaning datasets. You'll often start by loading a CSV and inspecting the head.",
+                "import pandas as pd\ndf = pd.read_csv('sales_data.csv')\nprint(df.head())",
+                "Forgetting to import pandas.", "DAT-EDA-001"
+            )
+            "html/css" -> LessonContent(
+                "Frontend Fundamentals", "Learn HTML tags.",
+                "HTML builds the skeleton of the web.",
+                "<h1>Hello</h1>",
+                "Forgetting closing tags.", "HTM-BASICS-001"
+            )
+            "typescript" -> LessonContent(
+                "Strict Typing", "Learn TS Interfaces.",
+                "TS adds types to JS.",
+                "interface User { name: string }",
+                "Mixing up type syntax.", "TS-BASICS-001"
             )
             else -> LessonContent(
                 "Python Variables", "Understand how to store data in variables.",

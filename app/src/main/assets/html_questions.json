@@ -1,0 +1,19 @@
+﻿{
+  "questions": [
+    {
+      "id": "HTM-BASICS-001",
+      "question": "Create a standard HTML5 boilerplate with a <h1> tag that says 'Hello World'.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n    <!-- write here -->\n</body>\n</html>",
+      "correctAnswer": "<h1>Hello World</h1>",
+      "acceptedAnswers": [
+        "<h1>Hello World</h1>"
+      ],
+      "hints": [
+        "Use the <h1> tag.",
+        "Ensure you close the tag with </h1>."
+      ],
+      "solution": "<h1>Hello World</h1>",
+      "explanation": "The h1 tag defines the most important heading."
+    }
+  ]
+}

@@ -1,9 +1,7 @@
 ﻿package com.cultcode.data
 
 import android.content.Context
-import org.json.JSONArray
 import org.json.JSONObject
-import java.io.InputStreamReader
 
 data class Question(
     val id: String,
@@ -17,45 +15,58 @@ data class Question(
 )
 
 class QuestionRepository(private val context: Context) {
+    
     fun getQuestion(id: String): Question? {
-        val fileName = if (id.startsWith("PY-")) "python_questions.json" else "sql_questions.json"
+        // Determine the correct file based on ID prefix
+        val fileName = when {
+            id.startsWith("SQL") -> "sql_questions.json"
+            id.startsWith("PY") -> "python_questions.json"
+            id.startsWith("YAM") -> "yaml_questions.json"
+            id.startsWith("DOC") -> "docker_questions.json"
+            id.startsWith("K8S") -> "k8s_questions.json"
+            id.startsWith("JAV") -> "java_questions.json"
+            id.startsWith("DAT") -> "data_science_questions.json"
+            id.startsWith("HTM") -> "html_questions.json"
+            id.startsWith("CSS") -> "css_questions.json"
+            id.startsWith("TS") -> "typescript_questions.json"
+            else -> "python_questions.json" // Fallback
+        }
         
-        return try {
-            val stream = context.assets.open(fileName)
-            val jsonString = InputStreamReader(stream).readText()
-            val jsonArray = JSONArray(jsonString)
+        try {
+            val jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
+            val jsonObject = JSONObject(jsonString)
+            val questionsArray = jsonObject.getJSONArray("questions")
             
-            for (i in 0 until jsonArray.length()) {
-                val obj = jsonArray.getJSONObject(i)
-                if (obj.getString("id") == id) {
+            for (i in 0 until questionsArray.length()) {
+                val q = questionsArray.getJSONObject(i)
+                if (q.getString("id") == id) {
                     val acceptedAnswers = mutableListOf<String>()
-                    val acceptedArray = obj.getJSONArray("acceptedAnswers")
+                    val acceptedArray = q.getJSONArray("acceptedAnswers")
                     for (j in 0 until acceptedArray.length()) {
                         acceptedAnswers.add(acceptedArray.getString(j))
                     }
                     
                     val hints = mutableListOf<String>()
-                    val hintsArray = obj.getJSONArray("hints")
+                    val hintsArray = q.getJSONArray("hints")
                     for (j in 0 until hintsArray.length()) {
                         hints.add(hintsArray.getString(j))
                     }
                     
                     return Question(
-                        id = obj.getString("id"),
-                        question = obj.getString("question"),
-                        code = obj.getString("code"),
-                        correctAnswer = obj.getString("correctAnswer"),
+                        id = q.getString("id"),
+                        question = q.getString("question"),
+                        code = q.getString("code"),
+                        correctAnswer = q.getString("correctAnswer"),
                         acceptedAnswers = acceptedAnswers,
                         hints = hints,
-                        solution = obj.getString("solution"),
-                        explanation = obj.getString("explanation")
+                        solution = q.getString("solution"),
+                        explanation = q.getString("explanation")
                     )
                 }
             }
-            null
         } catch (e: Exception) {
             e.printStackTrace()
-            null
         }
+        return null
     }
 }

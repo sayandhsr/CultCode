@@ -1,0 +1,19 @@
+﻿{
+  "questions": [
+    {
+      "id": "YAM-BASICS-001",
+      "question": "YAML heavily relies on indentation. Write a simple YAML object named 'server' with two properties: 'port' set to 8080 and 'host' set to 'localhost'.",
+      "code": "server:\n",
+      "correctAnswer": "server:\n  port: 8080\n  host: 'localhost'",
+      "acceptedAnswers": [
+        "server:\n  port: 8080\n  host: localhost"
+      ],
+      "hints": [
+        "Use exactly two spaces for indentation.",
+        "YAML properties use key: value format."
+      ],
+      "solution": "server:\n  port: 8080\n  host: localhost",
+      "explanation": "YAML uses spaces (not tabs) to represent nested objects."
+    }
+  ]
+}

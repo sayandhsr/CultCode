@@ -1,0 +1,19 @@
+﻿{
+  "questions": [
+    {
+      "id": "K8S-BASICS-001",
+      "question": "Write the kubectl command to get all running pods in the current namespace.",
+      "code": "$ ",
+      "correctAnswer": "kubectl get pods",
+      "acceptedAnswers": [
+        "kubectl get po"
+      ],
+      "hints": [
+        "The command starts with kubectl.",
+        "Use the 'get' verb."
+      ],
+      "solution": "kubectl get pods",
+      "explanation": "kubectl get pods lists all pods in the current namespace."
+    }
+  ]
+}

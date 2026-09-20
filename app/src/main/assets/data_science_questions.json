@@ -1,0 +1,20 @@
+﻿{
+  "questions": [
+    {
+      "id": "DAT-EDA-001",
+      "question": "Use Pandas to load 'sales_data.csv' and print the head of the dataframe to perform some initial Exploratory Data Analysis (EDA).",
+      "code": "import pandas as pd\n\n# Your code here",
+      "correctAnswer": "df = pd.read_csv('sales_data.csv')\nprint(df.head())",
+      "acceptedAnswers": [
+        "df=pd.read_csv('sales_data.csv')\nprint(df.head())",
+        "data=pd.read_csv(\"sales_data.csv\")\nprint(data.head())"
+      ],
+      "hints": [
+        "Use the pd.read_csv() function.",
+        "Use the .head() method on the dataframe."
+      ],
+      "solution": "df = pd.read_csv('sales_data.csv')\nprint(df.head())",
+      "explanation": "Pandas read_csv() is the standard way to load tabular data."
+    }
+  ]
+}
