@@ -67,7 +67,7 @@ fun LessonViewerScreen(
                     
                     Box(modifier = Modifier
                         .fillMaxWidth()
-                        .height(200.dp)
+                        .aspectRatio(1.5f)
                         .background(colors.surface, androidx.compose.foundation.shape.RoundedCornerShape(Radius.sm))
                     ) {
                         CodeEditor(
