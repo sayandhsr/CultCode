@@ -108,6 +108,7 @@ fun MainNavigation() {
                     "python" -> "PY-BASICS-001"
                     "javascript" -> "JS-BASICS-001"
                     "java" -> "JAV-BASICS-001"
+                    "html" -> "HTM-BASICS-001"
                     else -> "PY-BASICS-001"
                 }
                 com.unsulliedcode.ui.practice.PracticeScreen(

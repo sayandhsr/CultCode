@@ -36,19 +36,17 @@ class ContentRepository(private val context: Context) {
 
     fun getLanguages(): List<Language> = listOf(
         Language("python", "Python", "Core Programming", "🐍", 25, 100),
-        Language("javascript", "JavaScript", "Core Programming", "🟨", 25, 100),
+        Language("javascript", "JavaScript", "Core Programming", "📜", 25, 100),
         Language("java", "Java", "Core Programming", "☕", 25, 100),
         Language("c", "C", "Core Programming", "⚙️", 20, 80),
-        Language("cpp", "C++", "Core Programming", "🔧", 20, 80),
+        Language("cpp", "C++", "Core Programming", "🚀", 20, 80),
         Language("html", "HTML & CSS", "Core Programming", "🌐", 15, 60),
-        Language("yaml", "YAML", "Core Programming", "📄", 10, 40),
-        Language("go", "Go", "Core Programming", "🐹", 20, 80),
-        Language("rust", "Rust", "Core Programming", "🦀", 20, 80),
+        Language("yaml", "YAML", "Core Programming", "📝", 10, 40),
         Language("numpy", "NumPy", "Data Science", "🔢", 15, 60),
-        Language("pandas", "Pandas", "Data Science", "🐼", 15, 60),
+        Language("pandas", "Pandas", "Data Science", "📊", 15, 60),
         Language("docker", "Docker", "DevOps & Cloud", "🐳", 15, 60),
         Language("k8s", "Kubernetes", "DevOps & Cloud", "☸️", 15, 60),
-        Language("sql", "SQL", "Database Engineering", "🗃️", 20, 80),
+        Language("sql", "SQL", "Database Engineering", "🗄️", 20, 80),
         Language("mongo", "MongoDB", "Database Engineering", "🍃", 15, 60)
     )
 
@@ -134,6 +132,13 @@ class ContentRepository(private val context: Context) {
                 lesson("sql_04", languageId, "Aggregation", 4, "GROUP BY and aggregate functions.", "SELECT category, COUNT(*), AVG(price)\nFROM products\nGROUP BY category\nHAVING COUNT(*) > 5;", "medium"),
                 lesson("sql_05", languageId, "Subqueries", 5, "Nested queries and correlated subqueries.", "SELECT name FROM users\nWHERE id IN (\n  SELECT user_id FROM orders\n  WHERE total > 100\n);", "hard")
             )
+            "html" -> listOf(
+                lesson("html_01", languageId, "HTML Basics", 1, "Building the structure of a web page.", "<html>\n  <body>\n    <h1>Hello World</h1>\n  </body>\n</html>", "easy"),
+                lesson("html_02", languageId, "CSS Basics", 2, "Styling your web page.", "<style>\n  h1 {\n    color: blue;\n  }\n</style>", "easy"),
+                lesson("html_03", languageId, "CSS Flexbox", 3, "Laying out elements flexibly.", ".container {\n  display: flex;\n  justify-content: center;\n}", "medium"),
+                lesson("html_04", languageId, "Forms and Inputs", 4, "Collecting user data.", "<form>\n  <input type=\"text\" placeholder=\"Name\" />\n</form>", "medium"),
+                lesson("html_05", languageId, "CSS Grid", 5, "Advanced layouts with Grid.", ".grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}", "hard")
+            )
             else -> listOf(
                 lesson("${languageId}_01", languageId, "Introduction", 1, "Getting started with $languageId.", "// Hello from $languageId!", "easy"),
                 lesson("${languageId}_02", languageId, "Basics", 2, "Core concepts of $languageId.", "// Core concepts", "easy"),
@@ -170,6 +175,11 @@ class ContentRepository(private val context: Context) {
                 question("sqlq_01", languageId, "sql_01", "Which clause filters rows?", listOf("SELECT", "FROM", "WHERE", "ORDER BY"), 2, "WHERE filters rows based on conditions.", "easy", 10),
                 question("sqlq_02", languageId, "sql_03", "Which JOIN returns only matching rows?", listOf("LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "FULL JOIN"), 2, "INNER JOIN returns rows that have matching values in both tables.", "medium", 15),
                 question("sqlq_03", languageId, "sql_04", "What does COUNT(*) return?", listOf("Sum of values", "Number of rows", "Average value", "Maximum value"), 1, "COUNT(*) returns the total number of rows.", "easy", 10)
+            )
+            "html" -> listOf(
+                question("htmlq_01", languageId, "html_01", "What does HTML stand for?", listOf("HyperText Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language", "None"), 0, "HTML stands for HyperText Markup Language.", "easy", 10),
+                question("htmlq_02", languageId, "html_02", "What does CSS stand for?", listOf("Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"), 1, "CSS stands for Cascading Style Sheets.", "easy", 10),
+                question("htmlq_03", languageId, "html_03", "Which property is used in Flexbox?", listOf("float", "display: flex", "position", "grid"), 1, "Flexbox uses 'display: flex'.", "medium", 15)
             )
             else -> listOf(
                 question("${languageId}q_01", languageId, "${languageId}_01", "What is $languageId used for?", listOf("Web development", "General programming", "Data science", "All of the above"), 3, "$languageId has many applications.", "easy", 10)

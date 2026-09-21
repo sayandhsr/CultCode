@@ -106,7 +106,7 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                 DashboardGrid(
                     items = listOf(
                         "Python", "JavaScript", "Java", "Docker", "SQL", 
-                        "Kubernetes", "C++", "HTML", "Go", "Rust"
+                        "Kubernetes", "C++", "HTML"
                     ),
                     onItemClick = { item ->
                         val langId = when (item) {
@@ -118,8 +118,6 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
                             "Kubernetes" -> "k8s"
                             "C++" -> "cpp"
                             "HTML" -> "html"
-                            "Go" -> "go"
-                            "Rust" -> "rust"
                             else -> item.lowercase()
                         }
                         onNavigate(CourseList(langId))

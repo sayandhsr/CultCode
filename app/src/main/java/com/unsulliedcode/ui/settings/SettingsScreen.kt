@@ -133,7 +133,7 @@ fun SettingsScreen(onBack: () -> Unit) {
             HorizontalDivider(color = colors.border)
 
             Text("Interested Languages", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
-            val allTracks = listOf("Python", "JavaScript", "SQL", "Java", "C", "C++", "HTML", "CSS", "TypeScript", "Docker", "Kubernetes", "YAML")
+            val allTracks = listOf("Python", "JavaScript", "SQL", "Java", "C", "C++", "HTML", "TypeScript", "Docker", "Kubernetes", "YAML")
             
             Column(verticalArrangement = Arrangement.spacedBy(Space.sm)) {
                 allTracks.chunked(3).forEach { rowTracks ->
