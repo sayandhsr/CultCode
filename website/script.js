@@ -135,6 +135,9 @@ function handleBotReply(userText) {
         reply = "Unsullied Code is developed and maintained under Spurce Industries.";
     } else if (text.includes("update") || text.includes("release date") || text.includes("when") || text.includes("new version") || text.includes("future")) {
         reply = "New updates are coming soon! We are constantly refining the offline architecture and AST engine. Stay tuned for the final release.";
+    } else if (text.includes("time") || text.includes("date") || text.includes("day")) {
+        const now = new Date();
+        reply = `The current date and time is ${now.toLocaleString()}.`;
     } else if (text.match(/^(hello|hi|hey|greetings|morning|afternoon|evening)/)) {
         reply = "Hello there! How can I help you with Unsullied today?";
     } else if (text.includes("download") || text.includes("get") || text.includes("install") || text.includes("apk")) {
