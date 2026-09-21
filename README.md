@@ -1,31 +1,32 @@
-# UnsulliedCode 🗡️
+# CultCode / UnsulliedCode
 
-An elite, offline-first mobile coding ecosystem built with Android, Kotlin, and Jetpack Compose.
+An elite, offline-first mobile coding ecosystem built with Android, Kotlin, and Jetpack Compose. CultCode brings complex software engineering challenges, Git simulation, and algorithmic battles directly to your mobile device without requiring an active internet connection.
 
-## 🚀 Features (v6.1 Final Master Build)
-- **Offline-First Data Layer**: Complete curriculum with Python, JavaScript, Java, C++, Docker, Kubernetes, SQL, and 8+ other technologies.
-- **AST Evaluation Pipeline**: Offline code evaluation engine featuring syntax anti-hardcoding, output normalization, and semantic string matching (NO string-matching bypasses allowed).
-- **Dual-Theme Design System**: "Obsidian" and "Porcelain" themes featuring brutalist aesthetics, mathematically generated gradients, and strict token-driven styling.
-- **Gamification Engine**: Spaced repetition (SM-2 variant), XP progression, streak tracking, and procedural Canvas-based badges (Common to Mythic).
-- **Code Review Arena**: Dual-column diff viewers with interactive code battles.
-- **Custom Syntax Engine**: Line-numbered IDE with a custom tokenizer for real-time syntax highlighting of 8+ languages on-device.
-- **Git Simulator**: Interactive Git log graphs to practice branching and merging.
-- **Unified Question Models**: Single canonical `Question` model for both code challenges and multiple-choice quizzes, seamlessly parameterized across the entire app.
+## Features (v6.2 Stable Release)
+- **Offline-First Curriculum**: Complete tracks for Python, JavaScript, Java, C++, Docker, Kubernetes, SQL, Rust, Go, HTML, and more.
+- **True AST & Evaluation Engine**:
+  - **PythonAST**: Custom offline tokenizer and parse-tree evaluator that blocks hardcoded cheats (e.g., `print("answer")`) while permitting semantic algorithmic logic. Blocks forbidden constructs like `import os`.
+  - **SqlEvaluator**: Structural database verifier running an embedded in-memory SQLite instance, comparing results with Row-Order and Column-Order insensitivity.
+  - **Output Normalization**: Automatically calculates float tolerances (e.g., `3.1415` == `3.142`), numeric equivalences (`2.0` == `2`), and unordered array structural matching.
+- **Code Review Arena**: Fully interactive pull-request battleground using a custom `DiffView` component to review added/removed lines of code and "Approve" or "Reject" them.
+- **Motion & 3D Layer**: Fluid interactive components featuring algorithmic `pseudo3DTilt` effects, `animateFloatAsState` expansions, and responsive hover/press scaling (`Interaction.kt`).
+- **Strict Design System**: Brutalist "Obsidian" and "Porcelain" themes utilizing strict mathematical design tokens (`Space.kt`, `Radius.kt`, `AppTypography.kt`).
+- **Custom Syntax Engine**: Line-numbered IDE (`CodeEditor`) utilizing custom tokenizers for real-time syntax highlighting on-device.
 
-## 🏗️ Architecture
+## Architecture
 - **Language**: Kotlin 2.x
-- **UI Toolkit**: Jetpack Compose
-- **Navigation**: Navigation 3 (`androidx.navigation3`) with strict Parameterized Typed Routes.
-- **State**: Hoisted state, unidirectional data flow
-- **Storage**: JSON-based local storage (no network required)
+- **UI Toolkit**: Jetpack Compose (Material 3)
+- **Navigation**: Typed routing via `androidx.navigation3`
+- **Testing**: Robolectric + JUnit4 Golden Test Suite ensuring semantic correctness and blocking logic bypasses.
+- **Storage**: Highly optimized JSON-based local asset repository.
 
-## 📦 Releases
-The latest compiled APK can be found in the `releases/` directory.
+## Releases
+The latest compiled APK can be found in the `apk/` directory.
 
-[![Download Latest APK](https://img.shields.io/badge/Download-Latest_APK-blue?style=for-the-badge&logo=android)](https://github.com/sayandhsr/CultCode/raw/main/releases/UnsulliedCode-debug.apk)
+[![Download Latest APK](https://img.shields.io/badge/Download-CultCode_v6.2_APK-blue?style=for-the-badge&logo=android)](https://github.com/sayandhsr/CultCode/raw/main/apk/CultCode-v6.2.apk)
 
-## 📜 License & Fonts
+## License & Fonts
 - **Fonts**: JetBrains Mono & Inter (SIL Open Font License 1.1)
 
 ---
-*Built with 💻 and strict design token compliance.*
+*Built under the strict architectural directives of the UnsulliedCode project.*
