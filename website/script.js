@@ -122,13 +122,23 @@ function handleBotReply(userText) {
     let reply = "";
     let isHTML = false;
 
-    if (text.includes("time") || text.includes("date") || text.includes("day")) {
-        const now = new Date();
-        reply = `The current date and time is ${now.toLocaleString()}.`;
+    // Unparliamentary words filter
+    const badWords = ["fuck", "shit", "bitch", "asshole", "cunt", "dick", "pussy", "bastard", "slut", "whore"];
+    const hasBadWord = badWords.some(word => text.includes(word) || text.match(new RegExp(`\\b${word}\\b`)));
+
+    if (hasBadWord) {
+        reply = "You should probably get the fuck out of my page.";
+    } else if (text.includes("founder") || text.includes("creator") || text.includes("who made") || text.includes("developer") || text.includes("author") || text.includes("sayandh")) {
+        reply = `Unsullied Code was created by Sayandh. You can view his portfolio here: <br><a href="https://sayandh-tech.vercel.app/" target="_blank" style="color: #a5d6ff; text-decoration: underline;">Sayandh's Portfolio</a>`;
+        isHTML = true;
+    } else if (text.includes("company") || text.includes("organization") || text.includes("studio") || text.includes("spurce") || text.includes("spruce")) {
+        reply = "Unsullied Code is developed and maintained under Spurce Industries.";
+    } else if (text.includes("update") || text.includes("release date") || text.includes("when") || text.includes("new version") || text.includes("future")) {
+        reply = "New updates are coming soon! We are constantly refining the offline architecture and AST engine. Stay tuned for the final release.";
     } else if (text.match(/^(hello|hi|hey|greetings|morning|afternoon|evening)/)) {
         reply = "Hello there! How can I help you with Unsullied today?";
     } else if (text.includes("download") || text.includes("get") || text.includes("install") || text.includes("apk")) {
-        reply = `You can download the beta version right here: <br><br><a href="CultCode-v6.5-final.apk" download>📥 Download Unsullied APK</a><br><br>Or visit the <a href="#download" onclick="document.querySelector('#download').scrollIntoView({behavior: 'smooth'})">Download Section</a>.`;
+        reply = `You can download the beta version right here: <br><br><a href="CultCode-v6.5-final.apk" download style="color: #a5d6ff; text-decoration: underline;">📥 Download Unsullied APK</a><br><br>Or visit the <a href="#download" onclick="document.querySelector('#download').scrollIntoView({behavior: 'smooth'})" style="color: #a5d6ff; text-decoration: underline;">Download Section</a>.`;
         isHTML = true;
     } else if (text.includes("what is") || text.includes("define") || text.includes("about") || text === "what") {
         reply = "Unsullied is an elite, offline-first mobile coding ecosystem built with Kotlin. It brings complex software engineering challenges directly to your mobile device.";
@@ -141,7 +151,7 @@ function handleBotReply(userText) {
     } else if (text.includes("feature") || text.includes("language") || text.includes("support")) {
         reply = "We support Python, JS, Java, C++, Docker, Kubernetes, SQL, and HTML. Features include offline AST evaluation, 3D motion layer, and a strict dark-mode design system.";
     } else {
-        reply = "I'm still learning! You can ask me about what Unsullied is, how to download it, its features, or the current time.";
+        reply = "I'm still learning! You can ask me about app features, how to download the APK, the founder, updates, or Spurce Industries.";
     }
     
     setTimeout(() => {
