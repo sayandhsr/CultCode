@@ -15,7 +15,9 @@ import com.unsulliedcode.ui.navigation.AppScaffold
 import com.unsulliedcode.ui.theme.LocalAppColors
 import com.unsulliedcode.ui.theme.LocalAppTypography
 import com.unsulliedcode.ui.theme.Space
+import com.unsulliedcode.ui.theme.Radius
 import com.unsulliedcode.data.ContentRepository
+import com.unsulliedcode.ui.ide.CodeEditor
 
 @Composable
 fun LessonViewerScreen(
@@ -62,13 +64,19 @@ fun LessonViewerScreen(
                         color = colors.textPrimary,
                         modifier = Modifier.padding(bottom = Space.xs)
                     )
-                    // Simplified since CodeEditor import is problematic
-                    Text(
-                        text = lesson.codeExample,
-                        style = androidx.compose.ui.text.TextStyle(fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace),
-                        color = colors.textSecondary,
-                        modifier = Modifier.padding(bottom = Space.md)
-                    )
+                    
+                    Box(modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .background(colors.surface, androidx.compose.foundation.shape.RoundedCornerShape(Radius.sm))
+                    ) {
+                        CodeEditor(
+                            code = lesson.codeExample,
+                            onCodeChange = {},
+                            language = languageId,
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    }
                 }
                 Spacer(modifier = Modifier.height(Space.lg))
                 Button(
