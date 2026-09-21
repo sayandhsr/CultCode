@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
           }
       ) {
           UnsulliedCodeTheme(darkTheme = isDark, useMonospace = isMono) { 
-              Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) { 
+              Surface(modifier = Modifier.fillMaxSize(), color = com.unsulliedcode.ui.theme.LocalAppColors.current.bg) { 
                   MainNavigation() 
               } 
           }
@@ -39,4 +39,5 @@ class MainActivity : ComponentActivity() {
     }
   }
 }
+
 

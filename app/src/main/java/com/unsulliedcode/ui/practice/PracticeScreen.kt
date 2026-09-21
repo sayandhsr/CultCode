@@ -66,7 +66,7 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
             TopAppBar(
                 navigationIcon = { IconButton(onClick = { onNavigate(com.unsulliedcode.Home) }) { Text("<") } },
                 title = { Text("Practice", fontWeight = FontWeight.Bold) },
-                actions = { Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary) }
+                actions = { Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary) }
             )
         },
         floatingActionButton = {
@@ -83,24 +83,24 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(Space.md)
         ) {
-            Text(question.question, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+            Text(question.question, style = com.unsulliedcode.ui.theme.LocalAppTypography.current.h3, fontWeight = FontWeight.Bold)
             
             OutlinedTextField(
                 value = codeText,
                 onValueChange = { codeText = it },
                 modifier = Modifier.fillMaxWidth().heightIn(min = Space.md),
-                visualTransformation = SyntaxHighlightingTransformation(),
+                visualTransformation = SyntaxHighlightingTransformation(com.unsulliedcode.ui.theme.LocalAppColors.current),
                 textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace),
                 placeholder = { Text("Write your solution here...") }
             )
             
             if (output != null) {
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = if (isSuccess) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.errorContainer),
+                    colors = CardDefaults.cardColors(containerColor = if (isSuccess) com.unsulliedcode.ui.theme.LocalAppColors.current.successBg else com.unsulliedcode.ui.theme.LocalAppColors.current.errorBg),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(modifier = Modifier.padding(Space.md)) {
-                        Text(if (isSuccess) "SOLUTION VERIFIED!" else "EXECUTION FAILED", style = MaterialTheme.typography.labelMedium, color = if (isSuccess) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onErrorContainer)
+                        Text(if (isSuccess) "SOLUTION VERIFIED!" else "EXECUTION FAILED", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label, color = if (isSuccess) com.unsulliedcode.ui.theme.LocalAppColors.current.success else com.unsulliedcode.ui.theme.LocalAppColors.current.error)
                         Spacer(modifier = Modifier.height(Space.sm))
                         Text(output!!, fontFamily = FontFamily.Monospace)
                         
@@ -119,26 +119,26 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
             }
 
             if (showSolution) {
-                Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant), modifier = Modifier.fillMaxWidth()) {
+                Card(colors = CardDefaults.cardColors(containerColor = com.unsulliedcode.ui.theme.LocalAppColors.current.surfaceHover), modifier = Modifier.fillMaxWidth()) {
                     Column(modifier = Modifier.padding(Space.md)) {
-                        Text("SOLUTION / HINT", style = MaterialTheme.typography.labelSmall)
+                        Text("SOLUTION / HINT", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label)
                         Spacer(modifier = Modifier.height(Space.sm))
                         Text(question.solution, fontFamily = FontFamily.Monospace)
                         if (question.explanation.isNotEmpty()) {
                             Spacer(modifier = Modifier.height(Space.sm))
-                            Text(question.explanation, style = MaterialTheme.typography.bodySmall)
+                            Text(question.explanation, style = com.unsulliedcode.ui.theme.LocalAppTypography.current.body)
                         }
                     }
                 }
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                colors = CardDefaults.cardColors(containerColor = com.unsulliedcode.ui.theme.LocalAppColors.current.surface),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(Space.md)) {
-                    Text("Expected Output:", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
-                    Text(question.expectedOutput, fontFamily = FontFamily.Monospace, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text("Expected Output:", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label, color = com.unsulliedcode.ui.theme.LocalAppColors.current.borderStrong)
+                    Text(question.expectedOutput, fontFamily = FontFamily.Monospace, color = com.unsulliedcode.ui.theme.LocalAppColors.current.textSecondary)
                 }
             }
             
@@ -146,4 +146,7 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
         }
     }
 }
+
+
+
 

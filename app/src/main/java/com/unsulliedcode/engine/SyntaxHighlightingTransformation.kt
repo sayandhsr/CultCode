@@ -8,9 +8,10 @@ import androidx.compose.ui.text.input.OffsetMapping
 import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.withStyle
+import com.unsulliedcode.ui.theme.AppColors
 import java.util.regex.Pattern
 
-class SyntaxHighlightingTransformation : VisualTransformation {
+class SyntaxHighlightingTransformation(private val colors: AppColors) : VisualTransformation {
     
     private val keywords = listOf(
         "select", "from", "where", "join", "on", "as", "group by", "order by", "limit",
@@ -20,19 +21,12 @@ class SyntaxHighlightingTransformation : VisualTransformation {
         "var", "let", "const", "function", "=>", "val", "fun"
     ).map { it.lowercase() }
 
-    private var keywordColor = androidx.compose.ui.graphics.Color.White // Purple
-    private var stringColor = androidx.compose.ui.graphics.Color.Gray  // Green
-    private var numberColor = androidx.compose.ui.graphics.Color.Gray  // Orange
-    private var defaultColor = androidx.compose.ui.graphics.Color.Gray // Light Grey
-    private var operatorColor = androidx.compose.ui.graphics.Color.White // Cyan
-
     override fun filter(text: AnnotatedString): TransformedText {
         val inputText = text.text
         val annotatedString = buildAnnotatedString {
             append(inputText)
-            addStyle(SpanStyle(color = defaultColor), 0, inputText.length)
+            addStyle(SpanStyle(color = colors.textPrimary), 0, inputText.length)
 
-            // Extremely basic regex tokenizer for MVP syntax highlighting
             val pattern = Pattern.compile("(\"[^\"]*\")|('[^']*')|(\\b\\d+\\b)|(\\b[a-zA-Z_]\\w*\\b)|([=+\\-*/<>!]+)")
             val matcher = pattern.matcher(inputText)
             
@@ -43,16 +37,16 @@ class SyntaxHighlightingTransformation : VisualTransformation {
                 
                 when {
                     group.startsWith("\"") || group.startsWith("'") -> {
-                        addStyle(SpanStyle(color = stringColor), start, end)
+                        addStyle(SpanStyle(color = colors.syntaxString), start, end)
                     }
                     group.matches("\\d+".toRegex()) -> {
-                        addStyle(SpanStyle(color = numberColor), start, end)
+                        addStyle(SpanStyle(color = colors.syntaxNumber), start, end)
                     }
                     group.matches("[=+\\-*/<>!]+".toRegex()) -> {
-                        addStyle(SpanStyle(color = operatorColor), start, end)
+                        addStyle(SpanStyle(color = colors.syntaxOperator), start, end)
                     }
                     keywords.contains(group.lowercase()) -> {
-                        addStyle(SpanStyle(color = keywordColor), start, end)
+                        addStyle(SpanStyle(color = colors.syntaxKeyword), start, end)
                     }
                 }
             }
@@ -60,4 +54,3 @@ class SyntaxHighlightingTransformation : VisualTransformation {
         return TransformedText(annotatedString, OffsetMapping.Identity)
     }
 }
-

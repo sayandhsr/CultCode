@@ -106,7 +106,7 @@ tasks.register("checkDesignTokens") {
                             System.err.println("Hardcoded .dp literal found in ${f.name}:${i+1}: $line")
                             failed = true
                         }
-                        if (Regex("Color\\(0x[0-9A-Fa-f]{8}\\)").containsMatchIn(code)) {
+                        if (Regex("Color\\\\(0x[0-9A-Fa-f]{8}\\\\)").containsMatchIn(code) || code.contains("MaterialTheme.colorScheme") || code.contains("MaterialTheme.typography")) {
                             System.err.println("Hardcoded hex color found in ${f.name}:${i+1}: $line")
                             failed = true
                         }
@@ -122,6 +122,7 @@ tasks.register("checkDesignTokens") {
 tasks.named("preBuild").configure {
     dependsOn("checkDesignTokens")
 }
+
 
 
 

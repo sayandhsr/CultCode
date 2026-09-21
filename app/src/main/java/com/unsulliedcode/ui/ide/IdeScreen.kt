@@ -113,7 +113,7 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                     Card(modifier = Modifier.fillMaxWidth()) {
                         Column(modifier = Modifier.padding(Space.sm)) {
                             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                Text("Cell [${cell.id}]", style = MaterialTheme.typography.labelSmall)
+                                Text("Cell [${cell.id}]", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label)
                                 TextButton(onClick = {
                                     cells = cells.map { if (it.id == cell.id) it.copy(output = engine.freeRun(language, it.code).stdout) else it }
                                 }) { Text("Run Cell") }
@@ -122,12 +122,12 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                                 value = cell.code,
                                 onValueChange = { newCode -> cells = cells.map { if (it.id == cell.id) it.copy(code = newCode) else it } },
                                 modifier = Modifier.fillMaxWidth(),
-                                visualTransformation = SyntaxHighlightingTransformation(),
+                                visualTransformation = SyntaxHighlightingTransformation(com.unsulliedcode.ui.theme.LocalAppColors.current),
                                 textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace)
                             )
                             if (cell.output != null) {
                                 Spacer(modifier = Modifier.height(Space.sm))
-                                Text(cell.output!!, fontFamily = FontFamily.Monospace, color = MaterialTheme.colorScheme.primary)
+                                Text(cell.output!!, fontFamily = FontFamily.Monospace, color = com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary)
                             }
                         }
                     }
@@ -140,18 +140,18 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                     value = vsCodeText,
                     onValueChange = { vsCodeText = it },
                     modifier = Modifier.fillMaxWidth().weight(1f),
-                    visualTransformation = SyntaxHighlightingTransformation(),
+                    visualTransformation = SyntaxHighlightingTransformation(com.unsulliedcode.ui.theme.LocalAppColors.current),
                     textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace),
                     placeholder = { Text("Write your code here...") }
                 )
                 if (vsCodeOutput != null) {
                     Spacer(modifier = Modifier.height(Space.md))
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                        colors = CardDefaults.cardColors(containerColor = com.unsulliedcode.ui.theme.LocalAppColors.current.surfaceHover),
                         modifier = Modifier.fillMaxWidth().heightIn(min = Space.md, max = Space.md)
                     ) {
                         Column(modifier = Modifier.padding(Space.md)) {
-                            Text("TERMINAL OUTPUT", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.outline)
+                            Text("TERMINAL OUTPUT", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label, color = com.unsulliedcode.ui.theme.LocalAppColors.current.borderStrong)
                             Spacer(modifier = Modifier.height(Space.sm))
                             Text(vsCodeOutput!!, fontFamily = FontFamily.Monospace)
                         }
@@ -161,4 +161,6 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
         }
     }
 }
+
+
 
