@@ -19,13 +19,17 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 
 @Composable
-fun BrutalistButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, isPrimary: Boolean = true) {
+fun PremiumButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, isPrimary: Boolean = true) {
     val colors = LocalAppColors.current
     Button(
         onClick = onClick,
-        modifier = modifier.border(Border.hairline, colors.border, RoundedCornerShape(Radius.none)).height(Space.xxl),
-        colors = ButtonDefaults.buttonColors(containerColor = if (isPrimary) colors.accentPrimary else colors.bg, contentColor = if (isPrimary) colors.textInverse else colors.textPrimary),
-        shape = RoundedCornerShape(Radius.none)
+        modifier = modifier.height(Space.xxl),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = if (isPrimary) colors.accentPrimary else colors.surfaceElevated, 
+            contentColor = if (isPrimary) colors.textOnAccent else colors.textPrimary
+        ),
+        shape = RoundedCornerShape(Radius.lg),
+        elevation = ButtonDefaults.buttonElevation(defaultElevation = Space.xs, pressedElevation = Space.sm)
     ) { Text(text, fontWeight = FontWeight.Bold) }
 }
 

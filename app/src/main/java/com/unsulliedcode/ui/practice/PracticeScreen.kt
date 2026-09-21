@@ -127,9 +127,20 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
                 if (showSolution) {
                     Card(colors = CardDefaults.cardColors(containerColor = colors.surfaceHover), modifier = Modifier.fillMaxWidth()) {
                         Column(modifier = Modifier.padding(Space.md)) {
-                            Text("SOLUTION / HINT", style = typography.label, color = colors.textSecondary)
+                            Text("SOLUTION / HINTS", style = typography.label, color = colors.textSecondary)
                             Spacer(modifier = Modifier.height(Space.sm))
-                            Text(question.solution, fontFamily = FontFamily.Monospace, color = colors.textPrimary)
+                            
+                            if (question.hints.isNotEmpty()) {
+                                Text("Hints:", style = typography.h3, color = colors.textPrimary)
+                                question.hints.forEach { hint ->
+                                    Text("• $hint", style = typography.body, color = colors.textSecondary)
+                                }
+                                Spacer(modifier = Modifier.height(Space.sm))
+                            }
+
+                            Text("Expected Solution:", style = typography.h3, color = colors.textPrimary)
+                            Text(question.solution, fontFamily = FontFamily.Monospace, color = colors.accentPrimary)
+                            
                             if (question.explanation.isNotEmpty()) {
                                 Spacer(modifier = Modifier.height(Space.sm))
                                 Text(question.explanation, style = typography.body, color = colors.textSecondary)

@@ -76,13 +76,26 @@ class CodeExecutionEngine(private val context: Context) {
         var db: SQLiteDatabase? = null
         try {
             db = SQLiteDatabase.create(null)
-            if (code.contains("JOIN", ignoreCase = true) || code.contains("SELECT", ignoreCase = true) || expected.contains("SELECT", ignoreCase = true)) {
-                db.execSQL("CREATE TABLE Orders (OrderID int, CustomerID int);")
-                db.execSQL("CREATE TABLE Customers (CustomerID int, Name varchar(255));")
-                db.execSQL("INSERT INTO Customers VALUES (1, 'TechCorp');")
-                db.execSQL("INSERT INTO Orders VALUES (100, 1);")
-            }
             
+            // Unified Dataset for all SQL questions
+            db.execSQL("CREATE TABLE Users (ID int, Name varchar(255), Age int);")
+            db.execSQL("INSERT INTO Users VALUES (1, 'Alice', 25);")
+            db.execSQL("INSERT INTO Users VALUES (2, 'Bob', 30);")
+            db.execSQL("INSERT INTO Users VALUES (3, 'Charlie', 20);")
+            
+            db.execSQL("CREATE TABLE Products (ID int, Name varchar(255), Price float);")
+            db.execSQL("INSERT INTO Products VALUES (1, 'Laptop', 1200.00);")
+            db.execSQL("INSERT INTO Products VALUES (2, 'Mouse', 25.00);")
+            
+            db.execSQL("CREATE TABLE Customers (CustomerID int, Name varchar(255));")
+            db.execSQL("INSERT INTO Customers VALUES (1, 'TechCorp');")
+            db.execSQL("INSERT INTO Customers VALUES (2, 'HomeStore');")
+            
+            db.execSQL("CREATE TABLE Orders (OrderID int, CustomerID int, Total float);")
+            db.execSQL("INSERT INTO Orders VALUES (100, 1, 250.00);")
+            db.execSQL("INSERT INTO Orders VALUES (101, 1, 1500.00);")
+            db.execSQL("INSERT INTO Orders VALUES (102, 2, 45.00);")
+
             if (code.trim().uppercase().startsWith("SELECT")) {
                 // RUN FULL RESULT SET COMPARISON USING NEW SQLEVALUATOR
                 val isCorrect = SqlEvaluator.evaluateQuery(db, code, expected)

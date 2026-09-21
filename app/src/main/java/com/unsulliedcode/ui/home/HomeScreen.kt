@@ -13,7 +13,7 @@ import com.unsulliedcode.ui.navigation.AppScaffold
 import com.unsulliedcode.ui.theme.*
 import com.unsulliedcode.ui.dashboard.*
 import com.unsulliedcode.ui.gamification.*
-import com.unsulliedcode.ui.components.BrutalistButton
+import com.unsulliedcode.ui.components.PremiumButton
 import com.unsulliedcode.data.UserProgressRepository
 
 @Composable
@@ -68,12 +68,12 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
             }
             item {
                 Row(horizontalArrangement = Arrangement.spacedBy(Space.md)) {
-                    BrutalistButton(
+                    PremiumButton(
                         text = "Practice",
                         onClick = { onNavigate(com.unsulliedcode.PracticeEditor("python")) },
                         modifier = Modifier.weight(1f)
                     )
-                    BrutalistButton(
+                    PremiumButton(
                         text = "IDE",
                         onClick = { onNavigate(IdeSandbox) },
                         modifier = Modifier.weight(1f)
@@ -82,17 +82,17 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
             }
             item {
                 Row(horizontalArrangement = Arrangement.spacedBy(Space.md)) {
-                    BrutalistButton(
+                    PremiumButton(
                         text = "Arena",
                         onClick = { onNavigate(ArenaMatchmaking) },
                         modifier = Modifier.weight(1f)
                     )
-                    BrutalistButton(
+                    PremiumButton(
                         text = "Badges",
                         onClick = { onNavigate(GamificationBadges) },
                         modifier = Modifier.weight(1f)
                     )
-                    BrutalistButton(
+                    PremiumButton(
                         text = "Settings",
                         onClick = { onNavigate(Profile) },
                         modifier = Modifier.weight(1f)
