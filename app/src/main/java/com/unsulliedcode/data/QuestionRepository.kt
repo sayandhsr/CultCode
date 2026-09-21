@@ -30,16 +30,16 @@ class QuestionRepository(private val context: Context) {
         try {
             val jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
             val jsonObject = JSONObject(jsonString)
-            val questionsArray = jsonObject.getJSONArray("questions")
+            val questionsArray = jsonObject.optJSONArray("questions") ?: return null
             
             for (i in 0 until questionsArray.length()) {
-                val q = questionsArray.getJSONObject(i)
-                if (q.getString("id") == id) {
+                val q = questionsArray.optJSONObject(i) ?: continue
+                if (q.optString("id", "") == id) {
                     val acceptedAnswers = mutableListOf<String>()
                     val acceptedArray = q.optJSONArray("acceptedAnswers")
                     if (acceptedArray != null) {
                         for (j in 0 until acceptedArray.length()) {
-                            acceptedAnswers.add(acceptedArray.getString(j))
+                            acceptedAnswers.add(acceptedArray.optString(j, ""))
                         }
                     }
                     
@@ -47,19 +47,19 @@ class QuestionRepository(private val context: Context) {
                     val hintsArray = q.optJSONArray("hints")
                     if (hintsArray != null) {
                         for (j in 0 until hintsArray.length()) {
-                            hints.add(hintsArray.getString(j))
+                            hints.add(hintsArray.optString(j, ""))
                         }
                     }
                     
                     val languageId = fileName.removeSuffix("_questions.json").removeSuffix("_questions")
 
                     return Question(
-                        id = q.getString("id"),
+                        id = q.optString("id", id),
                         languageId = languageId,
-                        lessonId = "", // Legacy code challenge JSON doesn't have lesson_id
+                        lessonId = "", 
                         type = QuestionType.CODE_CHALLENGE,
-                        text = q.getString("question"),
-                        explanation = q.getString("explanation"),
+                        text = q.optString("question", "Invalid Question"),
+                        explanation = q.optString("explanation", ""),
                         difficulty = q.optString("difficulty", "medium"),
                         xpReward = 15,
                         code = q.optString("code", ""),
