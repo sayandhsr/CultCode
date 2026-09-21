@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsullied | A New Standard</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="smooth-scroll-wrapper">
+        <main class="container">
+            
+            <!-- PANEL 1: HERO -->
+            <section class="panel hero-panel" id="home">
+                <div class="hero-overlay"></div>
+                <header class="panel-header">
+                    <nav class="nav">
+                        <a href="#home" class="nav-item click-anim">HOME</a>
+                        <a href="#features" class="nav-item click-anim">FEATURES</a>
+                        <a href="#specs" class="nav-item click-anim">ARCHITECTURE</a>
+                        <a href="#about" class="nav-item click-anim">ABOUT</a>
+                        <a href="#download" class="nav-item click-anim">DOWNLOAD</a>
+                    </nav>
+                </header>
+                
+                <div class="hero-content">
+                    <h1 class="huge-title">UNSULLIED</h1>
+                    
+                    <div class="hero-footer">
+                        <div class="footer-left">
+                            <p>A NEW STANDARD</p>
+                            <p>OF MOBILE CODING</p>
+                        </div>
+                        <div class="footer-right">
+                            <p>OFFLINE-FIRST IDE</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL 2: FEATURES -->
+            <section class="panel features-panel" id="features">
+                <h2 class="panel-title">OUR FEATURES</h2>
+                
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-item hover-anim">
+                        <div class="feature-img-wrapper">
+                            <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=100')"></div>
+                        </div>
+                        <div class="feature-meta">
+                            <span class="feature-num">01</span>
+                            <h3 class="feature-title">OFFLINE-FIRST</h3>
+                            <p class="feature-desc">Curated logic challenges for Python, JS, Java, and C++. Zero internet required.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="feature-item hover-anim">
+                        <div class="feature-img-wrapper">
+                            <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=100')"></div>
+                        </div>
+                        <div class="feature-meta">
+                            <span class="feature-num">02</span>
+                            <h3 class="feature-title">TRUE AST ENGINE</h3>
+                            <p class="feature-desc">Custom tokenizer and parse-tree evaluator ensuring strict semantic algorithmic logic.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-item hover-anim">
+                        <div class="feature-img-wrapper">
+                            <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=100')"></div>
+                        </div>
+                        <div class="feature-meta">
+                            <span class="feature-num">03</span>
+                            <h3 class="feature-title">CODE REVIEW ARENA</h3>
+                            <p class="feature-desc">Fully interactive pull-request battleground to approve or reject lines of code.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-item hover-anim">
+                        <div class="feature-img-wrapper">
+                            <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&w=800&q=100')"></div>
+                        </div>
+                        <div class="feature-meta">
+                            <span class="feature-num">04</span>
+                            <h3 class="feature-title">3D MOTION LAYER</h3>
+                            <p class="feature-desc">Fluid interactive components featuring algorithmic pseudo 3D tilt effects.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL 3: SPECS & DOWNLOAD -->
+            <section class="panel specs-panel" id="specs">
+                <div class="specs-layout">
+                    <div class="specs-left">
+                        <h2 class="panel-title">SYSTEM ARCHITECTURE</h2>
+                        <h3 class="specs-subtitle">SUPPORTED LANGUAGES</h3>
+                        
+                        <div class="badges-container">
+                            <span class="lang-badge"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="lang-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="lang-badge"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="lang-badge"><i class="fa-solid fa-c"></i> C++</span>
+                            <span class="lang-badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                            <span class="lang-badge"><i class="fa-solid fa-database"></i> SQL</span>
+                            <span class="lang-badge"><i class="fa-brands fa-html5"></i> HTML</span>
+                        </div>
+
+                        <h3 class="specs-subtitle" style="margin-top: 50px;">CORE SPECS</h3>
+                        <ul class="specs-list">
+                            <li class="hover-anim-list">
+                                <span>Language Core</span>
+                                <span>Kotlin 2.x</span>
+                            </li>
+                            <li class="hover-anim-list">
+                                <span>User Interface</span>
+                                <span>Jetpack Compose</span>
+                            </li>
+                            <li class="hover-anim-list">
+                                <span>Routing Protocol</span>
+                                <span>Navigation3</span>
+                            </li>
+                            <li class="hover-anim-list">
+                                <span>Testing Suite</span>
+                                <span>JUnit4 + Golden</span>
+                            </li>
+                            <li class="hover-anim-list">
+                                <span>Storage Engine</span>
+                                <span>Optimized JSON</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="specs-right" id="download">
+                        <div class="download-card hover-anim">
+                            <div class="download-content">
+                                <img src="logo.png" alt="Unsullied Code Logo" class="download-logo">
+                                <h2>OBTAIN ACCESS</h2>
+                                <p>Secure your copy of the beta build. Offline precision engineering awaits.</p>
+                                <a href="CultCode-v6.5-final.apk" class="download-btn click-anim" download>
+                                    <span class="btn-text">DOWNLOAD APK</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PANEL 4: ABOUT -->
+            <section class="panel about-panel" id="about">
+                <div class="about-content hover-anim">
+                    <h2 class="panel-title">ABOUT UNSULLIED</h2>
+                    <div class="about-text-wrapper">
+                        <p class="large-text">Redefining mobile software engineering with uncompromising offline capabilities.</p>
+                        <p class="small-text">A distraction-free, beautifully crafted IDE strictly designed for those who appreciate the intersection of high-end design and raw offline logic.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-title">
+                    Assistant
+                </div>
+                <button class="close-chat click-anim" id="closeChat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">Hello. How can I assist you today?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off">
+                <button id="sendBtn" class="click-anim"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <div class="quick-replies">
+                <button class="quick-btn click-anim" data-query="Hi there!">Hi there!</button>
+                <button class="quick-btn click-anim" data-query="Download APK">Download APK</button>
+                <button class="quick-btn click-anim" data-query="What is this?">What is this?</button>
+            </div>
+        </div>
+        <button class="chat-toggle click-anim" id="chatToggle">
+            <i class="fa-solid fa-comment"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
