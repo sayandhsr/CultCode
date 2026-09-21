@@ -221,7 +221,7 @@ class UserProgressRepository(val context: Context) {
     }
 
     // UI Preferences stay in SharedPreferences
-    fun isDarkTheme(): Boolean = prefs.getBoolean("dark_theme", true)
+    fun isDarkTheme(): Boolean = prefs.getBoolean("dark_theme", false)
     fun setDarkTheme(isDark: Boolean) = prefs.edit().putBoolean("dark_theme", isDark).apply()
 
     fun isMonospace(): Boolean = prefs.getBoolean("use_monospace", true)
