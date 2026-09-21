@@ -123,7 +123,12 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                                 onValueChange = { newCode -> cells = cells.map { if (it.id == cell.id) it.copy(code = newCode) else it } },
                                 modifier = Modifier.fillMaxWidth(),
                                 visualTransformation = SyntaxHighlightingTransformation(com.unsulliedcode.ui.theme.LocalAppColors.current),
-                                textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace)
+                                textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace),
+                                colors = OutlinedTextFieldDefaults.colors(
+                                    focusedTextColor = com.unsulliedcode.ui.theme.LocalAppColors.current.textPrimary,
+                                    unfocusedTextColor = com.unsulliedcode.ui.theme.LocalAppColors.current.textPrimary,
+                                    cursorColor = com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary
+                                )
                             )
                             if (cell.output != null) {
                                 Spacer(modifier = Modifier.height(Space.sm))
@@ -142,6 +147,11 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                     modifier = Modifier.fillMaxWidth().weight(1f),
                     visualTransformation = SyntaxHighlightingTransformation(com.unsulliedcode.ui.theme.LocalAppColors.current),
                     textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = com.unsulliedcode.ui.theme.LocalAppColors.current.textPrimary,
+                        unfocusedTextColor = com.unsulliedcode.ui.theme.LocalAppColors.current.textPrimary,
+                        cursorColor = com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary
+                    ),
                     placeholder = { Text("Write your code here...") }
                 )
                 if (vsCodeOutput != null) {

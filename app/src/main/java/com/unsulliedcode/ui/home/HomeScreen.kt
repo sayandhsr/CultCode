@@ -30,7 +30,12 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
     AppScaffold(
         title = "Home",
         showBackButton = false,
-        onBack = {}
+        onBack = {},
+        actions = {
+            androidx.compose.material3.IconButton(onClick = { onNavigate(com.unsulliedcode.Settings) }) {
+                androidx.compose.material3.Text("⚙", color = colors.accentPrimary, fontSize = androidx.compose.ui.unit.TextUnit(20f, androidx.compose.ui.unit.TextUnitType.Sp))
+            }
+        }
     ) { padding ->
         LazyColumn(
             modifier = Modifier
@@ -50,18 +55,13 @@ fun HomeScreen(onNavigate: (NavKey) -> Unit) {
             item {
                 Row(horizontalArrangement = Arrangement.spacedBy(Space.md)) {
                     StatCard(
-                        label = "UC Score",
-                        value = ucScore.toString(),
-                        modifier = Modifier.weight(1f)
-                    )
-                    StatCard(
                         label = "Badges",
                         value = badgesCount.toString(),
                         modifier = Modifier.weight(1f)
                     )
                     StatCard(
                         label = "Streak",
-                        value = "${streak}d",
+                        value = "$streak Days",
                         modifier = Modifier.weight(1f)
                     )
                 }

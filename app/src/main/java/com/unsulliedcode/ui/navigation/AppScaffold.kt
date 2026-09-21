@@ -15,6 +15,7 @@ fun AppScaffold(
     showBackButton: Boolean = true,
     onBack: () -> Unit = {},
     bottomBar: @Composable () -> Unit = {},
+    actions: @Composable RowScope.() -> Unit = { Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = LocalAppColors.current.accentPrimary) },
     content: @Composable (PaddingValues) -> Unit
 ) {
     val colors = LocalAppColors.current
@@ -33,9 +34,7 @@ fun AppScaffold(
                         }
                     }
                 },
-                actions = {
-                    Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = colors.accentPrimary)
-                },
+                actions = actions,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = colors.bgElevated,
                     scrolledContainerColor = colors.surface,

@@ -92,6 +92,11 @@ fun PracticeScreen(questionId: String, onNavigate: (NavKey) -> Unit) {
                     modifier = Modifier.fillMaxWidth().heightIn(min = Space.md),
                     visualTransformation = SyntaxHighlightingTransformation(colors),
                     textStyle = LocalTextStyle.current.copy(fontFamily = FontFamily.Monospace),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = colors.textPrimary,
+                        unfocusedTextColor = colors.textPrimary,
+                        cursorColor = colors.accentPrimary
+                    ),
                     placeholder = { Text("Write your solution here...") }
                 )
                 

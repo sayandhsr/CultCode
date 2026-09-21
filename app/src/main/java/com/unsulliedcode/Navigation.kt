@@ -101,10 +101,17 @@ fun MainNavigation() {
                 )
             }
 
-            // ── Practice ──
+            // 🎯 Practice 🎯
             entry<PracticeEditor> { key ->
+                val fallbackId = when(key.languageId.lowercase()) {
+                    "sql" -> "SQL-BASICS-001"
+                    "python" -> "PY-BASICS-001"
+                    "javascript" -> "JS-BASICS-001"
+                    "java" -> "JAV-BASICS-001"
+                    else -> "PY-BASICS-001"
+                }
                 com.unsulliedcode.ui.practice.PracticeScreen(
-                    questionId = if (key.questionId.isNotEmpty()) key.questionId else "${key.languageId.take(3).uppercase()}-1",
+                    questionId = if (key.questionId.isNotEmpty()) key.questionId else fallbackId,
                     onNavigate = { backStack.add(it) }
                 )
             }

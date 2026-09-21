@@ -99,42 +99,6 @@ fun SettingsScreen(onBack: () -> Unit) {
             modifier = Modifier.fillMaxSize().padding(padding).padding(Space.md).verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(Space.md)
         ) {
-            Card(colors = CardDefaults.cardColors(containerColor = colors.surfaceElevated), modifier = Modifier.fillMaxWidth()) {
-                Column(modifier = Modifier.padding(Space.md), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("UC SCORE", style = typography.label, color = colors.textSecondary)
-                    Text("$ucScore", style = typography.h1, fontWeight = FontWeight.Black, color = colors.textPrimary)
-                }
-            }
-
-            Text("Your Badges", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
-            val allBadges = earnedBadges.toList()
-            if (allBadges.isNotEmpty()) {
-                Row(horizontalArrangement = Arrangement.spacedBy(Space.sm), modifier = Modifier.fillMaxWidth()) {
-                    allBadges.forEach { badgeName ->
-                        val isElite = badgeName == "Elite"
-                        Box(
-                            contentAlignment = Alignment.Center,
-                            modifier = Modifier.weight(1f).aspectRatio(1f)
-                                .background(
-                                    color = if (isElite) colors.textInverse else colors.accentPrimary,
-                                    shape = CircleShape
-                                )
-                        ) {
-                            Text(
-                                text = badgeName.replace(" ", "\n"),
-                                color = if (isElite) colors.textPrimary else colors.textOnAccent,
-                                style = typography.label,
-                                modifier = Modifier.padding(Space.sm), textAlign = TextAlign.Center, lineHeight = 14.sp
-                            )
-                        }
-                    }
-                }
-            } else {
-                Text("No badges earned yet.", style = typography.body, color = colors.textSecondary)
-            }
-
-            HorizontalDivider(color = colors.border)
-
             Text("Appearance", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
             Row(horizontalArrangement = Arrangement.spacedBy(Space.md)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
