@@ -2,6 +2,7 @@ package com.unsulliedcode.engine
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import com.unsulliedcode.engine.ast.PythonAst
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -75,7 +76,7 @@ class CodeExecutionEngine(private val context: Context) {
         var db: SQLiteDatabase? = null
         try {
             db = SQLiteDatabase.create(null)
-            if (code.contains("JOIN", ignoreCase = true) || code.contains("SELECT", ignoreCase = true)) {
+            if (code.contains("JOIN", ignoreCase = true) || code.contains("SELECT", ignoreCase = true) || expected.contains("SELECT", ignoreCase = true)) {
                 db.execSQL("CREATE TABLE Orders (OrderID int, CustomerID int);")
                 db.execSQL("CREATE TABLE Customers (CustomerID int, Name varchar(255));")
                 db.execSQL("INSERT INTO Customers VALUES (1, 'TechCorp');")
@@ -83,6 +84,8 @@ class CodeExecutionEngine(private val context: Context) {
             }
             
             if (code.trim().uppercase().startsWith("SELECT")) {
+                // RUN FULL RESULT SET COMPARISON USING NEW SQLEVALUATOR
+                val isCorrect = SqlEvaluator.evaluateQuery(db, code, expected)
                 val cursor = db.rawQuery(code, null)
                 val columns = cursor.columnNames.joinToString(" | ")
                 var output = "$columns\n"
@@ -96,7 +99,7 @@ class CodeExecutionEngine(private val context: Context) {
                     rowCount++
                 }
                 cursor.close()
-                val isCorrect = evaluateSemantic(code, expected, accepted).isSuccess
+
                 return ExecutionResult(
                     stdout = if (isCorrect) "Process finished with exit code 0\nResult: Success!\n\nOutput:\n$output" else "Query Executed successfully, but did not match expected solution.\n\nOutput:\n$output",
                     isSuccess = isCorrect,
@@ -122,26 +125,33 @@ class CodeExecutionEngine(private val context: Context) {
         }
     }
 
-    private fun astAntiHardcodingCheck(code: String, expected: String): Boolean {
-        // v3.0 §8 Phase 2: AST Anti-Hardcoding (Simulated via syntax parsing)
-        // Detects if the user just printed the literal expected output instead of writing logic.
-        val literalPrintRegex = Regex("print\\(\\s*[\"'](.*?)[\"']\\s*\\)")
-        val matches = literalPrintRegex.findAll(code)
-        for (match in matches) {
-            val printedValue = match.groupValues[1].trim()
-            if (printedValue == expected.trim() || printedValue.replace("\\s".toRegex(), "") == expected.replace("\\s".toRegex(), "")) {
-                return false // Hardcoded literal detected
-            }
-        }
-        return true
-    }
-
     private fun evaluateSemantic(code: String, expected: String, accepted: List<String>): ExecutionResult {
-        if (!astAntiHardcodingCheck(code, expected)) {
+        if (PythonAst.hasHardcodedPrint(code, expected)) {
             return ExecutionResult(stdout = "Error: Hardcoded literal detected. Write the actual logic.", isSuccess = false, isRealExecution = false)
         }
 
-        // Output Normalization (ignoring whitespace and case)
+        if (PythonAst.hasForbiddenConstruct(code, "os") || PythonAst.hasForbiddenConstruct(code, "sys")) {
+            return ExecutionResult(stdout = "Error: Forbidden construct detected.", isSuccess = false, isRealExecution = false)
+        }
+
+        val config = NormalizationConfig(ignoreOrder = true, floatTolerance = 0.001)
+
+        val prints = mutableListOf<String>()
+        val matcher = java.util.regex.Pattern.compile("print\\((.*?)\\)").matcher(code)
+        while (matcher.find()) {
+            val inside = matcher.group(1)?.replace("\"", "")?.replace("'", "") ?: ""
+            prints.add(inside)
+        }
+        val simulatedOutput = prints.joinToString("\n")
+
+        val isOutputCorrect = OutputNormalizer.compare(simulatedOutput, expected, config) ||
+            accepted.any { OutputNormalizer.compare(simulatedOutput, it, config) }
+
+        if (isOutputCorrect) {
+            return ExecutionResult("Process finished with exit code 0\nResult: Validation Success!", true, false)
+        }
+
+        // Semantic matching of variable content fallback
         val strictCode = code.replace("\\s".toRegex(), "").lowercase()
         val normalizedExpected = expected.replace("\\s".toRegex(), "").lowercase()
         val normalizedAccepted = accepted.map { it.replace("\\s".toRegex(), "").lowercase() }
