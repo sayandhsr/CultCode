@@ -582,4 +582,30 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
     .nav { display: none; }
     .panel { padding: 60px 5%; }
     .huge-title { font-size: 4rem; }
+    
+    /* Hide custom cursor on mobile to prevent touch sticking */
+    .cursor, .cursor-follower { display: none !important; }
+    *, a, button, .click-anim, .hover-anim { cursor: auto !important; }
+    
+    /* Fix chatbot width for small screens */
+    .chatbot-widget {
+        right: 20px;
+        bottom: 20px;
+    }
+    .chat-window {
+        width: calc(100vw - 40px);
+        bottom: 70px;
+        right: 0;
+    }
+    
+    .hero-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .download-card {
+        padding: 25px;
+    }
 }
