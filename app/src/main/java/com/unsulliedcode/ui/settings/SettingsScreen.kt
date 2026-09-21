@@ -1,7 +1,10 @@
-﻿package com.unsulliedcode.ui.settings
+package com.unsulliedcode.ui.settings
+
 import com.unsulliedcode.ui.theme.Space
 import com.unsulliedcode.ui.theme.Radius
 import com.unsulliedcode.ui.theme.Border
+import com.unsulliedcode.ui.theme.LocalAppColors
+import com.unsulliedcode.ui.theme.LocalAppTypography
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -18,7 +21,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 import com.unsulliedcode.data.UserProgressRepository
@@ -30,8 +32,10 @@ fun SettingsScreen(onBack: () -> Unit) {
     val context = LocalContext.current
     val repository = remember { UserProgressRepository(context) }
     
+    val userName by remember { mutableStateOf(repository.getName()) }
     var skillLevel by remember { mutableStateOf(repository.getSkillLevel()) }
     var tracks by remember { mutableStateOf(repository.getSelectedTracks()) }
+    val timeCommitment by remember { mutableStateOf(repository.getTimeCommitment()) }
     
     var isDark by remember { mutableStateOf(repository.isDarkTheme()) }
     var isMono by remember { mutableStateOf(repository.isMonospace()) }
@@ -51,7 +55,7 @@ fun SettingsScreen(onBack: () -> Unit) {
     LaunchedEffect(isLoading) {
         if (isLoading) {
             delay(1000)
-            repository.saveOnboardingPreferences("User", skillLevel, 30, tracks)
+            repository.saveOnboardingPreferences(userName, skillLevel, timeCommitment, tracks)
             repository.setDarkTheme(isDark)
             repository.setMonospace(isMono)
             themeUpdater()
@@ -59,92 +63,112 @@ fun SettingsScreen(onBack: () -> Unit) {
         }
     }
 
+    val colors = LocalAppColors.current
+    val typography = LocalAppTypography.current
+
     if (isLoading) {
-        Surface(modifier = Modifier.fillMaxSize(), color = com.unsulliedcode.ui.theme.LocalAppColors.current.bg) {
+        Surface(modifier = Modifier.fillMaxSize(), color = colors.bg) {
             Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
-                CircularProgressIndicator(color = com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary)
+                CircularProgressIndicator(color = colors.accentPrimary)
                 Spacer(modifier = Modifier.height(Space.lg))
-                Text(loadingText, style = com.unsulliedcode.ui.theme.LocalAppTypography.current.body)
+                Text(loadingText, style = typography.body, color = colors.textPrimary)
             }
         }
         return
     }
 
     Scaffold(
+        containerColor = colors.bg,
         topBar = {
             TopAppBar(
-                title = { Text("Profile & Settings") },
-                navigationIcon = { IconButton(onClick = onBack) { Text("<") } },
-                actions = { Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary) }
+                title = { Text("Profile & Settings", color = colors.textPrimary, style = typography.h2) },
+                navigationIcon = { IconButton(onClick = onBack) { Text("<", color = colors.textPrimary) } },
+                actions = { Text("UnsulliedCode ", fontWeight = FontWeight.Bold, color = colors.accentPrimary) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = colors.surface)
             )
         },
         floatingActionButton = {
-            ExtendedFloatingActionButton(onClick = { isLoading = true }) { Text("Save Preferences") }
+            ExtendedFloatingActionButton(
+                onClick = { isLoading = true },
+                containerColor = colors.accentPrimary,
+                contentColor = colors.textOnAccent
+            ) { Text("Save Preferences") }
         }
     ) { padding ->
         Column(
             modifier = Modifier.fillMaxSize().padding(padding).padding(Space.md).verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(Space.md)
         ) {
-            Card(colors = CardDefaults.cardColors(containerColor = com.unsulliedcode.ui.theme.LocalAppColors.current.surfaceElevated), modifier = Modifier.fillMaxWidth()) {
+            Card(colors = CardDefaults.cardColors(containerColor = colors.surfaceElevated), modifier = Modifier.fillMaxWidth()) {
                 Column(modifier = Modifier.padding(Space.md), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("UC SCORE", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label)
-                    Text("$ucScore", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.h1, fontWeight = FontWeight.Black)
+                    Text("UC SCORE", style = typography.label, color = colors.textSecondary)
+                    Text("$ucScore", style = typography.h1, fontWeight = FontWeight.Black, color = colors.textPrimary)
                 }
             }
 
-            Text("Your Badges", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.h3, fontWeight = FontWeight.Bold)
-            val allBadges = listOf("First Login", "Python Advanced", "SQL Advanced", "101 Badge", "Elite")
-            Row(horizontalArrangement = Arrangement.spacedBy(Space.sm), modifier = Modifier.fillMaxWidth()) {
-                allBadges.forEach { badgeName ->
-                    val isEarned = earnedBadges.contains(badgeName)
-                    val isElite = badgeName == "Elite"
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.weight(1f).aspectRatio(1f).alpha(if (isEarned) 1f else 0.3f)
-                            .background(
-                                color = if (isElite && isEarned) com.unsulliedcode.ui.theme.LocalAppColors.current.textInverse else if (isEarned) com.unsulliedcode.ui.theme.LocalAppColors.current.accentPrimary else com.unsulliedcode.ui.theme.LocalAppColors.current.surfaceHover,
-                                shape = CircleShape
+            Text("Your Badges", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
+            val allBadges = earnedBadges.toList()
+            if (allBadges.isNotEmpty()) {
+                Row(horizontalArrangement = Arrangement.spacedBy(Space.sm), modifier = Modifier.fillMaxWidth()) {
+                    allBadges.forEach { badgeName ->
+                        val isElite = badgeName == "Elite"
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier.weight(1f).aspectRatio(1f)
+                                .background(
+                                    color = if (isElite) colors.textInverse else colors.accentPrimary,
+                                    shape = CircleShape
+                                )
+                        ) {
+                            Text(
+                                text = badgeName.replace(" ", "\n"),
+                                color = if (isElite) colors.textPrimary else colors.textOnAccent,
+                                style = typography.label,
+                                modifier = Modifier.padding(Space.sm), textAlign = TextAlign.Center, lineHeight = 14.sp
                             )
-                    ) {
-                        Text(
-                            text = badgeName.replace(" ", "\n"),
-                            color = if (isElite && isEarned) com.unsulliedcode.ui.theme.LocalAppColors.current.textPrimary else if (isEarned) com.unsulliedcode.ui.theme.LocalAppColors.current.textOnAccent else com.unsulliedcode.ui.theme.LocalAppColors.current.textTertiary,
-                            style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label,
-                            modifier = Modifier.padding(Space.sm), textAlign = TextAlign.Center, lineHeight = 14.sp
-                        )
+                        }
                     }
                 }
+            } else {
+                Text("No badges earned yet.", style = typography.body, color = colors.textSecondary)
             }
 
-            HorizontalDivider()
+            HorizontalDivider(color = colors.border)
 
-            Text("Appearance", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.h3, fontWeight = FontWeight.Bold)
+            Text("Appearance", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
             Row(horizontalArrangement = Arrangement.spacedBy(Space.md)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Switch(checked = isDark, onCheckedChange = { isDark = it })
                     Spacer(modifier = Modifier.width(Space.sm))
-                    Text("Dark Theme")
+                    Text("Dark Theme", color = colors.textPrimary, style = typography.body)
                 }
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Switch(checked = isMono, onCheckedChange = { isMono = it })
                     Spacer(modifier = Modifier.width(Space.sm))
-                    Text("Monospace")
+                    Text("Monospace", color = colors.textPrimary, style = typography.body)
                 }
             }
             
-            HorizontalDivider()
+            HorizontalDivider(color = colors.border)
 
-            Text("Skill Level", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.h3, fontWeight = FontWeight.Bold)
+            Text("Skill Level", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
             Row(horizontalArrangement = Arrangement.spacedBy(Space.sm)) {
                 listOf("Beginner", "Intermediate", "Advanced").forEach { level ->
-                    FilterChip(selected = skillLevel == level, onClick = { skillLevel = level }, label = { Text(level) })
+                    FilterChip(
+                        selected = skillLevel == level,
+                        onClick = { skillLevel = level },
+                        label = { Text(level, color = colors.textPrimary) },
+                        colors = FilterChipDefaults.filterChipColors(
+                            containerColor = colors.surface,
+                            selectedContainerColor = colors.surfaceHover
+                        )
+                    )
                 }
             }
 
-            HorizontalDivider()
+            HorizontalDivider(color = colors.border)
 
-            Text("Interested Languages", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.h3, fontWeight = FontWeight.Bold)
+            Text("Interested Languages", style = typography.h3, fontWeight = FontWeight.Bold, color = colors.textPrimary)
             val allTracks = listOf("Python", "JavaScript", "SQL", "Java", "C", "C++", "HTML", "CSS", "TypeScript", "Docker", "Kubernetes", "YAML")
             
             Column(verticalArrangement = Arrangement.spacedBy(Space.sm)) {
@@ -158,7 +182,11 @@ fun SettingsScreen(onBack: () -> Unit) {
                                     if (newSet.contains(track)) newSet.remove(track) else newSet.add(track)
                                     tracks = newSet
                                 },
-                                label = { Text(track) }
+                                label = { Text(track, color = colors.textPrimary) },
+                                colors = FilterChipDefaults.filterChipColors(
+                                    containerColor = colors.surface,
+                                    selectedContainerColor = colors.surfaceHover
+                                )
                             )
                         }
                     }
@@ -169,6 +197,3 @@ fun SettingsScreen(onBack: () -> Unit) {
         }
     }
 }
-
-
-

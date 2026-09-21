@@ -1,4 +1,4 @@
-﻿package com.unsulliedcode.ui.ide
+package com.unsulliedcode.ui.ide
 import com.unsulliedcode.ui.theme.Space
 import com.unsulliedcode.ui.theme.Radius
 import com.unsulliedcode.ui.theme.Border
@@ -148,7 +148,7 @@ fun IdeScreen(initialLanguage: String, onNavigate: (NavKey) -> Unit) {
                     Spacer(modifier = Modifier.height(Space.md))
                     Card(
                         colors = CardDefaults.cardColors(containerColor = com.unsulliedcode.ui.theme.LocalAppColors.current.surfaceHover),
-                        modifier = Modifier.fillMaxWidth().heightIn(min = Space.md, max = Space.md)
+                        modifier = Modifier.fillMaxWidth().heightIn(min = Space.xxxl)
                     ) {
                         Column(modifier = Modifier.padding(Space.md)) {
                             Text("TERMINAL OUTPUT", style = com.unsulliedcode.ui.theme.LocalAppTypography.current.label, color = com.unsulliedcode.ui.theme.LocalAppColors.current.borderStrong)

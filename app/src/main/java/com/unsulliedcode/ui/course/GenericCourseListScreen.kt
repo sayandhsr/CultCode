@@ -1,4 +1,4 @@
-﻿package com.unsulliedcode.ui.course
+package com.unsulliedcode.ui.course
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,9 +13,7 @@ import androidx.navigation3.runtime.NavKey
 import com.unsulliedcode.data.ContentRepository
 import com.unsulliedcode.ui.navigation.AppScaffold
 import com.unsulliedcode.ui.theme.*
-import com.unsulliedcode.LessonViewerTheory
-import com.unsulliedcode.LessonViewerVideo
-import com.unsulliedcode.LessonViewerInteractive
+import com.unsulliedcode.LessonViewer
 
 @Composable
 fun GenericCourseListScreen(
@@ -46,7 +44,7 @@ fun GenericCourseListScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .background(colors.surfaceElevated, androidx.compose.foundation.shape.RoundedCornerShape(Radius.md))
-                        .interactive { onNavigate(LessonViewerTheory) }
+                        .interactive { onNavigate(com.unsulliedcode.LessonViewer(languageId, lesson.id)) }
                         .padding(Space.md)
                 ) {
                     Column {

@@ -32,17 +32,7 @@ class ContentRepository(private val context: Context) {
         val difficulty: String
     )
 
-    data class Question(
-        val id: String,
-        val languageId: String,
-        val lessonId: String,
-        val text: String,
-        val options: List<String>,
-        val correctIndex: Int,
-        val explanation: String,
-        val difficulty: String,
-        val xpReward: Int
-    )
+
 
     fun getLanguages(): List<Language> = listOf(
         Language("python", "Python", "Core Programming", "🐍", 25, 100),
@@ -101,6 +91,7 @@ class ContentRepository(private val context: Context) {
                         id = obj.getString("id"),
                         languageId = obj.getString("language_id"),
                         lessonId = obj.getString("lesson_id"),
+                        type = QuestionType.MULTIPLE_CHOICE,
                         text = obj.getString("text"),
                         options = (0 until optArray.length()).map { optArray.getString(it) },
                         correctIndex = obj.getInt("correct_index"),

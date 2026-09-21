@@ -1,4 +1,4 @@
-﻿package com.unsulliedcode.data
+package com.unsulliedcode.data
 
 import android.content.Context
 import org.json.JSONArray
@@ -26,6 +26,8 @@ class UserProgressRepository(val context: Context) {
                 put("selected_tracks", JSONArray().put("Python").put("SQL"))
                 put("time_commitment", 15)
                 put("onboarding_complete", false)
+                put("submissions", JSONArray())
+                put("last_activity_date", 0L)
             }
             profileFile.writeText(defaultJson.toString())
             return defaultJson
@@ -40,6 +42,8 @@ class UserProgressRepository(val context: Context) {
     private fun saveProfileJson(json: JSONObject) {
         profileFile.writeText(json.toString())
     }
+
+    fun getName(): String = getProfileJson().optString("name", "User")
 
     fun getTotalXp(): Int = getProfileJson().optInt("total_xp", 0)
     
@@ -129,6 +133,93 @@ class UserProgressRepository(val context: Context) {
         }
     }
 
+    // New stats tracking methods
+    fun logSubmission(questionId: String, isCorrect: Boolean) {
+        val json = getProfileJson()
+        val submissions = json.optJSONArray("submissions") ?: JSONArray()
+        val sub = JSONObject()
+        sub.put("questionId", questionId)
+        sub.put("isCorrect", isCorrect)
+        sub.put("timestamp", System.currentTimeMillis())
+        submissions.put(sub)
+        json.put("submissions", submissions)
+        saveProfileJson(json)
+    }
+
+    fun getSubmissionCount(): Int {
+        val json = getProfileJson()
+        return json.optJSONArray("submissions")?.length() ?: 0
+    }
+
+    fun getCorrectCount(): Int {
+        val json = getProfileJson()
+        val submissions = json.optJSONArray("submissions") ?: return 0
+        var count = 0
+        for (i in 0 until submissions.length()) {
+            if (submissions.getJSONObject(i).optBoolean("isCorrect", false)) count++
+        }
+        return count
+    }
+
+    fun getAccuracyRate(): Float {
+        val total = getSubmissionCount()
+        return if (total > 0) getCorrectCount().toFloat() / total else 0f
+    }
+
+    fun updateStreak() {
+        val json = getProfileJson()
+        val lastActivity = json.optLong("last_activity_date", 0L)
+        val today = System.currentTimeMillis()
+        val msPerDay = 86400000L
+        
+        val lastDay = lastActivity / msPerDay
+        val currentDay = today / msPerDay
+        
+        var streak = json.optInt("streak_days", 0)
+        
+        if (lastActivity == 0L || currentDay > lastDay + 1) {
+            streak = 1
+        } else if (currentDay == lastDay + 1) {
+            streak++
+        }
+        
+        json.put("streak_days", streak)
+        json.put("last_activity_date", today)
+        saveProfileJson(json)
+    }
+
+    fun getWeeklyActivity(): List<Int> {
+        val json = getProfileJson()
+        val submissions = json.optJSONArray("submissions") ?: JSONArray()
+        val msPerDay = 86400000L
+        val today = System.currentTimeMillis() / msPerDay
+        
+        val counts = IntArray(7)
+        for (i in 0 until submissions.length()) {
+            val ts = submissions.getJSONObject(i).optLong("timestamp", 0L)
+            val day = ts / msPerDay
+            val diff = (today - day).toInt()
+            if (diff in 0..6) {
+                counts[6 - diff]++
+            }
+        }
+        return counts.toList()
+    }
+
+    fun getProblemsSolved(): Int {
+        val json = getProfileJson()
+        val submissions = json.optJSONArray("submissions") ?: return 0
+        val solved = mutableSetOf<String>()
+        for (i in 0 until submissions.length()) {
+            val sub = submissions.getJSONObject(i)
+            if (sub.optBoolean("isCorrect", false)) {
+                val qId = sub.optString("questionId", "")
+                if (qId.isNotEmpty()) solved.add(qId)
+            }
+        }
+        return solved.size
+    }
+
     // UI Preferences stay in SharedPreferences
     fun isDarkTheme(): Boolean = prefs.getBoolean("dark_theme", true)
     fun setDarkTheme(isDark: Boolean) = prefs.edit().putBoolean("dark_theme", isDark).apply()
@@ -136,3 +227,4 @@ class UserProgressRepository(val context: Context) {
     fun isMonospace(): Boolean = prefs.getBoolean("use_monospace", true)
     fun setMonospace(isMono: Boolean) = prefs.edit().putBoolean("use_monospace", isMono).apply()
 }
+

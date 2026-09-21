@@ -9,19 +9,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.unsulliedcode.ui.theme.*
 
-data class QuizQuestion(
-    val id: String,
-    val text: String,
-    val options: List<String>,
-    val correctIndex: Int,
-    val explanation: String,
-    val difficulty: String,
-    val language: String
-)
+import com.unsulliedcode.data.Question
 
 @Composable
 fun QuestionCard(
-    question: QuizQuestion,
+    question: Question,
     selectedAnswer: Int?,
     onSelectAnswer: (Int) -> Unit,
     modifier: Modifier = Modifier

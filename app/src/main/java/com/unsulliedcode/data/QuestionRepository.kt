@@ -1,24 +1,11 @@
-﻿package com.unsulliedcode.data
+package com.unsulliedcode.data
 
 import android.content.Context
 import org.json.JSONObject
 
-data class Question(
-    val id: String,
-    val question: String,
-    val code: String,
-    val correctAnswer: String,
-    val expectedOutput: String,
-    val acceptedAnswers: List<String>,
-    val hints: List<String>,
-    val solution: String,
-    val explanation: String
-)
-
 class QuestionRepository(private val context: Context) {
     
     fun getQuestion(id: String): Question? {
-        // Determine the correct file based on ID prefix
         val fileName = when {
             id.startsWith("SQL") -> "sql_questions.json"
             id.startsWith("PY") -> "python_questions.json"
@@ -37,7 +24,7 @@ class QuestionRepository(private val context: Context) {
             id.startsWith("MON") -> "mongodb_questions.json"
             id.startsWith("CPP") -> "cpp_questions.json"
             id.startsWith("C-") -> "c_questions.json"
-            else -> "python_questions.json" // Fallback
+            else -> "python_questions.json"
         }
         
         try {
@@ -49,27 +36,38 @@ class QuestionRepository(private val context: Context) {
                 val q = questionsArray.getJSONObject(i)
                 if (q.getString("id") == id) {
                     val acceptedAnswers = mutableListOf<String>()
-                    val acceptedArray = q.getJSONArray("acceptedAnswers")
-                    for (j in 0 until acceptedArray.length()) {
-                        acceptedAnswers.add(acceptedArray.getString(j))
+                    val acceptedArray = q.optJSONArray("acceptedAnswers")
+                    if (acceptedArray != null) {
+                        for (j in 0 until acceptedArray.length()) {
+                            acceptedAnswers.add(acceptedArray.getString(j))
+                        }
                     }
                     
                     val hints = mutableListOf<String>()
-                    val hintsArray = q.getJSONArray("hints")
-                    for (j in 0 until hintsArray.length()) {
-                        hints.add(hintsArray.getString(j))
+                    val hintsArray = q.optJSONArray("hints")
+                    if (hintsArray != null) {
+                        for (j in 0 until hintsArray.length()) {
+                            hints.add(hintsArray.getString(j))
+                        }
                     }
                     
+                    val languageId = fileName.removeSuffix("_questions.json").removeSuffix("_questions")
+
                     return Question(
                         id = q.getString("id"),
-                        question = q.getString("question"),
-                        code = q.getString("code"),
-                        correctAnswer = q.getString("correctAnswer"),
+                        languageId = languageId,
+                        lessonId = "", // Legacy code challenge JSON doesn't have lesson_id
+                        type = QuestionType.CODE_CHALLENGE,
+                        text = q.getString("question"),
+                        explanation = q.getString("explanation"),
+                        difficulty = q.optString("difficulty", "medium"),
+                        xpReward = 15,
+                        code = q.optString("code", ""),
+                        correctAnswer = q.optString("correctAnswer", ""),
                         expectedOutput = q.optString("expectedOutput", "Output unavailable"),
                         acceptedAnswers = acceptedAnswers,
                         hints = hints,
-                        solution = q.getString("solution"),
-                        explanation = q.getString("explanation")
+                        solution = q.optString("solution", "")
                     )
                 }
             }
