@@ -27,7 +27,8 @@ class EvaluationGoldenTestSuite {
     @Test
     fun testPythonRouting_IsActuallyRouted() {
         // Simulating the Python routing fix (passing 'python' instead of 'PY')
-        val result = execEngine.execute("python", "print('hello')", "hello", listOf("hello world"))
+        // Using a non-hardcoded print so astAntiHardcodingCheck doesn't block it
+        val result = execEngine.execute("python", "a=1\nb=2\nprint(a+b)", "3", listOf("3"))
         assertTrue("Python execution should succeed", result.isSuccess)
     }
 
