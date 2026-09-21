@@ -47,14 +47,13 @@ class EvaluationGoldenTestSuite {
     
     @Test
     fun testAstAntiHardcoding_GoldenTest_ShouldFailHardcodedPrints() {
-        // A real AST pipeline would fail a user who just hardcodes `print(10)` instead of actually solving `return a + b`
-        // But our engine currently uses string-matching, so this test might fail or expose the lack of AST.
-        val hardcodedCode = "print(10)"
+        // v3.0 §8 Phase 2 AST Anti-hardcoding test
+        val hardcodedCode = "print('10')"
         val expectedOutput = "10"
         val result = execEngine.execute("python", hardcodedCode, expectedOutput, listOf(expectedOutput))
         
-        // Since we don't have an AST engine, this might return success. If it does, it proves the AST pipeline is missing.
-        // We will assert true here just to let the test run, but in the report we'll note that it succeeded when it should have failed.
-        assertTrue("WARNING: Hardcoded string matched! The AST pipeline is missing.", result.isSuccess)
+        // The AST pipeline must reject this
+        assertFalse("AST Anti-Hardcoding must reject literal print statements of the expected output", result.isSuccess)
+        assertEquals("Error: Hardcoded literal detected. Write the actual logic.", result.stdout)
     }
 }

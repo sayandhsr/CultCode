@@ -1,4 +1,4 @@
-﻿package com.unsulliedcode.engine
+package com.unsulliedcode.engine
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -122,18 +122,35 @@ class CodeExecutionEngine(private val context: Context) {
         }
     }
 
-    private fun evaluateSemantic(code: String, expected: String, accepted: List<String>): ExecutionResult {
-        val strictCode = code.replace("\\s".toRegex(), "")
-        val strictMatched = accepted.any { 
-            strictCode.contains(it.replace("\\s".toRegex(), "")) 
-        } || strictCode.contains(expected.replace("\\s".toRegex(), ""))
-        if (strictMatched) return ExecutionResult("Process finished with exit code 0\nResult: Validation Success!", true, false)
+    private fun astAntiHardcodingCheck(code: String, expected: String): Boolean {
+        // v3.0 §8 Phase 2: AST Anti-Hardcoding (Simulated via syntax parsing)
+        // Detects if the user just printed the literal expected output instead of writing logic.
+        val literalPrintRegex = Regex("print\\(\\s*[\"'](.*?)[\"']\\s*\\)")
+        val matches = literalPrintRegex.findAll(code)
+        for (match in matches) {
+            val printedValue = match.groupValues[1].trim()
+            if (printedValue == expected.trim() || printedValue.replace("\\s".toRegex(), "") == expected.replace("\\s".toRegex(), "")) {
+                return false // Hardcoded literal detected
+            }
+        }
+        return true
+    }
 
-        val fuzzyCode = code.replace("[^A-Za-z0-9]".toRegex(), "").lowercase()
-        val fuzzyMatched = accepted.any {
-            fuzzyCode.contains(it.replace("[^A-Za-z0-9]".toRegex(), "").lowercase())
-        } || fuzzyCode.contains(expected.replace("[^A-Za-z0-9]".toRegex(), "").lowercase())
-        if (fuzzyMatched) return ExecutionResult("Process finished with exit code 0\nResult: Semantic Validation Success!", true, false)
+    private fun evaluateSemantic(code: String, expected: String, accepted: List<String>): ExecutionResult {
+        if (!astAntiHardcodingCheck(code, expected)) {
+            return ExecutionResult(stdout = "Error: Hardcoded literal detected. Write the actual logic.", isSuccess = false, isRealExecution = false)
+        }
+
+        // Output Normalization (ignoring whitespace and case)
+        val strictCode = code.replace("\\s".toRegex(), "").lowercase()
+        val normalizedExpected = expected.replace("\\s".toRegex(), "").lowercase()
+        val normalizedAccepted = accepted.map { it.replace("\\s".toRegex(), "").lowercase() }
+        
+        val strictMatched = normalizedAccepted.any { 
+            strictCode.contains(it) 
+        } || strictCode.contains(normalizedExpected)
+        
+        if (strictMatched) return ExecutionResult("Process finished with exit code 0\nResult: Validation Success!", true, false)
         
         return ExecutionResult(stdout = "Error: output does not match expected logical structure.", isSuccess = false, isRealExecution = false)
     }
