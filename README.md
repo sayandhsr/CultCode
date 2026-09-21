@@ -26,5 +26,4 @@ The latest compiled APK can be found in the `releases/` directory.
 ## ⚖️ License & Fonts
 - **Fonts**: JetBrains Mono & Inter (SIL Open Font License 1.1)
 
----
-*Built with ❤️ and strict design token compliance.*
+
