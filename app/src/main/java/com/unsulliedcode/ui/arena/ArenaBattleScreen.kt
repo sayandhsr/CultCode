@@ -55,26 +55,35 @@ fun ArenaBattleScreen(
                 .padding(padding)
                 .padding(Space.md)
         ) {
-            // Your Code section
             Text(
-                text = "YOUR CODE",
+                text = "REVIEW THIS PULL REQUEST",
                 style = typography.label,
                 color = colors.textSecondary,
                 modifier = Modifier.padding(bottom = Space.xs)
             )
-            BasicTextField(
-                value = code,
-                onValueChange = { code = it },
-                textStyle = TextStyle(
-                    color = colors.textPrimary,
-                    fontFamily = FontFamily.Monospace
-                ),
+            
+            // Diff View Section
+            Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f)
                     .background(colors.surface, shape = androidx.compose.foundation.shape.RoundedCornerShape(Radius.md))
                     .padding(Space.sm)
-            )
+            ) {
+                DiffView(
+                    originalLines = listOf(
+                        DiffLine(1, "fun calculate(a: Int, b: Int): Int {", DiffLineType.CONTEXT),
+                        DiffLine(2, "    return a - b", DiffLineType.REMOVE),
+                        DiffLine(3, "}", DiffLineType.CONTEXT)
+                    ),
+                    modifiedLines = listOf(
+                        DiffLine(1, "fun calculate(a: Int, b: Int): Int {", DiffLineType.CONTEXT),
+                        DiffLine(2, "    return a + b", DiffLineType.ADD),
+                        DiffLine(3, "}", DiffLineType.CONTEXT)
+                    ),
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
 
             Spacer(modifier = Modifier.height(Space.md))
 
@@ -94,15 +103,31 @@ fun ArenaBattleScreen(
 
             Spacer(modifier = Modifier.height(Space.lg))
 
-            Button(
-                onClick = { onNavigate(ArenaResult) },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = colors.accentPrimary,
-                    contentColor = colors.textOnAccent
-                ),
-                modifier = Modifier.fillMaxWidth()
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(Space.md)
             ) {
-                Text("SUBMIT SOLUTION", style = typography.label)
+                Button(
+                    onClick = { onNavigate(ArenaResult) },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colors.error,
+                        contentColor = colors.textOnAccent
+                    ),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text("REJECT", style = typography.label)
+                }
+                
+                Button(
+                    onClick = { onNavigate(ArenaResult) },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colors.success,
+                        contentColor = colors.textOnAccent
+                    ),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text("APPROVE", style = typography.label)
+                }
             }
         }
     }
