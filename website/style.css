@@ -85,7 +85,7 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 
 .panel-title {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -95,7 +95,7 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 /* Hero Panel */
 .hero-panel {
     height: 100vh;
-    min-height: 700px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     background-image: url('https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1920&q=100');
@@ -157,7 +157,7 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 
 .huge-title {
     font-family: var(--font-heading);
-    font-size: clamp(4rem, 15vw, 13rem);
+    font-size: clamp(3rem, 12vw, 13rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -2px;
@@ -327,7 +327,7 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 
 .download-card {
     width: 100%;
-    aspect-ratio: 4/3;
+    min-height: 400px;
     background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=100');
     background-size: cover;
     background-position: center;
@@ -366,7 +366,7 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 
 .download-content h2 {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     margin-bottom: 10px;
 }
 .download-content p {
@@ -412,7 +412,7 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 
 .large-text {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     line-height: 1.3;
     margin-bottom: 40px;
 }
@@ -574,14 +574,12 @@ a:hover ~ .cursor-follower, button:hover ~ .cursor-follower, .click-anim:hover ~
 @media (max-width: 1024px) {
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .specs-layout { grid-template-columns: 1fr; gap: 50px; }
-    .huge-title { font-size: 6rem; }
 }
 
 @media (max-width: 768px) {
     .features-grid { grid-template-columns: 1fr; }
     .nav { display: none; }
-    .panel { padding: 60px 5%; }
-    .huge-title { font-size: 4rem; }
+    .panel { padding: 60px 20px; }
     
     /* Hide custom cursor on mobile to prevent touch sticking */
     .cursor, .cursor-follower { display: none !important; }
